@@ -1,7 +1,7 @@
 body
 {
   font-size: 3.6vmin;
-  /* font-family: garamond; */
+  font-family: georgia;
   background-color: rgb(35, 35, 45);
 }
 
@@ -94,7 +94,6 @@ body
 
 .title-route
 {
-  /* position: absolute; */
   width: 100%;
 
   top: 0;
@@ -102,7 +101,7 @@ body
   text-align: center;
   font-weight: bold;
 
-  font-size: 1.9em;
+  font-size: 1.8em;
 
   margin: 0;
 }
@@ -117,23 +116,17 @@ body
   width: 13vmin;
   height: 13vmin;
 
-  background-color: rgba(45, 45, 55, 0.6);
+  background-color: rgb(47, 47, 57);
   border: 0.1em solid rgb(55 55 65);
   border-radius: 5em;
 }
 
 .pokemon-input-place
 {
-  /* position: absolute;
-  top: 50%;
-  left: 30%; */
-  /* transform: translateY(-50%); */
-
-
   color: rgb(200, 200, 210);
-  background-color: rgb(50, 50, 60);
+  background-color: rgb(47, 47, 57);
 
-  width: 50%;
+  width: 40%;
   height: 7vmin;
 
   margin-top: 4vmin;
@@ -146,6 +139,30 @@ body
 }
 
 .pokemon-input-place:focus
+{
+  outline: 0.1em solid rgb(105 105 115);
+}
+
+.state-dropdown
+{
+  color: rgb(200, 200, 210);
+  background-color: rgb(47, 47, 57);
+
+  width: 20%;
+  height: 7vmin;
+
+  margin-left: 4.5%;
+
+  /* padding-left: 5%; */
+
+  border: 0.1em solid rgb(55 55 65);
+
+  /* border-radius: 0.1em; */
+
+  font-size: 0.8em;
+}
+
+.state-dropdown:focus
 {
   outline: 0.1em solid rgb(105 105 115);
 }
