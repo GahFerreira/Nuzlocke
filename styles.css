@@ -94,32 +94,28 @@ body
 
 .title-route
 {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 
   top: 0;
 
   text-align: center;
   font-weight: bold;
-}
 
-.title-route p
-{
   font-size: 1.9em;
-  margin:0;
+
+  margin: 0;
 }
 
 .img-place
 {
   position: absolute;
   top: 60%;
-  left: 12%;
-  transform: translateY(-50%);
+  left: 10%;
+  transform: translateY(-50%); /* Isso torna o ponto central o centro ao invés do topo-esquerda */
 
   width: 13vmin;
   height: 13vmin;
-
-  margin-right: 1vmin;
 
   background-color: rgba(45, 45, 55, 0.6);
   border: 0.1em solid rgb(55 55 65);
@@ -128,19 +124,20 @@ body
 
 .pokemon-input-place
 {
-  position: absolute;
-  top: 65%;
-  left: 28%;
-  transform: translateY(-50%);
-}
+  /* position: absolute;
+  top: 50%;
+  left: 30%; */
+  /* transform: translateY(-50%); */
 
-.pokemon-input-place input
-{
+
   color: rgb(200, 200, 210);
   background-color: rgb(50, 50, 60);
 
-  width: 100%;
+  width: 50%;
   height: 7vmin;
+
+  margin-top: 4vmin;
+  margin-left: calc(13vmin + 15%);
 
   border: 0.1em solid rgb(55 55 65);
   border-radius: 5em;
@@ -148,7 +145,7 @@ body
   font-size: 1.2em;
 }
 
-.pokemon-input-place input:focus
+.pokemon-input-place:focus
 {
   outline: 0.1em solid rgb(105 105 115);
 }
