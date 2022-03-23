@@ -4528,11 +4528,13 @@ function new_route_box()
   pokemon_field.className = "pokemon-input-place";
   pokemon_field.setAttribute("maxlength", 12);
 
+	// 'focus' means when the element gets in focus
   pokemon_field.addEventListener("focus", () =>
   {
     pokemon_select_wrapper.classList.add("active");
   });
 
+	// 'blur' means when the elements gets out of focus
   pokemon_field.addEventListener("blur", () =>
   {
     pokemon_select_wrapper.classList.remove("active");
@@ -4543,16 +4545,18 @@ function new_route_box()
   const pokemon_list = document.createElement("ul");
   pokemon_list.className = "pokemon_list";
 
-  for (const { name, value, image } of poke_data.slice(0, 4))
+  for (const { name, value, image } of poke_data.slice(0, 9))
   {
     const new_list_item = document.createElement("li");
 
     const new_option = document.createElement("div");
     new_option.className = "option";
 
-    const new_icon_div = document.createElement("div");
-    new_icon_div.className = `icon ${value}`;
-    new_option.appendChild(new_icon_div);
+		// 'alt' was set to "" so non-visual browsers may omit it from rendering (it's decoration after all)
+    const new_icon = document.createElement("img");
+		new_icon.src = image;
+		new_icon.setAttribute("alt", "");
+    new_option.appendChild(new_icon);
 
     const pokemon_name = document.createElement("p");
     pokemon_name.innerText = name;
@@ -4566,6 +4570,9 @@ function new_route_box()
   pokemon_select_wrapper.appendChild(pokemon_list);
 
   // Creating the dropdown menu to control pokemon state
+	const state_dropdown_wrapper = document.createElement("div");
+	state_dropdown_wrapper.className = "state-dropdown-wrapper";
+
   const state_dropdown = document.createElement("select");
   state_dropdown.className = "state-dropdown";
 
@@ -4579,7 +4586,8 @@ function new_route_box()
     state_dropdown.appendChild(new_option);
   }
 
-  new_box.appendChild(state_dropdown);
+	state_dropdown_wrapper.appendChild(state_dropdown);
+  new_box.appendChild(state_dropdown_wrapper);
 }
 
 const new_run_button = document.getElementById("new-run-button");
