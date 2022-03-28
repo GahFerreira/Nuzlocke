@@ -4524,23 +4524,25 @@ function new_route_box()
   new_box.appendChild(pokemon_select_wrapper);
 
   // Creating the input field where the pokemon name will be typed
-  const pokemon_field = document.createElement("input");
-  pokemon_field.className = "pokemon-input-place";
-  pokemon_field.setAttribute("maxlength", 12);
+  const pokemon_input_field = document.createElement("input");
+  pokemon_input_field.className = "pokemon-input-field";
+  pokemon_input_field.setAttribute("maxlength", 12);
 
+	// 'focus' & 'blur' events were removed because of a better implementation using CSS
 	// 'focus' means when the element gets in focus
-  pokemon_field.addEventListener("focus", () =>
-  {
-    pokemon_select_wrapper.classList.add("active");
-  });
+  // pokemon_input_field.addEventListener("focus", () =>
+  // {
+  //   pokemon_select_wrapper.classList.add("active");
+  // });
 
 	// 'blur' means when the elements gets out of focus
-  pokemon_field.addEventListener("blur", () =>
-  {
-    pokemon_select_wrapper.classList.remove("active");
-  });
+	// pokemon_input_field.addEventListener("blur", () =>
+	// {
+	// 	console.log(document.activeElement);
+	// 	// pokemon_select_wrapper.classList.remove("active");
+	// });
 
-  pokemon_select_wrapper.appendChild(pokemon_field);
+  pokemon_select_wrapper.appendChild(pokemon_input_field);
 
   const pokemon_list = document.createElement("ul");
   pokemon_list.className = "pokemon_list";
@@ -4548,6 +4550,7 @@ function new_route_box()
   for (const { name, value, image } of poke_data.slice(0, 9))
   {
     const new_list_item = document.createElement("li");
+		new_list_item.setAttribute("id", name);
 
     const new_option = document.createElement("div");
     new_option.className = "option";
@@ -4563,6 +4566,12 @@ function new_route_box()
     new_option.appendChild(pokemon_name);
 
     new_list_item.appendChild(new_option);
+
+		new_list_item.addEventListener("click", () =>
+		{
+			console.log(`${name} was clicked!`);
+			// pokemon_select_wrapper.classList.remove("active");
+		});
 
     pokemon_list.appendChild(new_list_item);
   }

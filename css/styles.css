@@ -9,7 +9,7 @@ body
   background-color: rgb(35, 35, 45);
 }
 
-/* Genérico */
+/* Generic */
 
 .outer-gray-box
 {
@@ -120,7 +120,7 @@ body
   position: absolute;
   top: 60%;
   left: 10%;
-  transform: translateY(-50%); /* Isso torna o ponto central o centro ao invés do topo-esquerda */
+  transform: translateY(-50%); /* This makes the center the central point, instead of the top-left */
 
   width: 13vmin;
   height: 13vmin;
@@ -132,16 +132,12 @@ body
 
 .pokemon-select-wrapper
 {
-  /* display: inline-block; */
-
-  /* position: relative; */
-
   width: 42%;
 
   margin-left: calc(13vmin + 15%);
 }
 
-.pokemon-input-place
+.pokemon-input-field
 {
   color: rgb(200, 200, 210);
   background-color: rgb(47, 47, 57);
@@ -161,35 +157,25 @@ body
   box-sizing: border-box;
 }
 
-.pokemon-input-place:focus
+.pokemon-input-field:focus
 {
   outline: none;
-  /* border: 0.1em solid rgb(105 105 115);
 
-  border-bottom: 0.1em solid rgba(0, 0, 0, 0); */
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.pokemon-select-wrapper .pokemon_list li
-{
-  display: none;
-}
-
-.pokemon-select-wrapper.active .pokemon_list li
+/* .pokemon-select-wrapper.active .pokemon_list li
 {
   display: block;
-}
+} */
 
 .pokemon_list
 {
-  /* display: inline-block; */
-
   list-style: none;
 
   margin: 0;
   padding: 0;
-  /*box-sizing: border-box; */
 }
 
 .pokemon_list li
@@ -205,14 +191,20 @@ body
   border: 0.1em solid rgb(55 55 65);
 
   box-sizing: border-box;
+
+  display: none; /* List items should only be displayed when the 'pokemon-input-field' is in focus or a list item is being clicked on*/
 }
 
-/*  */
-/* .pokemon_list li:first-child
+/*  Applied style:
+    1 - to all list items when 'pokemon-input-field' is in focus
+    2 - whenever a list item is 'active', the 'active' pseudoclass propagates to their parents, and in this case, one of the parents is 'pokemon_list', therefore when an item is activated, all other items are also styled
+    Note: this makes it possible to click in an item and trigger the 'click' event before it disappears (using 'focus' & 'blur' events, for example)
+*/
+.pokemon-input-field:focus + .pokemon_list li,
+.pokemon_list:active li
 {
-  border-top-left-radius: 0.1em;
-  border-top-right-radius: 0.1em;
-} */
+  display: block;
+}
 
 .pokemon_list li:last-child
 {
@@ -242,8 +234,6 @@ body
 
 .pokemon_list li .option p
 {
-  /* display: inline-block; */
-
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -254,8 +244,6 @@ body
 
 .state-dropdown-wrapper
 {
-  /* display: inline-block; */
-
   position: absolute;
 
   top: 45%;
@@ -273,11 +261,7 @@ body
   width: 100%;
   height: 100%;
 
-  /* padding-left: 5%; */
-
   border: 0.1em solid rgb(55 55 65);
-
-  /* border-radius: 0.1em; */
 
   font-size: 0.8em;
 
