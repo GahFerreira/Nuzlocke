@@ -34,31 +34,47 @@ function new_route_box()
 	// Creating the input field where the pokemon name will be typed
 	const pokemon_input_field = document.createElement("input");
 	pokemon_input_field.className = "pokemon-input-field";
+
 	pokemon_input_field.setAttribute("maxlength", 12);
+	pokemon_input_field.setAttribute("placeholder", "Pokémon...");
 
-	// 'focus' & 'blur' events were removed because of a better implementation using CSS
-	// 'focus' means when the element gets in focus
-	// pokemon_input_field.addEventListener("focus", () =>
-	// {
-	//   pokemon_select_wrapper.classList.add("active");
-	// });
+	// When the input field gets focused, it's ready to be typed in and we have to consider two cases:
+	//   If no pokemon had been previously selected, the placeholder shows "Pokemon..."
+	//	 If any pokemon has been previously selected, the placeholder shows the most recent pokemon's name
+	// Also, the input field has to be cleared, so the value is set to an empty string
+	pokemon_input_field.addEventListener("focus", () =>
+	{
+		pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
 
-	// 'blur' means when the elements gets out of focus
-	// pokemon_input_field.addEventListener("blur", () =>
-	// {
-	// 	console.log(document.activeElement);
-	// 	// pokemon_select_wrapper.classList.remove("active");
-	// });
+		pokemon_input_field.value = "";
+	});
+
+	// When the input field gets out of focus, we have to consider two cases:
+	//   A new pokemon was selected from the list
+	//     In this case, the value of the input field becomes that pokemon's name
+	//   No new pokemon was selected from the list
+	//     In this case, we have two possibilites:
+	//       A pokemon had already been selected before: its name becomes the value again
+	//       No pokemon had been selected before: no value and the placeholder becomes "Pokemon..."
+	pokemon_input_field.addEventListener("blur", () =>
+	{
+		console.log("Blur up!");
+
+		pokemon_input_field.value = (pokemon_input_field.placeholder !== "Pokémon...") ? pokemon_input_field.placeholder : "";
+
+		pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
+	});
 
 	pokemon_select_wrapper.appendChild(pokemon_input_field);
 
+	// Creating the pokemon list dropdown
 	const pokemon_list = document.createElement("ul");
 	pokemon_list.className = "pokemon_list";
 
 	for (const { name, value, image } of poke_data.slice(0, 9))
 	{
 		const new_list_item = document.createElement("li");
-		new_list_item.setAttribute("id", name);
+		// new_list_item.id = name;
 
 		const new_option = document.createElement("div");
 		new_option.className = "option";
@@ -75,10 +91,12 @@ function new_route_box()
 
 		new_list_item.appendChild(new_option);
 
+		new_list_item.addEventListener("mousedown", () => console.log("MouseDown!"));
+
 		new_list_item.addEventListener("click", () =>
 		{
+			pokemon_input_field.value = name;
 			console.log(`${name} was clicked!`);
-			// pokemon_select_wrapper.classList.remove("active");
 		});
 
 		pokemon_list.appendChild(new_list_item);
