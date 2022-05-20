@@ -24,6 +24,8 @@ function new_route_box()
 	// Creating the place where the pokemon image will be
 	const img_place = document.createElement("div");
 	img_place.className = "img-place";
+	const pokemon_image = document.createElement("img");
+	img_place.appendChild(pokemon_image);
 	new_box.appendChild(img_place);
 
 	// Creating the place where the pokemon selection will be
@@ -96,6 +98,10 @@ function new_route_box()
 		new_list_item.addEventListener("click", () =>
 		{
 			pokemon_input_field.value = name;
+
+			// Adds pokemon image to left circle
+			pokemon_image.src = image;
+
 			console.log(`${name} was clicked!`);
 		});
 
