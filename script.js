@@ -93,9 +93,9 @@ function new_route_box()
 
 		new_list_item.appendChild(new_option);
 
-		new_list_item.addEventListener("mousedown", () => console.log("MouseDown!"));
+		new_option.addEventListener("mousedown", () => console.log("MouseDown!"));
 
-		new_list_item.addEventListener("click", () =>
+		new_option.addEventListener("click", (e) =>
 		{
 			pokemon_input_field.value = name;
 

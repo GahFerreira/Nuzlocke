@@ -224,6 +224,16 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	display: none;
 }
 
+/* `.option` represents the part of the list item that is meant to be clickable to select that pokemon */
+.pokemon_list li .option *
+{
+	/* 
+		This makes all children of option not receive click events.
+		Browser Support: All browsers from 2013 forwards can use this, except all versions of opera-mini.
+	*/
+	pointer-events: none;
+}
+
 /*  Applied style:
     1 - to all list items when 'pokemon-input-field' is in focus
     2 - whenever a list item is 'active', the 'active' pseudoclass propagates to their parents, and in this case, one of the parents is 'pokemon_list', therefore when an item is activated, all other items are also styled
