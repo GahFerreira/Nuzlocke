@@ -197,7 +197,7 @@ const route_box_factory = (route_name) =>
 		 * This iterates over the poke_data array, which contains the data of all pokemon
 		 * For each pokemon, a new list item is created for it, and appended to pokemon_list
 		 */
-		for (const { name, value, image } of poke_data.slice(0, 9))
+		for (const { name, value, image } of poke_data.slice(0, 151))
 		{
 			const list_item = document.createElement("li");
 			list_item.pokemon_data = { name, image };

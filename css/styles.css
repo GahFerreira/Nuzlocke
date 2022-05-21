@@ -206,6 +206,14 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 
 	margin: 0;
 	padding: 0;
+
+	/* 
+		Adds a scrollbar to the list. 
+		Note that the height was set so it shows 8 list items (8 * 8vmin). 
+	*/
+	height: 64vmin;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .pokemon-list li
