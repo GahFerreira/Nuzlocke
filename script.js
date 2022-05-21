@@ -1,5 +1,7 @@
 import { poke_data } from "./js/pokedata.js";
 
+let v = { item: 'a' };
+
 function new_run()
 {
 	document.getElementById("menu").remove();
@@ -10,6 +12,14 @@ function new_run()
 
 const route_box_factory = (route_name) =>
 {
+	function Containing_Box()
+	{
+		const containing_box = document.createElement("div");
+		containing_box.className = "outer-gray-box containing-box";
+
+		return containing_box;
+	}
+
 	function Pokemon_Image_Holder()
 	{
 		// The circle which contains inside it the pokemon image
@@ -25,6 +35,15 @@ const route_box_factory = (route_name) =>
 		return pokemon_image_holder;
 	}
 
+	function Route_Title(route_name)
+	{
+		const route_title = document.createElement("p");
+		route_title.className = "title-route";
+		route_title.innerText = route_name;
+
+		return route_title;
+	}
+
 	function Pokemon_Input_Field()
 	{
 		const pokemon_input_field = document.createElement("input");
@@ -33,13 +52,29 @@ const route_box_factory = (route_name) =>
 		pokemon_input_field.setAttribute("maxlength", 12);
 		pokemon_input_field.setAttribute("placeholder", "Pokémon...");
 
+		return pokemon_input_field;
+	}
+
+	function assign_pokemon_input_field_events(pokemon_input_field, route_box)
+	{
 		// When the input field gets focused, it's ready to be typed in and we have to consider two cases:
 		//   If no pokemon had been previously selected, the placeholder shows "Pokemon..."
 		//	 If any pokemon has been previously selected, the placeholder shows the most recent pokemon's name
 		// Also, the input field has to be cleared, so the value is set to an empty string
 		pokemon_input_field.addEventListener("focus", () =>
 		{
-			pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
+			console.log("Focus up!");
+
+			if (route_box.selected_pokemon === undefined)
+			{
+				pokemon_input_field.placeholder = "Pokémon...";
+			}
+
+			else
+			{
+				console.log(pokemon_input_field.value);
+				pokemon_input_field.placeholder = pokemon_input_field.value;
+			}
 
 			pokemon_input_field.value = "";
 		});
@@ -55,24 +90,36 @@ const route_box_factory = (route_name) =>
 		{
 			console.log("Blur up!");
 
-			pokemon_input_field.value = (pokemon_input_field.placeholder !== "Pokémon...") ? pokemon_input_field.placeholder : "";
+			if (route_box.selected_pokemon === undefined)
+			{
+				pokemon_input_field.value = "";
+				pokemon_input_field.placeholder = "Pokémon...";
+			}
 
-			pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
+			else
+			{
+				pokemon_input_field.value = pokemon_input_field.placeholder;
+				// pokemon_input_field.placeholder = pokemon_input_field.value;
+			}
+
+			// pokemon_input_field.value = (pokemon_input_field.placeholder !== "Pokémon...") ? pokemon_input_field.placeholder : "";
+
+			// pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
 		});
-
-		return pokemon_input_field;
 	}
 
-	function Pokemon_List(pokemon_input_field, pokemon_image)
+	function Pokemon_List()
 	{
 		// Creating the pokemon list dropdown
 		const pokemon_list = document.createElement("ul");
 		pokemon_list.className = "pokemon_list";
 
+		pokemon_list.item_list = new Map();
+
 		for (const { name, value, image } of poke_data.slice(0, 9))
 		{
 			const new_list_item = document.createElement("li");
-			// new_list_item.id = name;
+			new_list_item.pokemon_data = { name, image };
 
 			const new_option = document.createElement("div");
 			new_option.className = "option";
@@ -88,26 +135,38 @@ const route_box_factory = (route_name) =>
 			new_option.appendChild(pokemon_name);
 
 			new_list_item.appendChild(new_option);
-
-			// new_option.addEventListener("mousedown", () => console.log("MouseDown!"));
-
-			new_option.addEventListener("click", (e) =>
-			{
-				pokemon_input_field.value = name;
-
-				// Adds pokemon image to left circle
-				pokemon_image.src = image;
-
-				console.log(`${name} was clicked!`);
-			});
+			new_list_item.option = new_option;
 
 			pokemon_list.appendChild(new_list_item);
+
+			pokemon_list.item_list.set(value, new_list_item);
 		}
 
 		return pokemon_list;
 	}
 
-	function Pokemon_Select_Wrapper(pokemon_image)
+	function assign_pokemon_list_events(pokemon_list, route_box, pokemon_input_field, pokemon_image)
+	{
+		// new_option.addEventListener("mousedown", () => console.log("MouseDown!"));
+
+		for (const [value, list_item] of pokemon_list.item_list)
+		{
+			list_item.option.addEventListener("click", () =>
+			{
+				console.log(`${list_item.pokemon_data.name} was clicked!`);
+
+				route_box.selected_pokemon = value;
+				pokemon_input_field.value = list_item.pokemon_data.name;
+
+				// Adds pokemon image to left circle
+				pokemon_image.src = list_item.pokemon_data.image;
+
+				console.log(`Current selected pokemon = ${route_box.selected_pokemon}`);
+			});
+		}
+	}
+
+	function Pokemon_Select_Wrapper()
 	{
 		const pokemon_select_wrapper = document.createElement("div");
 		pokemon_select_wrapper.className = "pokemon-select-wrapper";
@@ -116,10 +175,13 @@ const route_box_factory = (route_name) =>
 		const pokemon_input_field = Pokemon_Input_Field();
 
 		// The pokemon list that drops down when the input field is in focus
-		const pokemon_list = Pokemon_List(pokemon_input_field, pokemon_image);
+		const pokemon_list = Pokemon_List();
 
 		pokemon_select_wrapper.appendChild(pokemon_input_field);
 		pokemon_select_wrapper.appendChild(pokemon_list);
+
+		pokemon_select_wrapper.pokemon_input_field = pokemon_input_field;
+		pokemon_select_wrapper.pokemon_list = pokemon_list;
 
 		return pokemon_select_wrapper;
 	}
@@ -151,18 +213,16 @@ const route_box_factory = (route_name) =>
 	function Route_Box_html(route_name)
 	{
 		// The outer box that will contain all HTML elements
-		const containing_box = document.createElement("div");
-		containing_box.className = "outer-gray-box containing-box";
+		const containing_box = Containing_Box();
 
 		// A title for the Route Box, indicating the route name
-		const route_title = document.createElement("p");
-		route_title.className = "title-route";
-		route_title.innerText = route_name;
+		const route_title = Route_Title(route_name);
 
+		// The circle that holds the image of the selected pokemon
 		const pokemon_image_holder = Pokemon_Image_Holder();
 
 		// This wraps both the text input field and the list it creates when it's in focus
-		const pokemon_select_wrapper = Pokemon_Select_Wrapper(pokemon_image_holder.pokemon_image);
+		const pokemon_select_wrapper = Pokemon_Select_Wrapper();
 
 		// The state dropdown that shows the state of the pokemon
 		const state_dropdown = State_Dropdown();
@@ -198,136 +258,15 @@ const route_box_factory = (route_name) =>
 			html.containing_box.appendChild(html.pokemon_select_wrapper);
 			html.containing_box.appendChild(html.state_dropdown);
 
+			assign_pokemon_input_field_events(html.pokemon_select_wrapper.pokemon_input_field, route_box);
+			assign_pokemon_list_events(html.pokemon_select_wrapper.pokemon_list, route_box, html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image);
+
 			document.body.appendChild(document_fragment);
 		}
 	}
 
 	return route_box;
 }
-
-// function new_route_box()
-// {
-// 	// Creating the outer gray box
-// 	const new_box = document.createElement("div");
-// 	new_box.className = "outer-gray-box containing-box";
-// 	document.body.appendChild(new_box);
-
-// 	// Creating the title that will hold the name of the route
-// 	const route_name = document.createElement("p");
-// 	route_name.className = "title-route";
-// 	route_name.innerText = "Route 01";
-
-// 	new_box.appendChild(route_name);//
-
-// 	// Creating the place where the pokemon image will be
-// 	const img_place = document.createElement("div");
-// 	img_place.className = "img-place";
-// 	const pokemon_image = document.createElement("img");
-// 	img_place.appendChild(pokemon_image);
-// 	new_box.appendChild(img_place);
-
-// 	// Creating the place where the pokemon selection will be
-// 	const pokemon_select_wrapper = document.createElement("div");
-// 	pokemon_select_wrapper.className = "pokemon-select-wrapper";
-// 	new_box.appendChild(pokemon_select_wrapper);
-
-// 	// Creating the input field where the pokemon name will be typed
-// 	const pokemon_input_field = document.createElement("input");
-// 	pokemon_input_field.className = "pokemon-input-field";
-
-// 	pokemon_input_field.setAttribute("maxlength", 12);
-// 	pokemon_input_field.setAttribute("placeholder", "Pokémon...");
-
-// 	// When the input field gets focused, it's ready to be typed in and we have to consider two cases:
-// 	//   If no pokemon had been previously selected, the placeholder shows "Pokemon..."
-// 	//	 If any pokemon has been previously selected, the placeholder shows the most recent pokemon's name
-// 	// Also, the input field has to be cleared, so the value is set to an empty string
-// 	pokemon_input_field.addEventListener("focus", () =>
-// 	{
-// 		pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
-
-// 		pokemon_input_field.value = "";
-// 	});
-
-// 	// When the input field gets out of focus, we have to consider two cases:
-// 	//   A new pokemon was selected from the list
-// 	//     In this case, the value of the input field becomes that pokemon's name
-// 	//   No new pokemon was selected from the list
-// 	//     In this case, we have two possibilites:
-// 	//       A pokemon had already been selected before: its name becomes the value again
-// 	//       No pokemon had been selected before: no value and the placeholder becomes "Pokemon..."
-// 	pokemon_input_field.addEventListener("blur", () =>
-// 	{
-// 		console.log("Blur up!");
-
-// 		pokemon_input_field.value = (pokemon_input_field.placeholder !== "Pokémon...") ? pokemon_input_field.placeholder : "";
-
-// 		pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
-// 	});
-
-// 	pokemon_select_wrapper.appendChild(pokemon_input_field);
-
-// 	// Creating the pokemon list dropdown
-// 	const pokemon_list = document.createElement("ul");
-// 	pokemon_list.className = "pokemon_list";
-
-// 	for (const { name, value, image } of poke_data.slice(0, 9))
-// 	{
-// 		const new_list_item = document.createElement("li");
-// 		// new_list_item.id = name;
-
-// 		const new_option = document.createElement("div");
-// 		new_option.className = "option";
-
-// 		// 'alt' was set to "" so non-visual browsers may omit it from rendering (it's decoration after all)
-// 		const new_icon = document.createElement("img");
-// 		new_icon.src = image;
-// 		new_icon.setAttribute("alt", "");
-// 		new_option.appendChild(new_icon);
-
-// 		const pokemon_name = document.createElement("p");
-// 		pokemon_name.innerText = name;
-// 		new_option.appendChild(pokemon_name);
-
-// 		new_list_item.appendChild(new_option);
-
-// 		new_option.addEventListener("mousedown", () => console.log("MouseDown!"));
-
-// 		new_option.addEventListener("click", (e) =>
-// 		{
-// 			pokemon_input_field.value = name;
-
-// 			// Adds pokemon image to left circle
-// 			pokemon_image.src = image;
-
-// 			console.log(`${name} was clicked!`);
-// 		});
-
-// 		pokemon_list.appendChild(new_list_item);
-// 	}
-
-// 	pokemon_select_wrapper.appendChild(pokemon_list);
-
-// 	// Creating the dropdown menu to control pokemon state
-// 	const state_dropdown_wrapper = document.createElement("div");
-// 	state_dropdown_wrapper.className = "state-dropdown-wrapper";
-
-// 	const state_dropdown = document.createElement("select");
-// 	state_dropdown.className = "state-dropdown";
-
-// 	const states = ["team", "boxed", "fainted", "escaped"];
-
-// 	for (const state of states)
-// 	{
-// 		const new_option = document.createElement("option");
-// 		new_option.value = state;
-// 		new_option.text = state.charAt(0).toUpperCase() + state.slice(1);
-// 		state_dropdown.appendChild(new_option);
-// 	}
-
-// 	state_dropdown_wrapper.appendChild(state_dropdown);
-// 	new_box.appendChild(state_dropdown_wrapper);
-// }
 
 function main()
 {
