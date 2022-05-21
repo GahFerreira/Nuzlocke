@@ -1,7 +1,8 @@
 import { poke_data } from "./js/pokedata.js";
 
-let v = { item: 'a' };
-
+/**
+ * Function assigned to the "New Run" button in the main page when it is selected
+ */
 function new_run()
 {
 	document.getElementById("menu").remove();
@@ -10,8 +11,19 @@ function new_run()
 	first_route_box.build_route_box();
 }
 
+/**
+ * Class declaration, using Factory Design Pattern, of Route Box.
+ * 
+ * @param {string} route_name Name of the route.
+ * @returns A new Route Box object.
+ */
 const route_box_factory = (route_name) =>
 {
+	/**
+	 * Creates a `<div>` that will contain all elements of the Route Box.
+	 * 
+	 * @returns A new containing box HTML element.
+	 */
 	function Containing_Box()
 	{
 		const containing_box = document.createElement("div");
@@ -20,6 +32,11 @@ const route_box_factory = (route_name) =>
 		return containing_box;
 	}
 
+	/**
+	 * Creates a `<div>` that is a circle and appends an `<img>` to it which holds the image of the pokemon.
+	 * 
+	 * @returns A new pokemon image holder HTML element.
+	 */
 	function Pokemon_Image_Holder()
 	{
 		// The circle which contains inside it the pokemon image
@@ -35,6 +52,12 @@ const route_box_factory = (route_name) =>
 		return pokemon_image_holder;
 	}
 
+	/**
+	 * Creates a `<p>` that shows the name of the route as a title in the Route Box.
+	 * 
+	 * @param {string} route_name Name of the route.
+	 * @returns A new route title HTML element.
+	 */
 	function Route_Title(route_name)
 	{
 		const route_title = document.createElement("p");
@@ -44,6 +67,11 @@ const route_box_factory = (route_name) =>
 		return route_title;
 	}
 
+	/**
+	 * Creates an `<input>` that is meant for searching pokemon by their name and storing the name of the selected pokemon.
+	 * 
+	 * @returns A new pokemon input field HTML element.
+	 */
 	function Pokemon_Input_Field()
 	{
 		const pokemon_input_field = document.createElement("input");
@@ -55,12 +83,21 @@ const route_box_factory = (route_name) =>
 		return pokemon_input_field;
 	}
 
+	/**
+	 * Assigns events to the pokemon input field HTML element.
+	 * 
+	 * @param {HTMLInputElement} pokemon_input_field The HTML element that receives the events.
+	 * @param {object} route_box A reference to the Route Box object. Its purpose is to read the current selected pokemon, which is always `undefined` if passed directly to the function.
+	 */
 	function assign_pokemon_input_field_events(pokemon_input_field, route_box)
 	{
-		// When the input field gets focused, it's ready to be typed in and we have to consider two cases:
-		//   If no pokemon had been previously selected, the placeholder shows "Pokemon..."
-		//	 If any pokemon has been previously selected, the placeholder shows the most recent pokemon's name
-		// Also, the input field has to be cleared, so the value is set to an empty string
+		/**
+		 * When the input field gets focused, it should be ready to be typed in
+		 * Then we have to consider two cases:
+		 *   - If no pokemon had been previously selected, the placeholder shows "Pokemon..."
+		 *   - If any pokemon has been previously selected, the placeholder shows the most recent pokemon's name
+		 * Also, the input field has to be cleared, so the value is set to an empty string
+		 */
 		pokemon_input_field.addEventListener("focus", () =>
 		{
 			console.log("Focus up!");
@@ -79,13 +116,52 @@ const route_box_factory = (route_name) =>
 			pokemon_input_field.value = "";
 		});
 
-		// When the input field gets out of focus, we have to consider two cases:
-		//   A new pokemon was selected from the list
-		//     In this case, the value of the input field becomes that pokemon's name
-		//   No new pokemon was selected from the list
-		//     In this case, we have two possibilites:
-		//       A pokemon had already been selected before: its name becomes the value again
-		//       No pokemon had been selected before: no value and the placeholder becomes "Pokemon..."
+		/**
+		 * When the input field gets out of focus, ideally it should hold the name of the most recent selected pokemon as its value.
+		 * 
+		 * It can get out of focus in two cases:
+		 * 
+		 *   1. The user has focused another element that is not a pokemon from the list.
+		 * 
+		 *     In this case, we have to look at two possibilities:
+		 *       1.1 No pokemon has been previously selected
+		 *         The value has to become empty and the placeholder has to show "Pokemon...".
+		 *       1.2 A pokemon has been previously selected
+		 *         The value should simply become the name of the current selected pokemon.
+		 *       
+		 *   2. The user is selecting a pokemon from the list.
+		 * 
+		 *     This case is special, because the `blur` event will be called before the `click` 
+		 *     event that actually updates the selected pokemon. 
+		 *     When the `click` event is fired, it will update the value of the input field.
+		 * 
+		 *     In this case, we have to look at two possibilities:
+		 *       2.1 No pokemon has been previously selected
+		 *         2.1.1 While the user is still holding the click: the value has to become 
+		 *           empty and the placeholder has to show "Pokemon...".
+		 *         2.1.2 After the user chooses the pokemon: the value should simply become the 
+		 *           name of the newly selected pokemon.
+		 *       2.2 A pokemon has been previously selected
+		 *         2.2.1 While the user is still holding the click: the value should be emptied 
+		 *           and the placeholder should show the name of the current selected pokemon.
+		 *         2.2.2 After the user chooses the pokemon: the value should simply become the 
+		 *           name of the newly selected pokemon.
+		 *   
+		 *   Since `click` already updates the value after selecting a new pokemon from the 
+		 *   list, we can see that:
+		 *     - 1.1 and 2.1 are equal
+		 *     - 1.2 and 2.2 only differ while the user is holding the click
+		 * 
+		 *   We can converge 1.2 and 2.2 by simply always changing the value to the name of the 
+		 *   current selected pokemon, with the following step:
+		 *     While the user is holding the click on a pokemon from the list, we can color 
+		 *     the input field value to the same color as the placeholder.
+		 *     This way, to the user, it would look the same as if value was emptied and 
+		 *     placeholder showed the name of the current selected pokemon.
+		 *   
+		 *   The CSS rule that helps in this convergence has the following selector:
+		 *   `.pokemon-select-wrapper:active .pokemon-input-field`
+		 */
 		pokemon_input_field.addEventListener("blur", () =>
 		{
 			console.log("Blur up!");
@@ -99,15 +175,15 @@ const route_box_factory = (route_name) =>
 			else
 			{
 				pokemon_input_field.value = pokemon_input_field.placeholder;
-				// pokemon_input_field.placeholder = pokemon_input_field.value;
 			}
-
-			// pokemon_input_field.value = (pokemon_input_field.placeholder !== "Pokémon...") ? pokemon_input_field.placeholder : "";
-
-			// pokemon_input_field.placeholder = (pokemon_input_field.value !== "") ? pokemon_input_field.value : "Pokémon...";
 		});
 	}
 
+	/**
+	 * Creates an `<ul>` that drops down when the input field is focused and appends to it one `<li>` for each pokemon. Each `<li>` is composed of a `<div>`, which determines the click area for that list item, an `<img>` to show the pokemon sprite and a `<p>` to show the pokemon name.
+	 * 
+	 * @returns A new pokemon list HTML element.
+	 */
 	function Pokemon_List()
 	{
 		// Creating the pokemon list dropdown
@@ -116,6 +192,10 @@ const route_box_factory = (route_name) =>
 
 		pokemon_list.item_list = new Map();
 
+		/**
+		 * This iterates over the poke_data array, which contains the data of all pokemon
+		 * For each pokemon, a new list item is created for it, and appended to pokemon_list
+		 */
 		for (const { name, value, image } of poke_data.slice(0, 9))
 		{
 			const new_list_item = document.createElement("li");
@@ -145,17 +225,26 @@ const route_box_factory = (route_name) =>
 		return pokemon_list;
 	}
 
-	function assign_pokemon_list_events(pokemon_list, route_box, pokemon_input_field, pokemon_image)
+	/**
+	 * Assigns events to the pokemon list HTML element.
+	 * 
+	 * @param {HTMLUListElement} pokemon_list The pokemon list HTML element that holds the list items which will receive the events.
+	 * @param {HTMLInputElement} pokemon_input_field The pokemon input field HTML element, which will be updated when the `click` event is fired on a list item.
+	 * @param {HTMLImageElement} pokemon_image The pokemon image HTML element, which will be updated when the `click` event is fired on a list item.
+	 * @param {object} route_box A reference to the Route Box object. Its purpose is to update the selected pokemon, which doesn't update properly if passed directly to the function.
+	 */
+	function assign_pokemon_list_events(pokemon_list, pokemon_input_field, pokemon_image, route_box)
 	{
-		// new_option.addEventListener("mousedown", () => console.log("MouseDown!"));
-
-		for (const [value, list_item] of pokemon_list.item_list)
+		// This implementation iterates over the map, without declaring the keys (which wouldn't be used anyway)
+		for (const [, list_item] of pokemon_list.item_list)
 		{
+			// list_item.option.addEventListener("mousedown", () => console.log("MouseDown!"));
+
 			list_item.option.addEventListener("click", () =>
 			{
 				console.log(`${list_item.pokemon_data.name} was clicked!`);
 
-				route_box.selected_pokemon = value;
+				route_box.selected_pokemon = list_item.pokemon_data.name;
 				pokemon_input_field.value = list_item.pokemon_data.name;
 
 				// Adds pokemon image to left circle
@@ -166,6 +255,11 @@ const route_box_factory = (route_name) =>
 		}
 	}
 
+	/**
+	 * Creates a `<div>` that wraps both the `<input>` that defines the pokemon input field and the `<ul>` that defines the pokemon list.
+	 * 
+	 * @returns A new pokemon select wrapper HTML element.
+	 */
 	function Pokemon_Select_Wrapper()
 	{
 		const pokemon_select_wrapper = document.createElement("div");
@@ -186,6 +280,11 @@ const route_box_factory = (route_name) =>
 		return pokemon_select_wrapper;
 	}
 
+	/**
+	 * Creates a `<div>` that wraps a `<select>` field, that represents the state dropdown, which is filled with an `<option>` for each state.
+	 * 
+	 * @returns A new state dropdown wrapper HTML element.
+	 */
 	function State_Dropdown()
 	{
 		// Creating the dropdown menu to control pokemon state
@@ -210,6 +309,12 @@ const route_box_factory = (route_name) =>
 		return state_dropdown_wrapper;
 	}
 
+	/**
+	 * Creates the html object that is a property of Route Box. This object contains all HTML objects which together make a Route Box in the website.
+	 * 
+	 * @param {string} route_name Name of the route.
+	 * @returns A new object that contains all HTML fields of the Route Box.
+	 */
 	function Route_Box_html(route_name)
 	{
 		// The outer box that will contain all HTML elements
@@ -247,6 +352,9 @@ const route_box_factory = (route_name) =>
 		route_name: route_name,
 		selected_pokemon: undefined,
 		html: html,
+		/**
+		 * Builds the HTML elements of the html property into a node, also assigning events during the build, which is then inserted into the page by a Document Fragment.
+		 */
 		build_route_box()
 		{
 			const document_fragment = document.createDocumentFragment();
@@ -259,7 +367,7 @@ const route_box_factory = (route_name) =>
 			html.containing_box.appendChild(html.state_dropdown);
 
 			assign_pokemon_input_field_events(html.pokemon_select_wrapper.pokemon_input_field, route_box);
-			assign_pokemon_list_events(html.pokemon_select_wrapper.pokemon_list, route_box, html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image);
+			assign_pokemon_list_events(html.pokemon_select_wrapper.pokemon_list, html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image, route_box);
 
 			document.body.appendChild(document_fragment);
 		}
@@ -268,6 +376,9 @@ const route_box_factory = (route_name) =>
 	return route_box;
 }
 
+/**
+ * Function that should contain all code to run when the script is invoked.
+ */
 function main()
 {
 	const new_run_button = document.getElementById("new-run-button");

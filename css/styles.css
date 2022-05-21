@@ -188,11 +188,13 @@ body
 	border-bottom-right-radius: 0;
 }
 
-/* This exists because the 'blur' event of 'pokemon_input_field' is called when the user presses the click, but doesn't release it, in a 'pokemon_list' list.
+/* 
+This exists because the 'blur' event of 'pokemon_input_field' is called when the user presses the click, but doesn't release it, in a 'pokemon_list' list.
 When this happens, 'value' takes the value of 'placeholder', as if the user has already made a choice, before any 'click' event is triggered.
 To give the user the feeling that no choice has been made yet, this rule colors the 'value' of 'pokemon_input_field' with 'placeholder' color.
 
-Note: There may be better ways to deal with this scenario. As I'm still learning, this suffices for now.*/
+Note: There may be better ways to deal with this scenario. As I'm still learning, this suffices for now.
+*/
 .pokemon-select-wrapper:active .pokemon-input-field
 {
 	color: rgb(117, 117, 117);
