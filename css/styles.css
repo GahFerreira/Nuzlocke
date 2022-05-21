@@ -32,7 +32,7 @@ body
 	text-align: center;
 }
 
-.menu
+.main-menu
 {
 	width: 75vw;
 	height: 75vh;
@@ -45,7 +45,7 @@ body
 	background-color: rgb(25, 25, 32);
 }
 
-.menu-title
+.main-menu-title
 {
 	position: absolute;
 	top: 22%;
@@ -53,7 +53,7 @@ body
 	font-size: 3em;
 }
 
-.button-list
+.main-menu-button-list
 {
 	list-style-type: none;
 	position: absolute;
@@ -61,14 +61,14 @@ body
 	padding: 0 0;
 }
 
-.button-list li
+.main-menu-button-list li
 {
 	display: inline-block;
 	color: white;
 	margin: 10px 30px;
 }
 
-.button-list li button
+.main-menu-button-list li button
 {
 	padding: 10px 30px;
 
@@ -79,7 +79,7 @@ body
 	font-size: 0.8em;
 }
 
-.button-list li button:hover
+.main-menu-button-list li button:hover
 {
 	position: relative;
 	top: 1px;
@@ -101,7 +101,7 @@ body
 	border-radius: 2vw;
 }
 
-.title-route
+.route-title
 {
 	width: 100%;
 
@@ -115,7 +115,7 @@ body
 	margin: 0;
 }
 
-.img-place
+.pokemon-image-holder
 {
 	position: absolute;
 	top: 60%;
@@ -132,7 +132,7 @@ body
 	border-radius: 5em;
 }
 
-.img-place img
+.pokemon-image-holder img
 {
 	position: absolute;
 	top: -75%;
@@ -200,7 +200,7 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	color: rgb(117, 117, 117);
 }
 
-.pokemon_list
+.pokemon-list
 {
 	list-style: none;
 
@@ -208,7 +208,7 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	padding: 0;
 }
 
-.pokemon_list li
+.pokemon-list li
 {
 	cursor: pointer;
 
@@ -226,11 +226,11 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	display: none;
 }
 
-/* `.option` represents the part of the list item that is meant to be clickable to select that pokemon */
-.pokemon_list li .option *
+/* `.click-area` represents the part of the list item that is meant to be clickable to select that pokemon */
+.pokemon-list li .click-area *
 {
 	/* 
-		This makes all children of option not receive click events.
+		This makes all children of click-area not receive click events.
 		Browser Support: All browsers from 2013 forwards can use this, except all versions of opera-mini.
 	*/
 	pointer-events: none;
@@ -238,29 +238,29 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 
 /*  Applied style:
     1 - to all list items when 'pokemon-input-field' is in focus
-    2 - whenever a list item is 'active', the 'active' pseudoclass propagates to their parents, and in this case, one of the parents is 'pokemon_list', therefore when an item is activated, all other items are also styled
+    2 - whenever a list item is 'active', the 'active' pseudoclass propagates to their parents, and in this case, one of the parents is 'pokemon-list', therefore when an item is activated, all other items are also styled
     Note: this makes it possible to click in an item and trigger the 'click' event before it disappears (using 'focus' & 'blur' events, for example)
 */
-.pokemon-input-field:focus + .pokemon_list li,
-.pokemon_list:active li
+.pokemon-input-field:focus + .pokemon-list li,
+.pokemon-list:active li
 {
 	display: block;
 }
 
-.pokemon_list li:last-child
+.pokemon-list li:last-child
 {
 	border-bottom-left-radius: 0.1em;
 	border-bottom-right-radius: 0.1em;
 }
 
-.pokemon_list li .option
+.pokemon-list li .click-area
 {
 	position: relative;
 
 	height: 100%;
 }
 
-.pokemon_list li .option img
+.pokemon-list li .click-area img
 {
 	position: absolute;
 
@@ -273,7 +273,7 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	/* image-rendering: pixelated; */
 }
 
-.pokemon_list li .option p
+.pokemon-list li .click-area p
 {
 	position: relative;
 	top: 50%;

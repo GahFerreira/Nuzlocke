@@ -5,7 +5,7 @@ import { poke_data } from "./js/pokedata.js";
  */
 function new_run()
 {
-	document.getElementById("menu").remove();
+	document.getElementById("main-menu").remove();
 
 	const first_route_box = route_box_factory("Route 01");
 	first_route_box.build_route_box();
@@ -41,7 +41,7 @@ const route_box_factory = (route_name) =>
 	{
 		// The circle which contains inside it the pokemon image
 		const pokemon_image_holder = document.createElement("div");
-		pokemon_image_holder.className = "img-place";
+		pokemon_image_holder.className = "pokemon-image-holder";
 
 		// The pokemon image
 		const pokemon_image = document.createElement("img");
@@ -61,7 +61,7 @@ const route_box_factory = (route_name) =>
 	function Route_Title(route_name)
 	{
 		const route_title = document.createElement("p");
-		route_title.className = "title-route";
+		route_title.className = "route-title";
 		route_title.innerText = route_name;
 
 		return route_title;
@@ -188,8 +188,9 @@ const route_box_factory = (route_name) =>
 	{
 		// Creating the pokemon list dropdown
 		const pokemon_list = document.createElement("ul");
-		pokemon_list.className = "pokemon_list";
+		pokemon_list.className = "pokemon-list";
 
+		// Maps pokemon value (as defined in poke_data array) to its respective list_item HTML element
 		pokemon_list.item_list = new Map();
 
 		/**
@@ -198,28 +199,30 @@ const route_box_factory = (route_name) =>
 		 */
 		for (const { name, value, image } of poke_data.slice(0, 9))
 		{
-			const new_list_item = document.createElement("li");
-			new_list_item.pokemon_data = { name, image };
+			const list_item = document.createElement("li");
+			list_item.pokemon_data = { name, image };
 
-			const new_option = document.createElement("div");
-			new_option.className = "option";
+			const click_area = document.createElement("div");
+			click_area.className = "click-area";
 
 			// 'alt' was set to "" so non-visual browsers may omit it from rendering (it's decoration after all)
-			const new_icon = document.createElement("img");
-			new_icon.src = image;
-			new_icon.setAttribute("alt", "");
-			new_option.appendChild(new_icon);
+			const pokemon_icon = document.createElement("img");
+			pokemon_icon.src = image;
+			pokemon_icon.setAttribute("alt", "");
 
 			const pokemon_name = document.createElement("p");
 			pokemon_name.innerText = name;
-			new_option.appendChild(pokemon_name);
 
-			new_list_item.appendChild(new_option);
-			new_list_item.option = new_option;
+			click_area.appendChild(pokemon_icon);
+			click_area.appendChild(pokemon_name);
 
-			pokemon_list.appendChild(new_list_item);
+			list_item.appendChild(click_area);
+			list_item.click_area = click_area;
 
-			pokemon_list.item_list.set(value, new_list_item);
+			pokemon_list.appendChild(list_item);
+
+			// Adds the newly created list_item to the map of pokemon value -> respective list_item
+			pokemon_list.item_list.set(value, list_item);
 		}
 
 		return pokemon_list;
@@ -238,9 +241,9 @@ const route_box_factory = (route_name) =>
 		// This implementation iterates over the map, without declaring the keys (which wouldn't be used anyway)
 		for (const [, list_item] of pokemon_list.item_list)
 		{
-			// list_item.option.addEventListener("mousedown", () => console.log("MouseDown!"));
+			// list_item.click_area.addEventListener("mousedown", () => console.log("MouseDown!"));
 
-			list_item.option.addEventListener("click", () =>
+			list_item.click_area.addEventListener("click", () =>
 			{
 				console.log(`${list_item.pokemon_data.name} was clicked!`);
 
@@ -298,10 +301,10 @@ const route_box_factory = (route_name) =>
 
 		for (const state of states)
 		{
-			const new_option = document.createElement("option");
-			new_option.value = state;
-			new_option.text = state.charAt(0).toUpperCase() + state.slice(1);
-			state_dropdown.appendChild(new_option);
+			const state_option = document.createElement("option");
+			state_option.value = state;
+			state_option.text = state.charAt(0).toUpperCase() + state.slice(1);
+			state_dropdown.appendChild(state_option);
 		}
 
 		state_dropdown_wrapper.appendChild(state_dropdown);
@@ -381,7 +384,7 @@ const route_box_factory = (route_name) =>
  */
 function main()
 {
-	const new_run_button = document.getElementById("new-run-button");
+	const new_run_button = document.getElementById("main-menu-new-run-button");
 
 	new_run_button.addEventListener("click", new_run);
 }
