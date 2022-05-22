@@ -87,9 +87,10 @@ const route_box_factory = (route_name) =>
 	 * Assigns events to the pokemon input field HTML element.
 	 * 
 	 * @param {HTMLInputElement} pokemon_input_field The HTML element that receives the events.
+	 * @param {HTMLUListElement} pokemon_list The pokemon list HTML element that holds all pokemon as list items.
 	 * @param {object} route_box A reference to the Route Box object. Its purpose is to read the current selected pokemon, which is always `undefined` if passed directly to the function.
 	 */
-	function assign_pokemon_input_field_events(pokemon_input_field, route_box)
+	function assign_pokemon_input_field_events(pokemon_input_field, pokemon_list, route_box)
 	{
 		/**
 		 * When the input field gets focused, it should be ready to be typed in
@@ -101,6 +102,14 @@ const route_box_factory = (route_name) =>
 		pokemon_input_field.addEventListener("focus", () =>
 		{
 			console.log("Focus up!");
+
+			// Shows all list items
+			const start_Time = performance.now();
+			for (const [, list_item] of pokemon_list.item_list)
+			{
+				list_item.classList.remove("off");
+			}
+			console.log(`Took ${performance.now() - start_Time} ms`);
 
 			if (route_box.selected_pokemon === undefined)
 			{
@@ -177,6 +186,79 @@ const route_box_factory = (route_name) =>
 				pokemon_input_field.value = pokemon_input_field.placeholder;
 			}
 		});
+
+		/**
+		 * Checks if there's a pokemon with name equal to `str`.
+		 * 
+		 * `str` is first converted to a string using only english letters.
+		 * Therefore "pikachu" and "píkãchû" are both considered to be equal "pikachu".
+		 * 
+		 * @param {string} str String to be matched with a pokemon name.
+		 * @param {object} poke_data Array containing data of all pokemon, including their name.
+		 * @returns {boolean} true if a pokemon with name equal to `str` exists, false otherwise.
+		 */
+		function check_pokemon_name(str)
+		{
+			const start_time = performance.now();
+
+			if (str === "")
+			{
+				console.log("Empty String");
+
+				for (const [, list_item] of pokemon_list.item_list)
+				{
+					list_item.classList.toggle("off", false);
+				}
+
+				console.log(`Empty string in input execution took ${performance.now() - start_time} ms`);
+
+				return;
+			}
+
+			str = str.toLowerCase();
+
+			for (const [, list_item] of pokemon_list.item_list)
+			{
+				let str_is_substring_of_pokemon_name = false;
+
+				const pokemon_name = list_item.pokemon_data.name.toLowerCase();
+
+				for (let i_str = 0, i_pokemon_name = 0; i_pokemon_name < pokemon_name.length; i_pokemon_name++)
+				{
+					if (str[i_str] === pokemon_name[i_pokemon_name])
+					{
+						i_str++;
+
+						if (i_str === str.length) 
+						{
+							str_is_substring_of_pokemon_name = true;
+							break;
+						}
+					}
+				}
+
+				if (str_is_substring_of_pokemon_name === true)
+				{
+					list_item.classList.remove("off");
+				}
+
+				else
+				{
+					list_item.classList.toggle("off", true);
+				}
+			}
+
+			console.log(`Execution took ${performance.now() - start_time} ms`);
+		}
+
+		pokemon_input_field.addEventListener("input", (e) =>
+		{
+			console.log("input called!");
+
+			const input_string = e.target.value;
+
+			check_pokemon_name(input_string);
+		});
 	}
 
 	/**
@@ -193,11 +275,13 @@ const route_box_factory = (route_name) =>
 		// Maps pokemon value (as defined in poke_data array) to its respective list_item HTML element
 		pokemon_list.item_list = new Map();
 
+		const start_Time = performance.now();
+
 		/**
 		 * This iterates over the poke_data array, which contains the data of all pokemon
 		 * For each pokemon, a new list item is created for it, and appended to pokemon_list
 		 */
-		for (const { name, value, image } of poke_data.slice(0, 151))
+		for (const { name, value, image } of poke_data/*.slice(0, 9)*/)
 		{
 			const list_item = document.createElement("li");
 			list_item.pokemon_data = { name, image };
@@ -224,6 +308,8 @@ const route_box_factory = (route_name) =>
 			// Adds the newly created list_item to the map of pokemon value -> respective list_item
 			pokemon_list.item_list.set(value, list_item);
 		}
+
+		console.log(`Pokemon list creation took ${performance.now() - start_Time} ms`);
 
 		return pokemon_list;
 	}
@@ -369,7 +455,7 @@ const route_box_factory = (route_name) =>
 			html.containing_box.appendChild(html.pokemon_select_wrapper);
 			html.containing_box.appendChild(html.state_dropdown);
 
-			assign_pokemon_input_field_events(html.pokemon_select_wrapper.pokemon_input_field, route_box);
+			assign_pokemon_input_field_events(html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_select_wrapper.pokemon_list, route_box);
 			assign_pokemon_list_events(html.pokemon_select_wrapper.pokemon_list, html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image, route_box);
 
 			document.body.appendChild(document_fragment);

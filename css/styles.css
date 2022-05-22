@@ -234,6 +234,12 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	display: none;
 }
 
+/* This is meant to hide pokemon list items when its respective pokemon name doesn't match the input in the input field */
+.containing-box div.pokemon-select-wrapper ul.pokemon-list li.off
+{
+	display: none;
+}
+
 /* `.click-area` represents the part of the list item that is meant to be clickable to select that pokemon */
 .pokemon-list li .click-area *
 {
