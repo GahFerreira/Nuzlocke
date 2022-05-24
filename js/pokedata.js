@@ -1,4493 +1,3595 @@
 export const poke_data =
 	[
 		{
-			"name": "Bulbasaur",
-			"value": "bulbasaur",
-			"image": "img/pokemon/bulbasaur.png"
+			name: "Bulbasaur",
+			image: "img/pokemon/bulbasaur.png"
 		},
 		{
-			"name": "Ivysaur",
-			"value": "ivysaur",
-			"image": "img/pokemon/ivysaur.png"
+			name: "Ivysaur",
+			image: "img/pokemon/ivysaur.png"
 		},
 		{
-			"name": "Venusaur",
-			"value": "venusaur",
-			"image": "img/pokemon/venusaur.png"
+			name: "Venusaur",
+			image: "img/pokemon/venusaur.png"
 		},
 		{
-			"name": "Charmander",
-			"value": "charmander",
-			"image": "img/pokemon/charmander.png"
+			name: "Charmander",
+			image: "img/pokemon/charmander.png"
 		},
 		{
-			"name": "Charmeleon",
-			"value": "charmeleon",
-			"image": "img/pokemon/charmeleon.png"
+			name: "Charmeleon",
+			image: "img/pokemon/charmeleon.png"
 		},
 		{
-			"name": "Charizard",
-			"value": "charizard",
-			"image": "img/pokemon/charizard.png"
+			name: "Charizard",
+			image: "img/pokemon/charizard.png"
 		},
 		{
-			"name": "Squirtle",
-			"value": "squirtle",
-			"image": "img/pokemon/squirtle.png"
+			name: "Squirtle",
+			image: "img/pokemon/squirtle.png"
 		},
 		{
-			"name": "Wartortle",
-			"value": "wartortle",
-			"image": "img/pokemon/wartortle.png"
+			name: "Wartortle",
+			image: "img/pokemon/wartortle.png"
 		},
 		{
-			"name": "Blastoise",
-			"value": "blastoise",
-			"image": "img/pokemon/blastoise.png"
+			name: "Blastoise",
+			image: "img/pokemon/blastoise.png"
 		},
 		{
-			"name": "Caterpie",
-			"value": "caterpie",
-			"image": "img/pokemon/caterpie.png"
+			name: "Caterpie",
+			image: "img/pokemon/caterpie.png"
 		},
 		{
-			"name": "Metapod",
-			"value": "metapod",
-			"image": "img/pokemon/metapod.png"
+			name: "Metapod",
+			image: "img/pokemon/metapod.png"
 		},
 		{
-			"name": "Butterfree",
-			"value": "butterfree",
-			"image": "img/pokemon/butterfree.png"
+			name: "Butterfree",
+			image: "img/pokemon/butterfree.png"
 		},
 		{
-			"name": "Weedle",
-			"value": "weedle",
-			"image": "img/pokemon/weedle.png",
+			name: "Weedle",
+			image: "img/pokemon/weedle.png"
 		},
 		{
-			"name": "Kakuna",
-			"value": "kakuna",
-			"image": "img/pokemon/kakuna.png",
+			name: "Kakuna",
+			image: "img/pokemon/kakuna.png"
 		},
 		{
-			"name": "Beedrill",
-			"value": "beedrill",
-			"image": "img/pokemon/beedrill.png",
+			name: "Beedrill",
+			image: "img/pokemon/beedrill.png"
 		},
 		{
-			"name": "Pidgey",
-			"value": "pidgey",
-			"image": "img/pokemon/pidgey.png",
+			name: "Pidgey",
+			image: "img/pokemon/pidgey.png"
 		},
 		{
-			"name": "Pidgeotto",
-			"value": "pidgeotto",
-			"image": "img/pokemon/pidgeotto.png",
+			name: "Pidgeotto",
+			image: "img/pokemon/pidgeotto.png"
 		},
 		{
-			"name": "Pidgeot",
-			"value": "pidgeot",
-			"image": "img/pokemon/pidgeot.png",
+			name: "Pidgeot",
+			image: "img/pokemon/pidgeot.png"
 		},
 		{
-			"name": "Rattata",
-			"value": "rattata",
-			"image": "img/pokemon/rattata.png",
+			name: "Rattata",
+			image: "img/pokemon/rattata.png"
 		},
 		{
-			"name": "Raticate",
-			"value": "raticate",
-			"image": "img/pokemon/raticate.png",
+			name: "Raticate",
+			image: "img/pokemon/raticate.png"
 		},
 		{
-			"name": "Spearow",
-			"value": "spearow",
-			"image": "img/pokemon/spearow.png",
+			name: "Spearow",
+			image: "img/pokemon/spearow.png"
 		},
 		{
-			"name": "Fearow",
-			"value": "fearow",
-			"image": "img/pokemon/fearow.png",
+			name: "Fearow",
+			image: "img/pokemon/fearow.png"
 		},
 		{
-			"name": "Ekans",
-			"value": "ekans",
-			"image": "img/pokemon/ekans.png",
+			name: "Ekans",
+			image: "img/pokemon/ekans.png"
 		},
 		{
-			"name": "Arbok",
-			"value": "arbok",
-			"image": "img/pokemon/arbok.png",
+			name: "Arbok",
+			image: "img/pokemon/arbok.png"
 		},
 		{
-			"name": "Pikachu",
-			"value": "pikachu",
-			"image": "img/pokemon/pikachu.png"
+			name: "Pikachu",
+			image: "img/pokemon/pikachu.png"
 		},
 		{
-			"name": "Raichu",
-			"value": "raichu",
-			"image": "img/pokemon/raichu.png"
+			name: "Raichu",
+			image: "img/pokemon/raichu.png"
 		},
 		{
-			"name": "Sandshrew",
-			"value": "sandshrew",
-			"image": "img/pokemon/sandshrew.png"
+			name: "Sandshrew",
+			image: "img/pokemon/sandshrew.png"
 		},
 		{
-			"name": "Sandslash",
-			"value": "sandslash",
-			"image": "img/pokemon/sandslash.png"
+			name: "Sandslash",
+			image: "img/pokemon/sandslash.png"
 		},
 		{
-			"name": "Nidoran♀",
-			"value": "nidoran-female",
-			"image": "img/pokemon/nidoran-female.png"
+			name: "Nidoran♀",
+			image: "img/pokemon/nidoran-female.png"
 		},
 		{
-			"name": "Nidorina",
-			"value": "nidorina",
-			"image": "img/pokemon/nidorina.png"
+			name: "Nidorina",
+			image: "img/pokemon/nidorina.png"
 		},
 		{
-			"name": "Nidoqueen",
-			"value": "nidoqueen",
-			"image": "img/pokemon/nidoqueen.png"
+			name: "Nidoqueen",
+			image: "img/pokemon/nidoqueen.png"
 		},
 		{
-			"name": "Nidoran♂",
-			"value": "nidoran-male",
-			"image": "img/pokemon/nidoran-male.png"
+			name: "Nidoran♂",
+			image: "img/pokemon/nidoran-male.png"
 		},
 		{
-			"name": "Nidorino",
-			"value": "nidorino",
-			"image": "img/pokemon/nidorino.png"
+			name: "Nidorino",
+			image: "img/pokemon/nidorino.png"
 		},
 		{
-			"name": "Nidoking",
-			"value": "nidoking",
-			"image": "img/pokemon/nidoking.png"
+			name: "Nidoking",
+			image: "img/pokemon/nidoking.png"
 		},
 		{
-			"name": "Clefairy",
-			"value": "clefairy",
-			"image": "img/pokemon/clefairy.png"
+			name: "Clefairy",
+			image: "img/pokemon/clefairy.png"
 		},
 		{
-			"name": "Clefable",
-			"value": "clefable",
-			"image": "img/pokemon/clefable.png"
+			name: "Clefable",
+			image: "img/pokemon/clefable.png"
 		},
 		{
-			"name": "Vulpix",
-			"value": "vulpix",
-			"image": "img/pokemon/vulpix.png"
+			name: "Vulpix",
+			image: "img/pokemon/vulpix.png"
 		},
 		{
-			"name": "Ninetales",
-			"value": "ninetales",
-			"image": "img/pokemon/ninetales.png"
+			name: "Ninetales",
+			image: "img/pokemon/ninetales.png"
 		},
 		{
-			"name": "Jigglypuff",
-			"value": "jigglypuff",
-			"image": "img/pokemon/jigglypuff.png"
+			name: "Jigglypuff",
+			image: "img/pokemon/jigglypuff.png"
 		},
 		{
-			"name": "Wigglytuff",
-			"value": "wigglytuff",
-			"image": "img/pokemon/wigglytuff.png"
+			name: "Wigglytuff",
+			image: "img/pokemon/wigglytuff.png"
 		},
 		{
-			"name": "Zubat",
-			"value": "zubat",
-			"image": "img/pokemon/zubat.png"
+			name: "Zubat",
+			image: "img/pokemon/zubat.png"
 		},
 		{
-			"name": "Golbat",
-			"value": "golbat",
-			"image": "img/pokemon/golbat.png"
+			name: "Golbat",
+			image: "img/pokemon/golbat.png"
 		},
 		{
-			"name": "Oddish",
-			"value": "oddish",
-			"image": "img/pokemon/oddish.png"
+			name: "Oddish",
+			image: "img/pokemon/oddish.png"
 		},
 		{
-			"name": "Gloom",
-			"value": "gloom",
-			"image": "img/pokemon/gloom.png"
+			name: "Gloom",
+			image: "img/pokemon/gloom.png"
 		},
 		{
-			"name": "Vileplume",
-			"value": "vileplume",
-			"image": "img/pokemon/vileplume.png"
+			name: "Vileplume",
+			image: "img/pokemon/vileplume.png"
 		},
 		{
-			"name": "Paras",
-			"value": "paras",
-			"image": "img/pokemon/paras.png",
+			name: "Paras",
+			image: "img/pokemon/paras.png"
 		},
 		{
-			"name": "Parasect",
-			"value": "parasect",
-			"image": "img/pokemon/parasect.png",
+			name: "Parasect",
+			image: "img/pokemon/parasect.png"
 		},
 		{
-			"name": "Venonat",
-			"value": "venonat",
-			"image": "img/pokemon/venonat.png",
+			name: "Venonat",
+			image: "img/pokemon/venonat.png"
 		},
 		{
-			"name": "Venomoth",
-			"value": "venomoth",
-			"image": "img/pokemon/venomoth.png",
+			name: "Venomoth",
+			image: "img/pokemon/venomoth.png"
 		},
 		{
-			"name": "Diglett",
-			"value": "diglett",
-			"image": "img/pokemon/diglett.png"
+			name: "Diglett",
+			image: "img/pokemon/diglett.png"
 		},
 		{
-			"name": "Dugtrio",
-			"value": "dugtrio",
-			"image": "img/pokemon/dugtrio.png"
+			name: "Dugtrio",
+			image: "img/pokemon/dugtrio.png"
 		},
 		{
-			"name": "Meowth",
-			"value": "meowth",
-			"image": "img/pokemon/meowth.png"
+			name: "Meowth",
+			image: "img/pokemon/meowth.png"
 		},
 		{
-			"name": "Persian",
-			"value": "persian",
-			"image": "img/pokemon/persian.png"
+			name: "Persian",
+			image: "img/pokemon/persian.png"
 		},
 		{
-			"name": "Psyduck",
-			"value": "psyduck",
-			"image": "img/pokemon/psyduck.png"
+			name: "Psyduck",
+			image: "img/pokemon/psyduck.png"
 		},
 		{
-			"name": "Golduck",
-			"value": "golduck",
-			"image": "img/pokemon/golduck.png"
+			name: "Golduck",
+			image: "img/pokemon/golduck.png"
 		},
 		{
-			"name": "Mankey",
-			"value": "mankey",
-			"image": "img/pokemon/mankey.png",
+			name: "Mankey",
+			image: "img/pokemon/mankey.png"
 		},
 		{
-			"name": "Primeape",
-			"value": "primeape",
-			"image": "img/pokemon/primeape.png",
+			name: "Primeape",
+			image: "img/pokemon/primeape.png"
 		},
 		{
-			"name": "Growlithe",
-			"value": "growlithe",
-			"image": "img/pokemon/growlithe.png"
+			name: "Growlithe",
+			image: "img/pokemon/growlithe.png"
 		},
 		{
-			"name": "Arcanine",
-			"value": "arcanine",
-			"image": "img/pokemon/arcanine.png"
+			name: "Arcanine",
+			image: "img/pokemon/arcanine.png"
 		},
 		{
-			"name": "Poliwag",
-			"value": "poliwag",
-			"image": "img/pokemon/poliwag.png"
+			name: "Poliwag",
+			image: "img/pokemon/poliwag.png"
 		},
 		{
-			"name": "Poliwhirl",
-			"value": "poliwhirl",
-			"image": "img/pokemon/poliwhirl.png"
+			name: "Poliwhirl",
+			image: "img/pokemon/poliwhirl.png"
 		},
 		{
-			"name": "Poliwrath",
-			"value": "poliwrath",
-			"image": "img/pokemon/poliwrath.png"
+			name: "Poliwrath",
+			image: "img/pokemon/poliwrath.png"
 		},
 		{
-			"name": "Abra",
-			"value": "abra",
-			"image": "img/pokemon/abra.png"
+			name: "Abra",
+			image: "img/pokemon/abra.png"
 		},
 		{
-			"name": "Kadabra",
-			"value": "kadabra",
-			"image": "img/pokemon/kadabra.png"
+			name: "Kadabra",
+			image: "img/pokemon/kadabra.png"
 		},
 		{
-			"name": "Alakazam",
-			"value": "alakazam",
-			"image": "img/pokemon/alakazam.png"
+			name: "Alakazam",
+			image: "img/pokemon/alakazam.png"
 		},
 		{
-			"name": "Machop",
-			"value": "machop",
-			"image": "img/pokemon/machop.png"
+			name: "Machop",
+			image: "img/pokemon/machop.png"
 		},
 		{
-			"name": "Machoke",
-			"value": "machoke",
-			"image": "img/pokemon/machoke.png"
+			name: "Machoke",
+			image: "img/pokemon/machoke.png"
 		},
 		{
-			"name": "Machamp",
-			"value": "machamp",
-			"image": "img/pokemon/machamp.png"
+			name: "Machamp",
+			image: "img/pokemon/machamp.png"
 		},
 		{
-			"name": "Bellsprout",
-			"value": "bellsprout",
-			"image": "img/pokemon/bellsprout.png",
+			name: "Bellsprout",
+			image: "img/pokemon/bellsprout.png"
 		},
 		{
-			"name": "Weepinbell",
-			"value": "weepinbell",
-			"image": "img/pokemon/weepinbell.png",
+			name: "Weepinbell",
+			image: "img/pokemon/weepinbell.png"
 		},
 		{
-			"name": "Victreebel",
-			"value": "victreebel",
-			"image": "img/pokemon/victreebel.png",
+			name: "Victreebel",
+			image: "img/pokemon/victreebel.png"
 		},
 		{
-			"name": "Tentacool",
-			"value": "tentacool",
-			"image": "img/pokemon/tentacool.png"
+			name: "Tentacool",
+			image: "img/pokemon/tentacool.png"
 		},
 		{
-			"name": "Tentacruel",
-			"value": "tentacruel",
-			"image": "img/pokemon/tentacruel.png"
+			name: "Tentacruel",
+			image: "img/pokemon/tentacruel.png"
 		},
 		{
-			"name": "Geodude",
-			"value": "geodude",
-			"image": "img/pokemon/geodude.png",
+			name: "Geodude",
+			image: "img/pokemon/geodude.png"
 		},
 		{
-			"name": "Graveler",
-			"value": "graveler",
-			"image": "img/pokemon/graveler.png",
+			name: "Graveler",
+			image: "img/pokemon/graveler.png"
 		},
 		{
-			"name": "Golem",
-			"value": "golem",
-			"image": "img/pokemon/golem.png",
+			name: "Golem",
+			image: "img/pokemon/golem.png"
 		},
 		{
-			"name": "Ponyta",
-			"value": "ponyta",
-			"image": "img/pokemon/ponyta.png"
+			name: "Ponyta",
+			image: "img/pokemon/ponyta.png"
 		},
 		{
-			"name": "Rapidash",
-			"value": "rapidash",
-			"image": "img/pokemon/rapidash.png"
+			name: "Rapidash",
+			image: "img/pokemon/rapidash.png"
 		},
 		{
-			"name": "Slowpoke",
-			"value": "slowpoke",
-			"image": "img/pokemon/slowpoke.png"
+			name: "Slowpoke",
+			image: "img/pokemon/slowpoke.png"
 		},
 		{
-			"name": "Slowbro",
-			"value": "slowbro",
-			"image": "img/pokemon/slowbro.png"
+			name: "Slowbro",
+			image: "img/pokemon/slowbro.png"
 		},
 		{
-			"name": "Magnemite",
-			"value": "magnemite",
-			"image": "img/pokemon/magnemite.png"
+			name: "Magnemite",
+			image: "img/pokemon/magnemite.png"
 		},
 		{
-			"name": "Magneton",
-			"value": "magneton",
-			"image": "img/pokemon/magneton.png"
+			name: "Magneton",
+			image: "img/pokemon/magneton.png"
 		},
 		{
-			"name": "Farfetch\"d",
-			"value": "farfetchd",
-			"image": "img/pokemon/farfetchd.png"
+			name: "Farfetch'd",
+			image: "img/pokemon/farfetchd.png"
 		},
 		{
-			"name": "Doduo",
-			"value": "doduo",
-			"image": "img/pokemon/doduo.png",
+			name: "Doduo",
+			image: "img/pokemon/doduo.png"
 		},
 		{
-			"name": "Dodrio",
-			"value": "dodrio",
-			"image": "img/pokemon/dodrio.png",
+			name: "Dodrio",
+			image: "img/pokemon/dodrio.png"
 		},
 		{
-			"name": "Seel",
-			"value": "seel",
-			"image": "img/pokemon/seel.png",
+			name: "Seel",
+			image: "img/pokemon/seel.png"
 		},
 		{
-			"name": "Dewgong",
-			"value": "dewgong",
-			"image": "img/pokemon/dewgong.png",
+			name: "Dewgong",
+			image: "img/pokemon/dewgong.png"
 		},
 		{
-			"name": "Grimer",
-			"value": "grimer",
-			"image": "img/pokemon/grimer.png",
+			name: "Grimer",
+			image: "img/pokemon/grimer.png"
 		},
 		{
-			"name": "Muk",
-			"value": "muk",
-			"image": "img/pokemon/muk.png",
+			name: "Muk",
+			image: "img/pokemon/muk.png"
 		},
 		{
-			"name": "Shellder",
-			"value": "shellder",
-			"image": "img/pokemon/shellder.png"
+			name: "Shellder",
+			image: "img/pokemon/shellder.png"
 		},
 		{
-			"name": "Cloyster",
-			"value": "cloyster",
-			"image": "img/pokemon/cloyster.png"
+			name: "Cloyster",
+			image: "img/pokemon/cloyster.png"
 		},
 		{
-			"name": "Gastly",
-			"value": "gastly",
-			"image": "img/pokemon/gastly.png"
+			name: "Gastly",
+			image: "img/pokemon/gastly.png"
 		},
 		{
-			"name": "Haunter",
-			"value": "haunter",
-			"image": "img/pokemon/haunter.png"
+			name: "Haunter",
+			image: "img/pokemon/haunter.png"
 		},
 		{
-			"name": "Gengar",
-			"value": "gengar",
-			"image": "img/pokemon/gengar.png"
+			name: "Gengar",
+			image: "img/pokemon/gengar.png"
 		},
 		{
-			"name": "Onix",
-			"value": "onix",
-			"image": "img/pokemon/onix.png"
+			name: "Onix",
+			image: "img/pokemon/onix.png"
 		},
 		{
-			"name": "Drowzee",
-			"value": "drowzee",
-			"image": "img/pokemon/drowzee.png",
+			name: "Drowzee",
+			image: "img/pokemon/drowzee.png"
 		},
 		{
-			"name": "Hypno",
-			"value": "hypno",
-			"image": "img/pokemon/hypno.png",
+			name: "Hypno",
+			image: "img/pokemon/hypno.png"
 		},
 		{
-			"name": "Krabby",
-			"value": "krabby",
-			"image": "img/pokemon/krabby.png"
+			name: "Krabby",
+			image: "img/pokemon/krabby.png"
 		},
 		{
-			"name": "Kingler",
-			"value": "kingler",
-			"image": "img/pokemon/kingler.png"
+			name: "Kingler",
+			image: "img/pokemon/kingler.png"
 		},
 		{
-			"name": "Voltorb",
-			"value": "voltorb",
-			"image": "img/pokemon/voltorb.png",
+			name: "Voltorb",
+			image: "img/pokemon/voltorb.png"
 		},
 		{
-			"name": "Electrode",
-			"value": "electrode",
-			"image": "img/pokemon/electrode.png",
+			name: "Electrode",
+			image: "img/pokemon/electrode.png"
 		},
 		{
-			"name": "Exeggcute",
-			"value": "exeggcute",
-			"image": "img/pokemon/exeggcute.png"
+			name: "Exeggcute",
+			image: "img/pokemon/exeggcute.png"
 		},
 		{
-			"name": "Exeggutor",
-			"value": "exeggutor",
-			"image": "img/pokemon/exeggutor.png"
+			name: "Exeggutor",
+			image: "img/pokemon/exeggutor.png"
 		},
 		{
-			"name": "Cubone",
-			"value": "cubone",
-			"image": "img/pokemon/cubone.png"
+			name: "Cubone",
+			image: "img/pokemon/cubone.png"
 		},
 		{
-			"name": "Marowak",
-			"value": "marowak",
-			"image": "img/pokemon/marowak.png"
+			name: "Marowak",
+			image: "img/pokemon/marowak.png"
 		},
 		{
-			"name": "Hitmonlee",
-			"value": "hitmonlee",
-			"image": "img/pokemon/hitmonlee.png"
+			name: "Hitmonlee",
+			image: "img/pokemon/hitmonlee.png"
 		},
 		{
-			"name": "Hitmonchan",
-			"value": "hitmonchan",
-			"image": "img/pokemon/hitmonchan.png"
+			name: "Hitmonchan",
+			image: "img/pokemon/hitmonchan.png"
 		},
 		{
-			"name": "Lickitung",
-			"value": "lickitung",
-			"image": "img/pokemon/lickitung.png"
+			name: "Lickitung",
+			image: "img/pokemon/lickitung.png"
 		},
 		{
-			"name": "Koffing",
-			"value": "koffing",
-			"image": "img/pokemon/koffing.png"
+			name: "Koffing",
+			image: "img/pokemon/koffing.png"
 		},
 		{
-			"name": "Weezing",
-			"value": "weezing",
-			"image": "img/pokemon/weezing.png"
+			name: "Weezing",
+			image: "img/pokemon/weezing.png"
 		},
 		{
-			"name": "Rhyhorn",
-			"value": "rhyhorn",
-			"image": "img/pokemon/rhyhorn.png"
+			name: "Rhyhorn",
+			image: "img/pokemon/rhyhorn.png"
 		},
 		{
-			"name": "Rhydon",
-			"value": "rhydon",
-			"image": "img/pokemon/rhydon.png"
+			name: "Rhydon",
+			image: "img/pokemon/rhydon.png"
 		},
 		{
-			"name": "Chansey",
-			"value": "chansey",
-			"image": "img/pokemon/chansey.png"
+			name: "Chansey",
+			image: "img/pokemon/chansey.png"
 		},
 		{
-			"name": "Tangela",
-			"value": "tangela",
-			"image": "img/pokemon/tangela.png"
+			name: "Tangela",
+			image: "img/pokemon/tangela.png"
 		},
 		{
-			"name": "Kangaskhan",
-			"value": "kangaskhan",
-			"image": "img/pokemon/kangaskhan.png"
+			name: "Kangaskhan",
+			image: "img/pokemon/kangaskhan.png"
 		},
 		{
-			"name": "Horsea",
-			"value": "horsea",
-			"image": "img/pokemon/horsea.png"
+			name: "Horsea",
+			image: "img/pokemon/horsea.png"
 		},
 		{
-			"name": "Seadra",
-			"value": "seadra",
-			"image": "img/pokemon/seadra.png"
+			name: "Seadra",
+			image: "img/pokemon/seadra.png"
 		},
 		{
-			"name": "Goldeen",
-			"value": "goldeen",
-			"image": "img/pokemon/goldeen.png"
+			name: "Goldeen",
+			image: "img/pokemon/goldeen.png"
 		},
 		{
-			"name": "Seaking",
-			"value": "seaking",
-			"image": "img/pokemon/seaking.png"
+			name: "Seaking",
+			image: "img/pokemon/seaking.png"
 		},
 		{
-			"name": "Staryu",
-			"value": "staryu",
-			"image": "img/pokemon/staryu.png"
+			name: "Staryu",
+			image: "img/pokemon/staryu.png"
 		},
 		{
-			"name": "Starmie",
-			"value": "starmie",
-			"image": "img/pokemon/starmie.png"
+			name: "Starmie",
+			image: "img/pokemon/starmie.png"
 		},
 		{
-			"name": "Mr. Mime",
-			"value": "mr-mime",
-			"image": "img/pokemon/mr-mime.png"
+			name: "Mr. Mime",
+			image: "img/pokemon/mr-mime.png"
 		},
 		{
-			"name": "Scyther",
-			"value": "scyther",
-			"image": "img/pokemon/scyther.png"
+			name: "Scyther",
+			image: "img/pokemon/scyther.png"
 		},
 		{
-			"name": "Jynx",
-			"value": "jynx",
-			"image": "img/pokemon/jynx.png"
+			name: "Jynx",
+			image: "img/pokemon/jynx.png"
 		},
 		{
-			"name": "Electabuzz",
-			"value": "electabuzz",
-			"image": "img/pokemon/electabuzz.png"
+			name: "Electabuzz",
+			image: "img/pokemon/electabuzz.png"
 		},
 		{
-			"name": "Magmar",
-			"value": "magmar",
-			"image": "img/pokemon/magmar.png"
+			name: "Magmar",
+			image: "img/pokemon/magmar.png"
 		},
 		{
-			"name": "Pinsir",
-			"value": "pinsir",
-			"image": "img/pokemon/pinsir.png"
+			name: "Pinsir",
+			image: "img/pokemon/pinsir.png"
 		},
 		{
-			"name": "Tauros",
-			"value": "tauros",
-			"image": "img/pokemon/tauros.png"
+			name: "Tauros",
+			image: "img/pokemon/tauros.png"
 		},
 		{
-			"name": "Magikarp",
-			"value": "magikarp",
-			"image": "img/pokemon/magikarp.png"
+			name: "Magikarp",
+			image: "img/pokemon/magikarp.png"
 		},
 		{
-			"name": "Gyarados",
-			"value": "gyarados",
-			"image": "img/pokemon/gyarados.png"
+			name: "Gyarados",
+			image: "img/pokemon/gyarados.png"
 		},
 		{
-			"name": "Lapras",
-			"value": "lapras",
-			"image": "img/pokemon/lapras.png"
+			name: "Lapras",
+			image: "img/pokemon/lapras.png"
 		},
 		{
-			"name": "Ditto",
-			"value": "ditto",
-			"image": "img/pokemon/ditto.png"
+			name: "Ditto",
+			image: "img/pokemon/ditto.png"
 		},
 		{
-			"name": "Eevee",
-			"value": "eevee",
-			"image": "img/pokemon/eevee.png"
+			name: "Eevee",
+			image: "img/pokemon/eevee.png"
 		},
 		{
-			"name": "Vaporeon",
-			"value": "vaporeon",
-			"image": "img/pokemon/vaporeon.png"
+			name: "Vaporeon",
+			image: "img/pokemon/vaporeon.png"
 		},
 		{
-			"name": "Jolteon",
-			"value": "jolteon",
-			"image": "img/pokemon/jolteon.png"
+			name: "Jolteon",
+			image: "img/pokemon/jolteon.png"
 		},
 		{
-			"name": "Flareon",
-			"value": "flareon",
-			"image": "img/pokemon/flareon.png"
+			name: "Flareon",
+			image: "img/pokemon/flareon.png"
 		},
 		{
-			"name": "Porygon",
-			"value": "porygon",
-			"image": "img/pokemon/porygon.png"
+			name: "Porygon",
+			image: "img/pokemon/porygon.png"
 		},
 		{
-			"name": "Omanyte",
-			"value": "omanyte",
-			"image": "img/pokemon/omanyte.png"
+			name: "Omanyte",
+			image: "img/pokemon/omanyte.png"
 		},
 		{
-			"name": "Omastar",
-			"value": "omastar",
-			"image": "img/pokemon/omastar.png"
+			name: "Omastar",
+			image: "img/pokemon/omastar.png"
 		},
 		{
-			"name": "Kabuto",
-			"value": "kabuto",
-			"image": "img/pokemon/kabuto.png"
+			name: "Kabuto",
+			image: "img/pokemon/kabuto.png"
 		},
 		{
-			"name": "Kabutops",
-			"value": "kabutops",
-			"image": "img/pokemon/kabutops.png"
+			name: "Kabutops",
+			image: "img/pokemon/kabutops.png"
 		},
 		{
-			"name": "Aerodactyl",
-			"value": "aerodactyl",
-			"image": "img/pokemon/aerodactyl.png"
+			name: "Aerodactyl",
+			image: "img/pokemon/aerodactyl.png"
 		},
 		{
-			"name": "Snorlax",
-			"value": "snorlax",
-			"image": "img/pokemon/snorlax.png"
+			name: "Snorlax",
+			image: "img/pokemon/snorlax.png"
 		},
 		{
-			"name": "Articuno",
-			"value": "articuno",
-			"image": "img/pokemon/articuno.png"
+			name: "Articuno",
+			image: "img/pokemon/articuno.png"
 		},
 		{
-			"name": "Zapdos",
-			"value": "zapdos",
-			"image": "img/pokemon/zapdos.png"
+			name: "Zapdos",
+			image: "img/pokemon/zapdos.png"
 		},
 		{
-			"name": "Moltres",
-			"value": "moltres",
-			"image": "img/pokemon/moltres.png"
+			name: "Moltres",
+			image: "img/pokemon/moltres.png"
 		},
 		{
-			"name": "Dratini",
-			"value": "dratini",
-			"image": "img/pokemon/dratini.png"
+			name: "Dratini",
+			image: "img/pokemon/dratini.png"
 		},
 		{
-			"name": "Dragonair",
-			"value": "dragonair",
-			"image": "img/pokemon/dragonair.png"
+			name: "Dragonair",
+			image: "img/pokemon/dragonair.png"
 		},
 		{
-			"name": "Dragonite",
-			"value": "dragonite",
-			"image": "img/pokemon/dragonite.png"
+			name: "Dragonite",
+			image: "img/pokemon/dragonite.png"
 		},
 		{
-			"name": "Mewtwo",
-			"value": "mewtwo",
-			"image": "img/pokemon/mewtwo.png"
+			name: "Mewtwo",
+			image: "img/pokemon/mewtwo.png"
 		},
 		{
-			"name": "Mew",
-			"value": "mew",
-			"image": "img/pokemon/mew.png"
+			name: "Mew",
+			image: "img/pokemon/mew.png"
 		},
 		{
-			"name": "Chikorita",
-			"value": "chikorita",
-			"image": "img/pokemon/chikorita.png",
+			name: "Chikorita",
+			image: "img/pokemon/chikorita.png"
 		},
 		{
-			"name": "Bayleef",
-			"value": "bayleef",
-			"image": "img/pokemon/bayleef.png",
+			name: "Bayleef",
+			image: "img/pokemon/bayleef.png"
 		},
 		{
-			"name": "Meganium",
-			"value": "meganium",
-			"image": "img/pokemon/meganium.png",
+			name: "Meganium",
+			image: "img/pokemon/meganium.png"
 		},
 		{
-			"name": "Cyndaquil",
-			"value": "cyndaquil",
-			"image": "img/pokemon/cyndaquil.png",
+			name: "Cyndaquil",
+			image: "img/pokemon/cyndaquil.png"
 		},
 		{
-			"name": "Quilava",
-			"value": "quilava",
-			"image": "img/pokemon/quilava.png",
+			name: "Quilava",
+			image: "img/pokemon/quilava.png"
 		},
 		{
-			"name": "Typhlosion",
-			"value": "typhlosion",
-			"image": "img/pokemon/typhlosion.png",
+			name: "Typhlosion",
+			image: "img/pokemon/typhlosion.png"
 		},
 		{
-			"name": "Totodile",
-			"value": "totodile",
-			"image": "img/pokemon/totodile.png",
+			name: "Totodile",
+			image: "img/pokemon/totodile.png"
 		},
 		{
-			"name": "Croconaw",
-			"value": "croconaw",
-			"image": "img/pokemon/croconaw.png",
+			name: "Croconaw",
+			image: "img/pokemon/croconaw.png"
 		},
 		{
-			"name": "Feraligatr",
-			"value": "feraligatr",
-			"image": "img/pokemon/feraligatr.png",
+			name: "Feraligatr",
+			image: "img/pokemon/feraligatr.png"
 		},
 		{
-			"name": "Sentret",
-			"value": "sentret",
-			"image": "img/pokemon/sentret.png",
+			name: "Sentret",
+			image: "img/pokemon/sentret.png"
 		},
 		{
-			"name": "Furret",
-			"value": "furret",
-			"image": "img/pokemon/furret.png",
+			name: "Furret",
+			image: "img/pokemon/furret.png"
 		},
 		{
-			"name": "Hoothoot",
-			"value": "hoothoot",
-			"image": "img/pokemon/hoothoot.png"
+			name: "Hoothoot",
+			image: "img/pokemon/hoothoot.png"
 		},
 		{
-			"name": "Noctowl",
-			"value": "noctowl",
-			"image": "img/pokemon/noctowl.png"
+			name: "Noctowl",
+			image: "img/pokemon/noctowl.png"
 		},
 		{
-			"name": "Ledyba",
-			"value": "ledyba",
-			"image": "img/pokemon/ledyba.png",
+			name: "Ledyba",
+			image: "img/pokemon/ledyba.png"
 		},
 		{
-			"name": "Ledian",
-			"value": "ledian",
-			"image": "img/pokemon/ledian.png",
+			name: "Ledian",
+			image: "img/pokemon/ledian.png"
 		},
 		{
-			"name": "Spinarak",
-			"value": "spinarak",
-			"image": "img/pokemon/spinarak.png",
+			name: "Spinarak",
+			image: "img/pokemon/spinarak.png"
 		},
 		{
-			"name": "Ariados",
-			"value": "ariados",
-			"image": "img/pokemon/ariados.png",
+			name: "Ariados",
+			image: "img/pokemon/ariados.png"
 		},
 		{
-			"name": "Crobat",
-			"value": "crobat",
-			"image": "img/pokemon/crobat.png",
+			name: "Crobat",
+			image: "img/pokemon/crobat.png"
 		},
 		{
-			"name": "Chinchou",
-			"value": "chinchou",
-			"image": "img/pokemon/chinchou.png"
+			name: "Chinchou",
+			image: "img/pokemon/chinchou.png"
 		},
 		{
-			"name": "Lanturn",
-			"value": "lanturn",
-			"image": "img/pokemon/lanturn.png"
+			name: "Lanturn",
+			image: "img/pokemon/lanturn.png"
 		},
 		{
-			"name": "Pichu",
-			"value": "pichu",
-			"image": "img/pokemon/pichu.png"
+			name: "Pichu",
+			image: "img/pokemon/pichu.png"
 		},
 		{
-			"name": "Cleffa",
-			"value": "cleffa",
-			"image": "img/pokemon/cleffa.png"
+			name: "Cleffa",
+			image: "img/pokemon/cleffa.png"
 		},
 		{
-			"name": "Igglybuff",
-			"value": "igglybuff",
-			"image": "img/pokemon/igglybuff.png"
+			name: "Igglybuff",
+			image: "img/pokemon/igglybuff.png"
 		},
 		{
-			"name": "Togepi",
-			"value": "togepi",
-			"image": "img/pokemon/togepi.png"
+			name: "Togepi",
+			image: "img/pokemon/togepi.png"
 		},
 		{
-			"name": "Togetic",
-			"value": "togetic",
-			"image": "img/pokemon/togetic.png"
+			name: "Togetic",
+			image: "img/pokemon/togetic.png"
 		},
 		{
-			"name": "Natu",
-			"value": "natu",
-			"image": "img/pokemon/natu.png"
+			name: "Natu",
+			image: "img/pokemon/natu.png"
 		},
 		{
-			"name": "Xatu",
-			"value": "xatu",
-			"image": "img/pokemon/xatu.png"
+			name: "Xatu",
+			image: "img/pokemon/xatu.png"
 		},
 		{
-			"name": "Mareep",
-			"value": "mareep",
-			"image": "img/pokemon/mareep.png",
+			name: "Mareep",
+			image: "img/pokemon/mareep.png"
 		},
 		{
-			"name": "Flaaffy",
-			"value": "flaaffy",
-			"image": "img/pokemon/flaaffy.png",
+			name: "Flaaffy",
+			image: "img/pokemon/flaaffy.png"
 		},
 		{
-			"name": "Ampharos",
-			"value": "ampharos",
-			"image": "img/pokemon/ampharos.png",
+			name: "Ampharos",
+			image: "img/pokemon/ampharos.png"
 		},
 		{
-			"name": "Bellossom",
-			"value": "bellossom",
-			"image": "img/pokemon/bellossom.png"
+			name: "Bellossom",
+			image: "img/pokemon/bellossom.png"
 		},
 		{
-			"name": "Marill",
-			"value": "marill",
-			"image": "img/pokemon/marill.png"
+			name: "Marill",
+			image: "img/pokemon/marill.png"
 		},
 		{
-			"name": "Azumarill",
-			"value": "azumarill",
-			"image": "img/pokemon/azumarill.png"
+			name: "Azumarill",
+			image: "img/pokemon/azumarill.png"
 		},
 		{
-			"name": "Sudowoodo",
-			"value": "sudowoodo",
-			"image": "img/pokemon/sudowoodo.png"
+			name: "Sudowoodo",
+			image: "img/pokemon/sudowoodo.png"
 		},
 		{
-			"name": "Politoed",
-			"value": "politoed",
-			"image": "img/pokemon/politoed.png"
+			name: "Politoed",
+			image: "img/pokemon/politoed.png"
 		},
 		{
-			"name": "Hoppip",
-			"value": "hoppip",
-			"image": "img/pokemon/hoppip.png",
+			name: "Hoppip",
+			image: "img/pokemon/hoppip.png"
 		},
 		{
-			"name": "Skiploom",
-			"value": "skiploom",
-			"image": "img/pokemon/skiploom.png",
+			name: "Skiploom",
+			image: "img/pokemon/skiploom.png"
 		},
 		{
-			"name": "Jumpluff",
-			"value": "jumpluff",
-			"image": "img/pokemon/jumpluff.png",
+			name: "Jumpluff",
+			image: "img/pokemon/jumpluff.png"
 		},
 		{
-			"name": "Aipom",
-			"value": "aipom",
-			"image": "img/pokemon/aipom.png",
+			name: "Aipom",
+			image: "img/pokemon/aipom.png"
 		},
 		{
-			"name": "Sunkern",
-			"value": "sunkern",
-			"image": "img/pokemon/sunkern.png",
+			name: "Sunkern",
+			image: "img/pokemon/sunkern.png"
 		},
 		{
-			"name": "Sunflora",
-			"value": "sunflora",
-			"image": "img/pokemon/sunflora.png",
+			name: "Sunflora",
+			image: "img/pokemon/sunflora.png"
 		},
 		{
-			"name": "Yanma",
-			"value": "yanma",
-			"image": "img/pokemon/yanma.png",
+			name: "Yanma",
+			image: "img/pokemon/yanma.png"
 		},
 		{
-			"name": "Wooper",
-			"value": "wooper",
-			"image": "img/pokemon/wooper.png"
+			name: "Wooper",
+			image: "img/pokemon/wooper.png"
 		},
 		{
-			"name": "Quagsire",
-			"value": "quagsire",
-			"image": "img/pokemon/quagsire.png"
+			name: "Quagsire",
+			image: "img/pokemon/quagsire.png"
 		},
 		{
-			"name": "Espeon",
-			"value": "espeon",
-			"image": "img/pokemon/espeon.png"
+			name: "Espeon",
+			image: "img/pokemon/espeon.png"
 		},
 		{
-			"name": "Umbreon",
-			"value": "umbreon",
-			"image": "img/pokemon/umbreon.png"
+			name: "Umbreon",
+			image: "img/pokemon/umbreon.png"
 		},
 		{
-			"name": "Murkrow",
-			"value": "murkrow",
-			"image": "img/pokemon/murkrow.png",
+			name: "Murkrow",
+			image: "img/pokemon/murkrow.png"
 		},
 		{
-			"name": "Slowking",
-			"value": "slowking",
-			"image": "img/pokemon/slowking.png"
+			name: "Slowking",
+			image: "img/pokemon/slowking.png"
 		},
 		{
-			"name": "Misdreavus",
-			"value": "misdreavus",
-			"image": "img/pokemon/misdreavus.png",
+			name: "Misdreavus",
+			image: "img/pokemon/misdreavus.png"
 		},
 		{
-			"name": "Unown",
-			"value": "unown",
-			"image": "img/pokemon/unown.png",
+			name: "Unown",
+			image: "img/pokemon/unown.png"
 		},
 		{
-			"name": "Wobbuffet",
-			"value": "wobbuffet",
-			"image": "img/pokemon/wobbuffet.png"
+			name: "Wobbuffet",
+			image: "img/pokemon/wobbuffet.png"
 		},
 		{
-			"name": "Girafarig",
-			"value": "girafarig",
-			"image": "img/pokemon/girafarig.png",
+			name: "Girafarig",
+			image: "img/pokemon/girafarig.png"
 		},
 		{
-			"name": "Pineco",
-			"value": "pineco",
-			"image": "img/pokemon/pineco.png",
+			name: "Pineco",
+			image: "img/pokemon/pineco.png"
 		},
 		{
-			"name": "Forretress",
-			"value": "forretress",
-			"image": "img/pokemon/forretress.png",
+			name: "Forretress",
+			image: "img/pokemon/forretress.png"
 		},
 		{
-			"name": "Dunsparce",
-			"value": "dunsparce",
-			"image": "img/pokemon/dunsparce.png"
+			name: "Dunsparce",
+			image: "img/pokemon/dunsparce.png"
 		},
 		{
-			"name": "Gligar",
-			"value": "gligar",
-			"image": "img/pokemon/gligar.png",
+			name: "Gligar",
+			image: "img/pokemon/gligar.png"
 		},
 		{
-			"name": "Steelix",
-			"value": "steelix",
-			"image": "img/pokemon/steelix.png"
+			name: "Steelix",
+			image: "img/pokemon/steelix.png"
 		},
 		{
-			"name": "Snubbull",
-			"value": "snubbull",
-			"image": "img/pokemon/snubbull.png",
+			name: "Snubbull",
+			image: "img/pokemon/snubbull.png"
 		},
 		{
-			"name": "Granbull",
-			"value": "granbull",
-			"image": "img/pokemon/granbull.png",
+			name: "Granbull",
+			image: "img/pokemon/granbull.png"
 		},
 		{
-			"name": "Qwilfish",
-			"value": "qwilfish",
-			"image": "img/pokemon/qwilfish.png"
+			name: "Qwilfish",
+			image: "img/pokemon/qwilfish.png"
 		},
 		{
-			"name": "Scizor",
-			"value": "scizor",
-			"image": "img/pokemon/scizor.png"
+			name: "Scizor",
+			image: "img/pokemon/scizor.png"
 		},
 		{
-			"name": "Shuckle",
-			"value": "shuckle",
-			"image": "img/pokemon/shuckle.png"
+			name: "Shuckle",
+			image: "img/pokemon/shuckle.png"
 		},
 		{
-			"name": "Heracross",
-			"value": "heracross",
-			"image": "img/pokemon/heracross.png"
+			name: "Heracross",
+			image: "img/pokemon/heracross.png"
 		},
 		{
-			"name": "Sneasel",
-			"value": "sneasel",
-			"image": "img/pokemon/sneasel.png"
+			name: "Sneasel",
+			image: "img/pokemon/sneasel.png"
 		},
 		{
-			"name": "Teddiursa",
-			"value": "teddiursa",
-			"image": "img/pokemon/teddiursa.png",
+			name: "Teddiursa",
+			image: "img/pokemon/teddiursa.png"
 		},
 		{
-			"name": "Ursaring",
-			"value": "ursaring",
-			"image": "img/pokemon/ursaring.png",
+			name: "Ursaring",
+			image: "img/pokemon/ursaring.png"
 		},
 		{
-			"name": "Slugma",
-			"value": "slugma",
-			"image": "img/pokemon/slugma.png",
+			name: "Slugma",
+			image: "img/pokemon/slugma.png"
 		},
 		{
-			"name": "Magcargo",
-			"value": "magcargo",
-			"image": "img/pokemon/magcargo.png",
+			name: "Magcargo",
+			image: "img/pokemon/magcargo.png"
 		},
 		{
-			"name": "Swinub",
-			"value": "swinub",
-			"image": "img/pokemon/swinub.png"
+			name: "Swinub",
+			image: "img/pokemon/swinub.png"
 		},
 		{
-			"name": "Piloswine",
-			"value": "piloswine",
-			"image": "img/pokemon/piloswine.png"
+			name: "Piloswine",
+			image: "img/pokemon/piloswine.png"
 		},
 		{
-			"name": "Corsola",
-			"value": "corsola",
-			"image": "img/pokemon/corsola.png"
+			name: "Corsola",
+			image: "img/pokemon/corsola.png"
 		},
 		{
-			"name": "Remoraid",
-			"value": "remoraid",
-			"image": "img/pokemon/remoraid.png"
+			name: "Remoraid",
+			image: "img/pokemon/remoraid.png"
 		},
 		{
-			"name": "Octillery",
-			"value": "octillery",
-			"image": "img/pokemon/octillery.png"
+			name: "Octillery",
+			image: "img/pokemon/octillery.png"
 		},
 		{
-			"name": "Delibird",
-			"value": "delibird",
-			"image": "img/pokemon/delibird.png"
+			name: "Delibird",
+			image: "img/pokemon/delibird.png"
 		},
 		{
-			"name": "Mantine",
-			"value": "mantine",
-			"image": "img/pokemon/mantine.png"
+			name: "Mantine",
+			image: "img/pokemon/mantine.png"
 		},
 		{
-			"name": "Skarmory",
-			"value": "skarmory",
-			"image": "img/pokemon/skarmory.png"
+			name: "Skarmory",
+			image: "img/pokemon/skarmory.png"
 		},
 		{
-			"name": "Houndour",
-			"value": "houndour",
-			"image": "img/pokemon/houndour.png",
+			name: "Houndour",
+			image: "img/pokemon/houndour.png"
 		},
 		{
-			"name": "Houndoom",
-			"value": "houndoom",
-			"image": "img/pokemon/houndoom.png",
+			name: "Houndoom",
+			image: "img/pokemon/houndoom.png"
 		},
 		{
-			"name": "Kingdra",
-			"value": "kingdra",
-			"image": "img/pokemon/kingdra.png"
+			name: "Kingdra",
+			image: "img/pokemon/kingdra.png"
 		},
 		{
-			"name": "Phanpy",
-			"value": "phanpy",
-			"image": "img/pokemon/phanpy.png",
+			name: "Phanpy",
+			image: "img/pokemon/phanpy.png"
 		},
 		{
-			"name": "Donphan",
-			"value": "donphan",
-			"image": "img/pokemon/donphan.png",
+			name: "Donphan",
+			image: "img/pokemon/donphan.png"
 		},
 		{
-			"name": "Porygon2",
-			"value": "porygon2",
-			"image": "img/pokemon/porygon2.png"
+			name: "Porygon2",
+			image: "img/pokemon/porygon2.png"
 		},
 		{
-			"name": "Stantler",
-			"value": "stantler",
-			"image": "img/pokemon/stantler.png",
+			name: "Stantler",
+			image: "img/pokemon/stantler.png"
 		},
 		{
-			"name": "Smeargle",
-			"value": "smeargle",
-			"image": "img/pokemon/smeargle.png",
+			name: "Smeargle",
+			image: "img/pokemon/smeargle.png"
 		},
 		{
-			"name": "Tyrogue",
-			"value": "tyrogue",
-			"image": "img/pokemon/tyrogue.png"
+			name: "Tyrogue",
+			image: "img/pokemon/tyrogue.png"
 		},
 		{
-			"name": "Hitmontop",
-			"value": "hitmontop",
-			"image": "img/pokemon/hitmontop.png"
+			name: "Hitmontop",
+			image: "img/pokemon/hitmontop.png"
 		},
 		{
-			"name": "Smoochum",
-			"value": "smoochum",
-			"image": "img/pokemon/smoochum.png"
+			name: "Smoochum",
+			image: "img/pokemon/smoochum.png"
 		},
 		{
-			"name": "Elekid",
-			"value": "elekid",
-			"image": "img/pokemon/elekid.png"
+			name: "Elekid",
+			image: "img/pokemon/elekid.png"
 		},
 		{
-			"name": "Magby",
-			"value": "magby",
-			"image": "img/pokemon/magby.png"
+			name: "Magby",
+			image: "img/pokemon/magby.png"
 		},
 		{
-			"name": "Miltank",
-			"value": "miltank",
-			"image": "img/pokemon/miltank.png"
+			name: "Miltank",
+			image: "img/pokemon/miltank.png"
 		},
 		{
-			"name": "Blissey",
-			"value": "blissey",
-			"image": "img/pokemon/blissey.png"
+			name: "Blissey",
+			image: "img/pokemon/blissey.png"
 		},
 		{
-			"name": "Raikou",
-			"value": "raikou",
-			"image": "img/pokemon/raikou.png"
+			name: "Raikou",
+			image: "img/pokemon/raikou.png"
 		},
 		{
-			"name": "Entei",
-			"value": "entei",
-			"image": "img/pokemon/entei.png"
+			name: "Entei",
+			image: "img/pokemon/entei.png"
 		},
 		{
-			"name": "Suicune",
-			"value": "suicune",
-			"image": "img/pokemon/suicune.png"
+			name: "Suicune",
+			image: "img/pokemon/suicune.png"
 		},
 		{
-			"name": "Larvitar",
-			"value": "larvitar",
-			"image": "img/pokemon/larvitar.png"
+			name: "Larvitar",
+			image: "img/pokemon/larvitar.png"
 		},
 		{
-			"name": "Pupitar",
-			"value": "pupitar",
-			"image": "img/pokemon/pupitar.png"
+			name: "Pupitar",
+			image: "img/pokemon/pupitar.png"
 		},
 		{
-			"name": "Tyranitar",
-			"value": "tyranitar",
-			"image": "img/pokemon/tyranitar.png"
+			name: "Tyranitar",
+			image: "img/pokemon/tyranitar.png"
 		},
 		{
-			"name": "Lugia",
-			"value": "lugia",
-			"image": "img/pokemon/lugia.png"
+			name: "Lugia",
+			image: "img/pokemon/lugia.png"
 		},
 		{
-			"name": "Ho-Oh",
-			"value": "ho-oh",
-			"image": "img/pokemon/ho-oh.png"
+			name: "Ho-Oh",
+			image: "img/pokemon/ho-oh.png"
 		},
 		{
-			"name": "Celebi",
-			"value": "celebi",
-			"image": "img/pokemon/celebi.png"
+			name: "Celebi",
+			image: "img/pokemon/celebi.png"
 		},
 		{
-			"name": "Treecko",
-			"value": "treecko",
-			"image": "img/pokemon/treecko.png"
+			name: "Treecko",
+			image: "img/pokemon/treecko.png"
 		},
 		{
-			"name": "Grovyle",
-			"value": "grovyle",
-			"image": "img/pokemon/grovyle.png"
+			name: "Grovyle",
+			image: "img/pokemon/grovyle.png"
 		},
 		{
-			"name": "Sceptile",
-			"value": "sceptile",
-			"image": "img/pokemon/sceptile.png"
+			name: "Sceptile",
+			image: "img/pokemon/sceptile.png"
 		},
 		{
-			"name": "Torchic",
-			"value": "torchic",
-			"image": "img/pokemon/torchic.png"
+			name: "Torchic",
+			image: "img/pokemon/torchic.png"
 		},
 		{
-			"name": "Combusken",
-			"value": "combusken",
-			"image": "img/pokemon/combusken.png"
+			name: "Combusken",
+			image: "img/pokemon/combusken.png"
 		},
 		{
-			"name": "Blaziken",
-			"value": "blaziken",
-			"image": "img/pokemon/blaziken.png"
+			name: "Blaziken",
+			image: "img/pokemon/blaziken.png"
 		},
 		{
-			"name": "Mudkip",
-			"value": "mudkip",
-			"image": "img/pokemon/mudkip.png"
+			name: "Mudkip",
+			image: "img/pokemon/mudkip.png"
 		},
 		{
-			"name": "Marshtomp",
-			"value": "marshtomp",
-			"image": "img/pokemon/marshtomp.png"
+			name: "Marshtomp",
+			image: "img/pokemon/marshtomp.png"
 		},
 		{
-			"name": "Swampert",
-			"value": "swampert",
-			"image": "img/pokemon/swampert.png"
+			name: "Swampert",
+			image: "img/pokemon/swampert.png"
 		},
 		{
-			"name": "Poochyena",
-			"value": "poochyena",
-			"image": "img/pokemon/poochyena.png",
+			name: "Poochyena",
+			image: "img/pokemon/poochyena.png"
 		},
 		{
-			"name": "Mightyena",
-			"value": "mightyena",
-			"image": "img/pokemon/mightyena.png",
+			name: "Mightyena",
+			image: "img/pokemon/mightyena.png"
 		},
 		{
-			"name": "Zigzagoon",
-			"value": "zigzagoon",
-			"image": "img/pokemon/zigzagoon.png"
+			name: "Zigzagoon",
+			image: "img/pokemon/zigzagoon.png"
 		},
 		{
-			"name": "Linoone",
-			"value": "linoone",
-			"image": "img/pokemon/linoone.png"
+			name: "Linoone",
+			image: "img/pokemon/linoone.png"
 		},
 		{
-			"name": "Wurmple",
-			"value": "wurmple",
-			"image": "img/pokemon/wurmple.png",
+			name: "Wurmple",
+			image: "img/pokemon/wurmple.png"
 		},
 		{
-			"name": "Silcoon",
-			"value": "silcoon",
-			"image": "img/pokemon/silcoon.png",
+			name: "Silcoon",
+			image: "img/pokemon/silcoon.png"
 		},
 		{
-			"name": "Beautifly",
-			"value": "beautifly",
-			"image": "img/pokemon/beautifly.png",
+			name: "Beautifly",
+			image: "img/pokemon/beautifly.png"
 		},
 		{
-			"name": "Cascoon",
-			"value": "cascoon",
-			"image": "img/pokemon/cascoon.png",
+			name: "Cascoon",
+			image: "img/pokemon/cascoon.png"
 		},
 		{
-			"name": "Dustox",
-			"value": "dustox",
-			"image": "img/pokemon/dustox.png",
+			name: "Dustox",
+			image: "img/pokemon/dustox.png"
 		},
 		{
-			"name": "Lotad",
-			"value": "lotad",
-			"image": "img/pokemon/lotad.png"
+			name: "Lotad",
+			image: "img/pokemon/lotad.png"
 		},
 		{
-			"name": "Lombre",
-			"value": "lombre",
-			"image": "img/pokemon/lombre.png"
+			name: "Lombre",
+			image: "img/pokemon/lombre.png"
 		},
 		{
-			"name": "Ludicolo",
-			"value": "ludicolo",
-			"image": "img/pokemon/ludicolo.png"
+			name: "Ludicolo",
+			image: "img/pokemon/ludicolo.png"
 		},
 		{
-			"name": "Seedot",
-			"value": "seedot",
-			"image": "img/pokemon/seedot.png"
+			name: "Seedot",
+			image: "img/pokemon/seedot.png"
 		},
 		{
-			"name": "Nuzleaf",
-			"value": "nuzleaf",
-			"image": "img/pokemon/nuzleaf.png"
+			name: "Nuzleaf",
+			image: "img/pokemon/nuzleaf.png"
 		},
 		{
-			"name": "Shiftry",
-			"value": "shiftry",
-			"image": "img/pokemon/shiftry.png"
+			name: "Shiftry",
+			image: "img/pokemon/shiftry.png"
 		},
 		{
-			"name": "Taillow",
-			"value": "taillow",
-			"image": "img/pokemon/taillow.png",
+			name: "Taillow",
+			image: "img/pokemon/taillow.png"
 		},
 		{
-			"name": "Swellow",
-			"value": "swellow",
-			"image": "img/pokemon/swellow.png",
+			name: "Swellow",
+			image: "img/pokemon/swellow.png"
 		},
 		{
-			"name": "Wingull",
-			"value": "wingull",
-			"image": "img/pokemon/wingull.png"
+			name: "Wingull",
+			image: "img/pokemon/wingull.png"
 		},
 		{
-			"name": "Pelipper",
-			"value": "pelipper",
-			"image": "img/pokemon/pelipper.png"
+			name: "Pelipper",
+			image: "img/pokemon/pelipper.png"
 		},
 		{
-			"name": "Ralts",
-			"value": "ralts",
-			"image": "img/pokemon/ralts.png"
+			name: "Ralts",
+			image: "img/pokemon/ralts.png"
 		},
 		{
-			"name": "Kirlia",
-			"value": "kirlia",
-			"image": "img/pokemon/kirlia.png"
+			name: "Kirlia",
+			image: "img/pokemon/kirlia.png"
 		},
 		{
-			"name": "Gardevoir",
-			"value": "gardevoir",
-			"image": "img/pokemon/gardevoir.png"
+			name: "Gardevoir",
+			image: "img/pokemon/gardevoir.png"
 		},
 		{
-			"name": "Surskit",
-			"value": "surskit",
-			"image": "img/pokemon/surskit.png",
+			name: "Surskit",
+			image: "img/pokemon/surskit.png"
 		},
 		{
-			"name": "Masquerain",
-			"value": "masquerain",
-			"image": "img/pokemon/masquerain.png",
+			name: "Masquerain",
+			image: "img/pokemon/masquerain.png"
 		},
 		{
-			"name": "Shroomish",
-			"value": "shroomish",
-			"image": "img/pokemon/shroomish.png",
+			name: "Shroomish",
+			image: "img/pokemon/shroomish.png"
 		},
 		{
-			"name": "Breloom",
-			"value": "breloom",
-			"image": "img/pokemon/breloom.png",
+			name: "Breloom",
+			image: "img/pokemon/breloom.png"
 		},
 		{
-			"name": "Slakoth",
-			"value": "slakoth",
-			"image": "img/pokemon/slakoth.png",
+			name: "Slakoth",
+			image: "img/pokemon/slakoth.png"
 		},
 		{
-			"name": "Vigoroth",
-			"value": "vigoroth",
-			"image": "img/pokemon/vigoroth.png",
+			name: "Vigoroth",
+			image: "img/pokemon/vigoroth.png"
 		},
 		{
-			"name": "Slaking",
-			"value": "slaking",
-			"image": "img/pokemon/slaking.png",
+			name: "Slaking",
+			image: "img/pokemon/slaking.png"
 		},
 		{
-			"name": "Nincada",
-			"value": "nincada",
-			"image": "img/pokemon/nincada.png"
+			name: "Nincada",
+			image: "img/pokemon/nincada.png"
 		},
 		{
-			"name": "Ninjask",
-			"value": "ninjask",
-			"image": "img/pokemon/ninjask.png"
+			name: "Ninjask",
+			image: "img/pokemon/ninjask.png"
 		},
 		{
-			"name": "Shedinja",
-			"value": "shedinja",
-			"image": "img/pokemon/shedinja.png"
+			name: "Shedinja",
+			image: "img/pokemon/shedinja.png"
 		},
 		{
-			"name": "Whismur",
-			"value": "whismur",
-			"image": "img/pokemon/whismur.png"
+			name: "Whismur",
+			image: "img/pokemon/whismur.png"
 		},
 		{
-			"name": "Loudred",
-			"value": "loudred",
-			"image": "img/pokemon/loudred.png"
+			name: "Loudred",
+			image: "img/pokemon/loudred.png"
 		},
 		{
-			"name": "Exploud",
-			"value": "exploud",
-			"image": "img/pokemon/exploud.png"
+			name: "Exploud",
+			image: "img/pokemon/exploud.png"
 		},
 		{
-			"name": "Makuhita",
-			"value": "makuhita",
-			"image": "img/pokemon/makuhita.png",
+			name: "Makuhita",
+			image: "img/pokemon/makuhita.png"
 		},
 		{
-			"name": "Hariyama",
-			"value": "hariyama",
-			"image": "img/pokemon/hariyama.png",
+			name: "Hariyama",
+			image: "img/pokemon/hariyama.png"
 		},
 		{
-			"name": "Azurill",
-			"value": "azurill",
-			"image": "img/pokemon/azurill.png"
+			name: "Azurill",
+			image: "img/pokemon/azurill.png"
 		},
 		{
-			"name": "Nosepass",
-			"value": "nosepass",
-			"image": "img/pokemon/nosepass.png",
+			name: "Nosepass",
+			image: "img/pokemon/nosepass.png"
 		},
 		{
-			"name": "Skitty",
-			"value": "skitty",
-			"image": "img/pokemon/skitty.png",
+			name: "Skitty",
+			image: "img/pokemon/skitty.png"
 		},
 		{
-			"name": "Delcatty",
-			"value": "delcatty",
-			"image": "img/pokemon/delcatty.png",
+			name: "Delcatty",
+			image: "img/pokemon/delcatty.png"
 		},
 		{
-			"name": "Sableye",
-			"value": "sableye",
-			"image": "img/pokemon/sableye.png"
+			name: "Sableye",
+			image: "img/pokemon/sableye.png"
 		},
 		{
-			"name": "Mawile",
-			"value": "mawile",
-			"image": "img/pokemon/mawile.png"
+			name: "Mawile",
+			image: "img/pokemon/mawile.png"
 		},
 		{
-			"name": "Aron",
-			"value": "aron",
-			"image": "img/pokemon/aron.png"
+			name: "Aron",
+			image: "img/pokemon/aron.png"
 		},
 		{
-			"name": "Lairon",
-			"value": "lairon",
-			"image": "img/pokemon/lairon.png"
+			name: "Lairon",
+			image: "img/pokemon/lairon.png"
 		},
 		{
-			"name": "Aggron",
-			"value": "aggron",
-			"image": "img/pokemon/aggron.png"
+			name: "Aggron",
+			image: "img/pokemon/aggron.png"
 		},
 		{
-			"name": "Meditite",
-			"value": "meditite",
-			"image": "img/pokemon/meditite.png",
+			name: "Meditite",
+			image: "img/pokemon/meditite.png"
 		},
 		{
-			"name": "Medicham",
-			"value": "medicham",
-			"image": "img/pokemon/medicham.png",
+			name: "Medicham",
+			image: "img/pokemon/medicham.png"
 		},
 		{
-			"name": "Electrike",
-			"value": "electrike",
-			"image": "img/pokemon/electrike.png"
+			name: "Electrike",
+			image: "img/pokemon/electrike.png"
 		},
 		{
-			"name": "Manectric",
-			"value": "manectric",
-			"image": "img/pokemon/manectric.png"
+			name: "Manectric",
+			image: "img/pokemon/manectric.png"
 		},
 		{
-			"name": "Plusle",
-			"value": "plusle",
-			"image": "img/pokemon/plusle.png",
+			name: "Plusle",
+			image: "img/pokemon/plusle.png"
 		},
 		{
-			"name": "Minun",
-			"value": "minun",
-			"image": "img/pokemon/minun.png",
+			name: "Minun",
+			image: "img/pokemon/minun.png"
 		},
 		{
-			"name": "Volbeat",
-			"value": "volbeat",
-			"image": "img/pokemon/volbeat.png",
+			name: "Volbeat",
+			image: "img/pokemon/volbeat.png"
 		},
 		{
-			"name": "Illumise",
-			"value": "illumise",
-			"image": "img/pokemon/illumise.png",
+			name: "Illumise",
+			image: "img/pokemon/illumise.png"
 		},
 		{
-			"name": "Roselia",
-			"value": "roselia",
-			"image": "img/pokemon/roselia.png"
+			name: "Roselia",
+			image: "img/pokemon/roselia.png"
 		},
 		{
-			"name": "Gulpin",
-			"value": "gulpin",
-			"image": "img/pokemon/gulpin.png",
+			name: "Gulpin",
+			image: "img/pokemon/gulpin.png"
 		},
 		{
-			"name": "Swalot",
-			"value": "swalot",
-			"image": "img/pokemon/swalot.png",
+			name: "Swalot",
+			image: "img/pokemon/swalot.png"
 		},
 		{
-			"name": "Carvanha",
-			"value": "carvanha",
-			"image": "img/pokemon/carvanha.png"
+			name: "Carvanha",
+			image: "img/pokemon/carvanha.png"
 		},
 		{
-			"name": "Sharpedo",
-			"value": "sharpedo",
-			"image": "img/pokemon/sharpedo.png"
+			name: "Sharpedo",
+			image: "img/pokemon/sharpedo.png"
 		},
 		{
-			"name": "Wailmer",
-			"value": "wailmer",
-			"image": "img/pokemon/wailmer.png"
+			name: "Wailmer",
+			image: "img/pokemon/wailmer.png"
 		},
 		{
-			"name": "Wailord",
-			"value": "wailord",
-			"image": "img/pokemon/wailord.png"
+			name: "Wailord",
+			image: "img/pokemon/wailord.png"
 		},
 		{
-			"name": "Numel",
-			"value": "numel",
-			"image": "img/pokemon/numel.png",
+			name: "Numel",
+			image: "img/pokemon/numel.png"
 		},
 		{
-			"name": "Camerupt",
-			"value": "camerupt",
-			"image": "img/pokemon/camerupt.png",
+			name: "Camerupt",
+			image: "img/pokemon/camerupt.png"
 		},
 		{
-			"name": "Torkoal",
-			"value": "torkoal",
-			"image": "img/pokemon/torkoal.png"
+			name: "Torkoal",
+			image: "img/pokemon/torkoal.png"
 		},
 		{
-			"name": "Spoink",
-			"value": "spoink",
-			"image": "img/pokemon/spoink.png",
+			name: "Spoink",
+			image: "img/pokemon/spoink.png"
 		},
 		{
-			"name": "Grumpig",
-			"value": "grumpig",
-			"image": "img/pokemon/grumpig.png",
+			name: "Grumpig",
+			image: "img/pokemon/grumpig.png"
 		},
 		{
-			"name": "Spinda",
-			"value": "spinda",
-			"image": "img/pokemon/spinda.png",
+			name: "Spinda",
+			image: "img/pokemon/spinda.png"
 		},
 		{
-			"name": "Trapinch",
-			"value": "trapinch",
-			"image": "img/pokemon/trapinch.png"
+			name: "Trapinch",
+			image: "img/pokemon/trapinch.png"
 		},
 		{
-			"name": "Vibrava",
-			"value": "vibrava",
-			"image": "img/pokemon/vibrava.png"
+			name: "Vibrava",
+			image: "img/pokemon/vibrava.png"
 		},
 		{
-			"name": "Flygon",
-			"value": "flygon",
-			"image": "img/pokemon/flygon.png"
+			name: "Flygon",
+			image: "img/pokemon/flygon.png"
 		},
 		{
-			"name": "Cacnea",
-			"value": "cacnea",
-			"image": "img/pokemon/cacnea.png",
+			name: "Cacnea",
+			image: "img/pokemon/cacnea.png"
 		},
 		{
-			"name": "Cacturne",
-			"value": "cacturne",
-			"image": "img/pokemon/cacturne.png",
+			name: "Cacturne",
+			image: "img/pokemon/cacturne.png"
 		},
 		{
-			"name": "Swablu",
-			"value": "swablu",
-			"image": "img/pokemon/swablu.png"
+			name: "Swablu",
+			image: "img/pokemon/swablu.png"
 		},
 		{
-			"name": "Altaria",
-			"value": "altaria",
-			"image": "img/pokemon/altaria.png"
+			name: "Altaria",
+			image: "img/pokemon/altaria.png"
 		},
 		{
-			"name": "Zangoose",
-			"value": "zangoose",
-			"image": "img/pokemon/zangoose.png",
+			name: "Zangoose",
+			image: "img/pokemon/zangoose.png"
 		},
 		{
-			"name": "Seviper",
-			"value": "seviper",
-			"image": "img/pokemon/seviper.png",
+			name: "Seviper",
+			image: "img/pokemon/seviper.png"
 		},
 		{
-			"name": "Lunatone",
-			"value": "lunatone",
-			"image": "img/pokemon/lunatone.png"
+			name: "Lunatone",
+			image: "img/pokemon/lunatone.png"
 		},
 		{
-			"name": "Solrock",
-			"value": "solrock",
-			"image": "img/pokemon/solrock.png"
+			name: "Solrock",
+			image: "img/pokemon/solrock.png"
 		},
 		{
-			"name": "Barboach",
-			"value": "barboach",
-			"image": "img/pokemon/barboach.png"
+			name: "Barboach",
+			image: "img/pokemon/barboach.png"
 		},
 		{
-			"name": "Whiscash",
-			"value": "whiscash",
-			"image": "img/pokemon/whiscash.png"
+			name: "Whiscash",
+			image: "img/pokemon/whiscash.png"
 		},
 		{
-			"name": "Corphish",
-			"value": "corphish",
-			"image": "img/pokemon/corphish.png"
+			name: "Corphish",
+			image: "img/pokemon/corphish.png"
 		},
 		{
-			"name": "Crawdaunt",
-			"value": "crawdaunt",
-			"image": "img/pokemon/crawdaunt.png"
+			name: "Crawdaunt",
+			image: "img/pokemon/crawdaunt.png"
 		},
 		{
-			"name": "Baltoy",
-			"value": "baltoy",
-			"image": "img/pokemon/baltoy.png"
+			name: "Baltoy",
+			image: "img/pokemon/baltoy.png"
 		},
 		{
-			"name": "Claydol",
-			"value": "claydol",
-			"image": "img/pokemon/claydol.png"
+			name: "Claydol",
+			image: "img/pokemon/claydol.png"
 		},
 		{
-			"name": "Lileep",
-			"value": "lileep",
-			"image": "img/pokemon/lileep.png"
+			name: "Lileep",
+			image: "img/pokemon/lileep.png"
 		},
 		{
-			"name": "Cradily",
-			"value": "cradily",
-			"image": "img/pokemon/cradily.png"
+			name: "Cradily",
+			image: "img/pokemon/cradily.png"
 		},
 		{
-			"name": "Anorith",
-			"value": "anorith",
-			"image": "img/pokemon/anorith.png"
+			name: "Anorith",
+			image: "img/pokemon/anorith.png"
 		},
 		{
-			"name": "Armaldo",
-			"value": "armaldo",
-			"image": "img/pokemon/armaldo.png"
+			name: "Armaldo",
+			image: "img/pokemon/armaldo.png"
 		},
 		{
-			"name": "Feebas",
-			"value": "feebas",
-			"image": "img/pokemon/feebas.png"
+			name: "Feebas",
+			image: "img/pokemon/feebas.png"
 		},
 		{
-			"name": "Milotic",
-			"value": "milotic",
-			"image": "img/pokemon/milotic.png"
+			name: "Milotic",
+			image: "img/pokemon/milotic.png"
 		},
 		{
-			"name": "Castform",
-			"value": "castform",
-			"image": "img/pokemon/castform.png",
+			name: "Castform",
+			image: "img/pokemon/castform.png"
 		},
 		{
-			"name": "Kecleon",
-			"value": "kecleon",
-			"image": "img/pokemon/kecleon.png",
+			name: "Kecleon",
+			image: "img/pokemon/kecleon.png"
 		},
 		{
-			"name": "Shuppet",
-			"value": "shuppet",
-			"image": "img/pokemon/shuppet.png",
+			name: "Shuppet",
+			image: "img/pokemon/shuppet.png"
 		},
 		{
-			"name": "Banette",
-			"value": "banette",
-			"image": "img/pokemon/banette.png",
+			name: "Banette",
+			image: "img/pokemon/banette.png"
 		},
 		{
-			"name": "Duskull",
-			"value": "duskull",
-			"image": "img/pokemon/duskull.png"
+			name: "Duskull",
+			image: "img/pokemon/duskull.png"
 		},
 		{
-			"name": "Dusclops",
-			"value": "dusclops",
-			"image": "img/pokemon/dusclops.png"
+			name: "Dusclops",
+			image: "img/pokemon/dusclops.png"
 		},
 		{
-			"name": "Tropius",
-			"value": "tropius",
-			"image": "img/pokemon/tropius.png",
+			name: "Tropius",
+			image: "img/pokemon/tropius.png"
 		},
 		{
-			"name": "Chimecho",
-			"value": "chimecho",
-			"image": "img/pokemon/chimecho.png",
+			name: "Chimecho",
+			image: "img/pokemon/chimecho.png"
 		},
 		{
-			"name": "Absol",
-			"value": "absol",
-			"image": "img/pokemon/absol.png"
+			name: "Absol",
+			image: "img/pokemon/absol.png"
 		},
 		{
-			"name": "Wynaut",
-			"value": "wynaut",
-			"image": "img/pokemon/wynaut.png"
+			name: "Wynaut",
+			image: "img/pokemon/wynaut.png"
 		},
 		{
-			"name": "Snorunt",
-			"value": "snorunt",
-			"image": "img/pokemon/snorunt.png"
+			name: "Snorunt",
+			image: "img/pokemon/snorunt.png"
 		},
 		{
-			"name": "Glalie",
-			"value": "glalie",
-			"image": "img/pokemon/glalie.png"
+			name: "Glalie",
+			image: "img/pokemon/glalie.png"
 		},
 		{
-			"name": "Spheal",
-			"value": "spheal",
-			"image": "img/pokemon/spheal.png"
+			name: "Spheal",
+			image: "img/pokemon/spheal.png"
 		},
 		{
-			"name": "Sealeo",
-			"value": "sealeo",
-			"image": "img/pokemon/sealeo.png"
+			name: "Sealeo",
+			image: "img/pokemon/sealeo.png"
 		},
 		{
-			"name": "Walrein",
-			"value": "walrein",
-			"image": "img/pokemon/walrein.png"
+			name: "Walrein",
+			image: "img/pokemon/walrein.png"
 		},
 		{
-			"name": "Clamperl",
-			"value": "clamperl",
-			"image": "img/pokemon/clamperl.png",
+			name: "Clamperl",
+			image: "img/pokemon/clamperl.png"
 		},
 		{
-			"name": "Huntail",
-			"value": "huntail",
-			"image": "img/pokemon/huntail.png",
+			name: "Huntail",
+			image: "img/pokemon/huntail.png"
 		},
 		{
-			"name": "Gorebyss",
-			"value": "gorebyss",
-			"image": "img/pokemon/gorebyss.png",
+			name: "Gorebyss",
+			image: "img/pokemon/gorebyss.png"
 		},
 		{
-			"name": "Relicanth",
-			"value": "relicanth",
-			"image": "img/pokemon/relicanth.png"
+			name: "Relicanth",
+			image: "img/pokemon/relicanth.png"
 		},
 		{
-			"name": "Luvdisc",
-			"value": "luvdisc",
-			"image": "img/pokemon/luvdisc.png",
+			name: "Luvdisc",
+			image: "img/pokemon/luvdisc.png"
 		},
 		{
-			"name": "Bagon",
-			"value": "bagon",
-			"image": "img/pokemon/bagon.png"
+			name: "Bagon",
+			image: "img/pokemon/bagon.png"
 		},
 		{
-			"name": "Shelgon",
-			"value": "shelgon",
-			"image": "img/pokemon/shelgon.png"
+			name: "Shelgon",
+			image: "img/pokemon/shelgon.png"
 		},
 		{
-			"name": "Salamence",
-			"value": "salamence",
-			"image": "img/pokemon/salamence.png"
+			name: "Salamence",
+			image: "img/pokemon/salamence.png"
 		},
 		{
-			"name": "Beldum",
-			"value": "beldum",
-			"image": "img/pokemon/beldum.png"
+			name: "Beldum",
+			image: "img/pokemon/beldum.png"
 		},
 		{
-			"name": "Metang",
-			"value": "metang",
-			"image": "img/pokemon/metang.png"
+			name: "Metang",
+			image: "img/pokemon/metang.png"
 		},
 		{
-			"name": "Metagross",
-			"value": "metagross",
-			"image": "img/pokemon/metagross.png"
+			name: "Metagross",
+			image: "img/pokemon/metagross.png"
 		},
 		{
-			"name": "Regirock",
-			"value": "regirock",
-			"image": "img/pokemon/regirock.png"
+			name: "Regirock",
+			image: "img/pokemon/regirock.png"
 		},
 		{
-			"name": "Regice",
-			"value": "regice",
-			"image": "img/pokemon/regice.png"
+			name: "Regice",
+			image: "img/pokemon/regice.png"
 		},
 		{
-			"name": "Registeel",
-			"value": "registeel",
-			"image": "img/pokemon/registeel.png"
+			name: "Registeel",
+			image: "img/pokemon/registeel.png"
 		},
 		{
-			"name": "Latias",
-			"value": "latias",
-			"image": "img/pokemon/latias.png"
+			name: "Latias",
+			image: "img/pokemon/latias.png"
 		},
 		{
-			"name": "Latios",
-			"value": "latios",
-			"image": "img/pokemon/latios.png"
+			name: "Latios",
+			image: "img/pokemon/latios.png"
 		},
 		{
-			"name": "Kyogre",
-			"value": "kyogre",
-			"image": "img/pokemon/kyogre.png"
+			name: "Kyogre",
+			image: "img/pokemon/kyogre.png"
 		},
 		{
-			"name": "Groudon",
-			"value": "groudon",
-			"image": "img/pokemon/groudon.png"
+			name: "Groudon",
+			image: "img/pokemon/groudon.png"
 		},
 		{
-			"name": "Rayquaza",
-			"value": "rayquaza",
-			"image": "img/pokemon/rayquaza.png"
+			name: "Rayquaza",
+			image: "img/pokemon/rayquaza.png"
 		},
 		{
-			"name": "Jirachi",
-			"value": "jirachi",
-			"image": "img/pokemon/jirachi.png"
+			name: "Jirachi",
+			image: "img/pokemon/jirachi.png"
 		},
 		{
-			"name": "Deoxys",
-			"value": "deoxys",
-			"image": "img/pokemon/deoxys.png",
+			name: "Deoxys",
+			image: "img/pokemon/deoxys.png"
 		},
 		{
-			"name": "Turtwig",
-			"value": "turtwig",
-			"image": "img/pokemon/turtwig.png",
+			name: "Turtwig",
+			image: "img/pokemon/turtwig.png"
 		},
 		{
-			"name": "Grotle",
-			"value": "grotle",
-			"image": "img/pokemon/grotle.png",
+			name: "Grotle",
+			image: "img/pokemon/grotle.png"
 		},
 		{
-			"name": "Torterra",
-			"value": "torterra",
-			"image": "img/pokemon/torterra.png",
+			name: "Torterra",
+			image: "img/pokemon/torterra.png"
 		},
 		{
-			"name": "Chimchar",
-			"value": "chimchar",
-			"image": "img/pokemon/chimchar.png",
+			name: "Chimchar",
+			image: "img/pokemon/chimchar.png"
 		},
 		{
-			"name": "Monferno",
-			"value": "monferno",
-			"image": "img/pokemon/monferno.png",
+			name: "Monferno",
+			image: "img/pokemon/monferno.png"
 		},
 		{
-			"name": "Infernape",
-			"value": "infernape",
-			"image": "img/pokemon/infernape.png",
+			name: "Infernape",
+			image: "img/pokemon/infernape.png"
 		},
 		{
-			"name": "Piplup",
-			"value": "piplup",
-			"image": "img/pokemon/piplup.png",
+			name: "Piplup",
+			image: "img/pokemon/piplup.png"
 		},
 		{
-			"name": "Prinplup",
-			"value": "prinplup",
-			"image": "img/pokemon/prinplup.png",
+			name: "Prinplup",
+			image: "img/pokemon/prinplup.png"
 		},
 		{
-			"name": "Empoleon",
-			"value": "empoleon",
-			"image": "img/pokemon/empoleon.png",
+			name: "Empoleon",
+			image: "img/pokemon/empoleon.png"
 		},
 		{
-			"name": "Starly",
-			"value": "starly",
-			"image": "img/pokemon/starly.png",
+			name: "Starly",
+			image: "img/pokemon/starly.png"
 		},
 		{
-			"name": "Staravia",
-			"value": "staravia",
-			"image": "img/pokemon/staravia.png",
+			name: "Staravia",
+			image: "img/pokemon/staravia.png"
 		},
 		{
-			"name": "Staraptor",
-			"value": "staraptor",
-			"image": "img/pokemon/staraptor.png",
+			name: "Staraptor",
+			image: "img/pokemon/staraptor.png"
 		},
 		{
-			"name": "Bidoof",
-			"value": "bidoof",
-			"image": "img/pokemon/bidoof.png",
+			name: "Bidoof",
+			image: "img/pokemon/bidoof.png"
 		},
 		{
-			"name": "Bibarel",
-			"value": "bibarel",
-			"image": "img/pokemon/bibarel.png",
+			name: "Bibarel",
+			image: "img/pokemon/bibarel.png"
 		},
 		{
-			"name": "Kricketot",
-			"value": "kricketot",
-			"image": "img/pokemon/kricketot.png",
+			name: "Kricketot",
+			image: "img/pokemon/kricketot.png"
 		},
 		{
-			"name": "Kricketune",
-			"value": "kricketune",
-			"image": "img/pokemon/kricketune.png",
+			name: "Kricketune",
+			image: "img/pokemon/kricketune.png"
 		},
 		{
-			"name": "Shinx",
-			"value": "shinx",
-			"image": "img/pokemon/shinx.png"
+			name: "Shinx",
+			image: "img/pokemon/shinx.png"
 		},
 		{
-			"name": "Luxio",
-			"value": "luxio",
-			"image": "img/pokemon/luxio.png"
+			name: "Luxio",
+			image: "img/pokemon/luxio.png"
 		},
 		{
-			"name": "Luxray",
-			"value": "luxray",
-			"image": "img/pokemon/luxray.png"
+			name: "Luxray",
+			image: "img/pokemon/luxray.png"
 		},
 		{
-			"name": "Budew",
-			"value": "budew",
-			"image": "img/pokemon/budew.png"
+			name: "Budew",
+			image: "img/pokemon/budew.png"
 		},
 		{
-			"name": "Roserade",
-			"value": "roserade",
-			"image": "img/pokemon/roserade.png"
+			name: "Roserade",
+			image: "img/pokemon/roserade.png"
 		},
 		{
-			"name": "Cranidos",
-			"value": "cranidos",
-			"image": "img/pokemon/cranidos.png",
+			name: "Cranidos",
+			image: "img/pokemon/cranidos.png"
 		},
 		{
-			"name": "Rampardos",
-			"value": "rampardos",
-			"image": "img/pokemon/rampardos.png",
+			name: "Rampardos",
+			image: "img/pokemon/rampardos.png"
 		},
 		{
-			"name": "Shieldon",
-			"value": "shieldon",
-			"image": "img/pokemon/shieldon.png",
+			name: "Shieldon",
+			image: "img/pokemon/shieldon.png"
 		},
 		{
-			"name": "Bastiodon",
-			"value": "bastiodon",
-			"image": "img/pokemon/bastiodon.png",
+			name: "Bastiodon",
+			image: "img/pokemon/bastiodon.png"
 		},
 		{
-			"name": "Burmy",
-			"value": "burmy",
-			"image": "img/pokemon/burmy.png",
+			name: "Burmy",
+			image: "img/pokemon/burmy.png"
 		},
 		{
-			"name": "Wormadam",
-			"value": "wormadam",
-			"image": "img/pokemon/wormadam.png",
+			name: "Wormadam",
+			image: "img/pokemon/wormadam.png"
 		},
 		{
-			"name": "Mothim",
-			"value": "mothim",
-			"image": "img/pokemon/mothim.png",
+			name: "Mothim",
+			image: "img/pokemon/mothim.png"
 		},
 		{
-			"name": "Combee",
-			"value": "combee",
-			"image": "img/pokemon/combee.png"
+			name: "Combee",
+			image: "img/pokemon/combee.png"
 		},
 		{
-			"name": "Vespiquen",
-			"value": "vespiquen",
-			"image": "img/pokemon/vespiquen.png"
+			name: "Vespiquen",
+			image: "img/pokemon/vespiquen.png"
 		},
 		{
-			"name": "Pachirisu",
-			"value": "pachirisu",
-			"image": "img/pokemon/pachirisu.png",
+			name: "Pachirisu",
+			image: "img/pokemon/pachirisu.png"
 		},
 		{
-			"name": "Buizel",
-			"value": "buizel",
-			"image": "img/pokemon/buizel.png",
+			name: "Buizel",
+			image: "img/pokemon/buizel.png"
 		},
 		{
-			"name": "Floatzel",
-			"value": "floatzel",
-			"image": "img/pokemon/floatzel.png",
+			name: "Floatzel",
+			image: "img/pokemon/floatzel.png"
 		},
 		{
-			"name": "Cherubi",
-			"value": "cherubi",
-			"image": "img/pokemon/cherubi.png"
+			name: "Cherubi",
+			image: "img/pokemon/cherubi.png"
 		},
 		{
-			"name": "Cherrim",
-			"value": "cherrim",
-			"image": "img/pokemon/cherrim.png"
+			name: "Cherrim",
+			image: "img/pokemon/cherrim.png"
 		},
 		{
-			"name": "Shellos",
-			"value": "shellos",
-			"image": "img/pokemon/shellos.png"
+			name: "Shellos",
+			image: "img/pokemon/shellos.png"
 		},
 		{
-			"name": "Gastrodon",
-			"value": "gastrodon",
-			"image": "img/pokemon/gastrodon.png"
+			name: "Gastrodon",
+			image: "img/pokemon/gastrodon.png"
 		},
 		{
-			"name": "Ambipom",
-			"value": "ambipom",
-			"image": "img/pokemon/ambipom.png",
+			name: "Ambipom",
+			image: "img/pokemon/ambipom.png"
 		},
 		{
-			"name": "Drifloon",
-			"value": "drifloon",
-			"image": "img/pokemon/drifloon.png"
+			name: "Drifloon",
+			image: "img/pokemon/drifloon.png"
 		},
 		{
-			"name": "Drifblim",
-			"value": "drifblim",
-			"image": "img/pokemon/drifblim.png"
+			name: "Drifblim",
+			image: "img/pokemon/drifblim.png"
 		},
 		{
-			"name": "Buneary",
-			"value": "buneary",
-			"image": "img/pokemon/buneary.png"
+			name: "Buneary",
+			image: "img/pokemon/buneary.png"
 		},
 		{
-			"name": "Lopunny",
-			"value": "lopunny",
-			"image": "img/pokemon/lopunny.png"
+			name: "Lopunny",
+			image: "img/pokemon/lopunny.png"
 		},
 		{
-			"name": "Mismagius",
-			"value": "mismagius",
-			"image": "img/pokemon/mismagius.png",
+			name: "Mismagius",
+			image: "img/pokemon/mismagius.png"
 		},
 		{
-			"name": "Honchkrow",
-			"value": "honchkrow",
-			"image": "img/pokemon/honchkrow.png",
+			name: "Honchkrow",
+			image: "img/pokemon/honchkrow.png"
 		},
 		{
-			"name": "Glameow",
-			"value": "glameow",
-			"image": "img/pokemon/glameow.png",
+			name: "Glameow",
+			image: "img/pokemon/glameow.png"
 		},
 		{
-			"name": "Purugly",
-			"value": "purugly",
-			"image": "img/pokemon/purugly.png",
+			name: "Purugly",
+			image: "img/pokemon/purugly.png"
 		},
 		{
-			"name": "Chingling",
-			"value": "chingling",
-			"image": "img/pokemon/chingling.png",
+			name: "Chingling",
+			image: "img/pokemon/chingling.png"
 		},
 		{
-			"name": "Stunky",
-			"value": "stunky",
-			"image": "img/pokemon/stunky.png"
+			name: "Stunky",
+			image: "img/pokemon/stunky.png"
 		},
 		{
-			"name": "Skuntank",
-			"value": "skuntank",
-			"image": "img/pokemon/skuntank.png"
+			name: "Skuntank",
+			image: "img/pokemon/skuntank.png"
 		},
 		{
-			"name": "Bronzor",
-			"value": "bronzor",
-			"image": "img/pokemon/bronzor.png"
+			name: "Bronzor",
+			image: "img/pokemon/bronzor.png"
 		},
 		{
-			"name": "Bronzong",
-			"value": "bronzong",
-			"image": "img/pokemon/bronzong.png"
+			name: "Bronzong",
+			image: "img/pokemon/bronzong.png"
 		},
 		{
-			"name": "Bonsly",
-			"value": "bonsly",
-			"image": "img/pokemon/bonsly.png"
+			name: "Bonsly",
+			image: "img/pokemon/bonsly.png"
 		},
 		{
-			"name": "Mime Jr.",
-			"value": "mime-jr",
-			"image": "img/pokemon/mime-jr.png"
+			name: "Mime Jr.",
+			image: "img/pokemon/mime-jr.png"
 		},
 		{
-			"name": "Happiny",
-			"value": "happiny",
-			"image": "img/pokemon/happiny.png"
+			name: "Happiny",
+			image: "img/pokemon/happiny.png"
 		},
 		{
-			"name": "Chatot",
-			"value": "chatot",
-			"image": "img/pokemon/chatot.png",
+			name: "Chatot",
+			image: "img/pokemon/chatot.png"
 		},
 		{
-			"name": "Spiritomb",
-			"value": "spiritomb",
-			"image": "img/pokemon/spiritomb.png"
+			name: "Spiritomb",
+			image: "img/pokemon/spiritomb.png"
 		},
 		{
-			"name": "Gible",
-			"value": "gible",
-			"image": "img/pokemon/gible.png"
+			name: "Gible",
+			image: "img/pokemon/gible.png"
 		},
 		{
-			"name": "Gabite",
-			"value": "gabite",
-			"image": "img/pokemon/gabite.png"
+			name: "Gabite",
+			image: "img/pokemon/gabite.png"
 		},
 		{
-			"name": "Garchomp",
-			"value": "garchomp",
-			"image": "img/pokemon/garchomp.png"
+			name: "Garchomp",
+			image: "img/pokemon/garchomp.png"
 		},
 		{
-			"name": "Munchlax",
-			"value": "munchlax",
-			"image": "img/pokemon/munchlax.png"
+			name: "Munchlax",
+			image: "img/pokemon/munchlax.png"
 		},
 		{
-			"name": "Riolu",
-			"value": "riolu",
-			"image": "img/pokemon/riolu.png"
+			name: "Riolu",
+			image: "img/pokemon/riolu.png"
 		},
 		{
-			"name": "Lucario",
-			"value": "lucario",
-			"image": "img/pokemon/lucario.png"
+			name: "Lucario",
+			image: "img/pokemon/lucario.png"
 		},
 		{
-			"name": "Hippopotas",
-			"value": "hippopotas",
-			"image": "img/pokemon/hippopotas.png"
+			name: "Hippopotas",
+			image: "img/pokemon/hippopotas.png"
 		},
 		{
-			"name": "Hippowdon",
-			"value": "hippowdon",
-			"image": "img/pokemon/hippowdon.png"
+			name: "Hippowdon",
+			image: "img/pokemon/hippowdon.png"
 		},
 		{
-			"name": "Skorupi",
-			"value": "skorupi",
-			"image": "img/pokemon/skorupi.png"
+			name: "Skorupi",
+			image: "img/pokemon/skorupi.png"
 		},
 		{
-			"name": "Drapion",
-			"value": "drapion",
-			"image": "img/pokemon/drapion.png"
+			name: "Drapion",
+			image: "img/pokemon/drapion.png"
 		},
 		{
-			"name": "Croagunk",
-			"value": "croagunk",
-			"image": "img/pokemon/croagunk.png"
+			name: "Croagunk",
+			image: "img/pokemon/croagunk.png"
 		},
 		{
-			"name": "Toxicroak",
-			"value": "toxicroak",
-			"image": "img/pokemon/toxicroak.png"
+			name: "Toxicroak",
+			image: "img/pokemon/toxicroak.png"
 		},
 		{
-			"name": "Carnivine",
-			"value": "carnivine",
-			"image": "img/pokemon/carnivine.png",
+			name: "Carnivine",
+			image: "img/pokemon/carnivine.png"
 		},
 		{
-			"name": "Finneon",
-			"value": "finneon",
-			"image": "img/pokemon/finneon.png",
+			name: "Finneon",
+			image: "img/pokemon/finneon.png"
 		},
 		{
-			"name": "Lumineon",
-			"value": "lumineon",
-			"image": "img/pokemon/lumineon.png",
+			name: "Lumineon",
+			image: "img/pokemon/lumineon.png"
 		},
 		{
-			"name": "Mantyke",
-			"value": "mantyke",
-			"image": "img/pokemon/mantyke.png"
+			name: "Mantyke",
+			image: "img/pokemon/mantyke.png"
 		},
 		{
-			"name": "Snover",
-			"value": "snover",
-			"image": "img/pokemon/snover.png"
+			name: "Snover",
+			image: "img/pokemon/snover.png"
 		},
 		{
-			"name": "Abomasnow",
-			"value": "abomasnow",
-			"image": "img/pokemon/abomasnow.png"
+			name: "Abomasnow",
+			image: "img/pokemon/abomasnow.png"
 		},
 		{
-			"name": "Weavile",
-			"value": "weavile",
-			"image": "img/pokemon/weavile.png"
+			name: "Weavile",
+			image: "img/pokemon/weavile.png"
 		},
 		{
-			"name": "Magnezone",
-			"value": "magnezone",
-			"image": "img/pokemon/magnezone.png"
+			name: "Magnezone",
+			image: "img/pokemon/magnezone.png"
 		},
 		{
-			"name": "Lickilicky",
-			"value": "lickilicky",
-			"image": "img/pokemon/lickilicky.png"
+			name: "Lickilicky",
+			image: "img/pokemon/lickilicky.png"
 		},
 		{
-			"name": "Rhyperior",
-			"value": "rhyperior",
-			"image": "img/pokemon/rhyperior.png"
+			name: "Rhyperior",
+			image: "img/pokemon/rhyperior.png"
 		},
 		{
-			"name": "Tangrowth",
-			"value": "tangrowth",
-			"image": "img/pokemon/tangrowth.png"
+			name: "Tangrowth",
+			image: "img/pokemon/tangrowth.png"
 		},
 		{
-			"name": "Electivire",
-			"value": "electivire",
-			"image": "img/pokemon/electivire.png"
+			name: "Electivire",
+			image: "img/pokemon/electivire.png"
 		},
 		{
-			"name": "Magmortar",
-			"value": "magmortar",
-			"image": "img/pokemon/magmortar.png"
+			name: "Magmortar",
+			image: "img/pokemon/magmortar.png"
 		},
 		{
-			"name": "Togekiss",
-			"value": "togekiss",
-			"image": "img/pokemon/togekiss.png"
+			name: "Togekiss",
+			image: "img/pokemon/togekiss.png"
 		},
 		{
-			"name": "Yanmega",
-			"value": "yanmega",
-			"image": "img/pokemon/yanmega.png",
+			name: "Yanmega",
+			image: "img/pokemon/yanmega.png"
 		},
 		{
-			"name": "Leafeon",
-			"value": "leafeon",
-			"image": "img/pokemon/leafeon.png"
+			name: "Leafeon",
+			image: "img/pokemon/leafeon.png"
 		},
 		{
-			"name": "Glaceon",
-			"value": "glaceon",
-			"image": "img/pokemon/glaceon.png"
+			name: "Glaceon",
+			image: "img/pokemon/glaceon.png"
 		},
 		{
-			"name": "Gliscor",
-			"value": "gliscor",
-			"image": "img/pokemon/gliscor.png",
+			name: "Gliscor",
+			image: "img/pokemon/gliscor.png"
 		},
 		{
-			"name": "Mamoswine",
-			"value": "mamoswine",
-			"image": "img/pokemon/mamoswine.png"
+			name: "Mamoswine",
+			image: "img/pokemon/mamoswine.png"
 		},
 		{
-			"name": "Porygon-Z",
-			"value": "porygon-z",
-			"image": "img/pokemon/porygon-z.png"
+			name: "Porygon-Z",
+			image: "img/pokemon/porygon-z.png"
 		},
 		{
-			"name": "Gallade",
-			"value": "gallade",
-			"image": "img/pokemon/gallade.png"
+			name: "Gallade",
+			image: "img/pokemon/gallade.png"
 		},
 		{
-			"name": "Probopass",
-			"value": "probopass",
-			"image": "img/pokemon/probopass.png",
+			name: "Probopass",
+			image: "img/pokemon/probopass.png"
 		},
 		{
-			"name": "Dusknoir",
-			"value": "dusknoir",
-			"image": "img/pokemon/dusknoir.png"
+			name: "Dusknoir",
+			image: "img/pokemon/dusknoir.png"
 		},
 		{
-			"name": "Froslass",
-			"value": "froslass",
-			"image": "img/pokemon/froslass.png"
+			name: "Froslass",
+			image: "img/pokemon/froslass.png"
 		},
 		{
-			"name": "Rotom",
-			"value": "rotom",
-			"image": "img/pokemon/rotom.png"
+			name: "Rotom",
+			image: "img/pokemon/rotom.png"
 		},
 		{
-			"name": "Uxie",
-			"value": "uxie",
-			"image": "img/pokemon/uxie.png"
+			name: "Uxie",
+			image: "img/pokemon/uxie.png"
 		},
 		{
-			"name": "Mesprit",
-			"value": "mesprit",
-			"image": "img/pokemon/mesprit.png"
+			name: "Mesprit",
+			image: "img/pokemon/mesprit.png"
 		},
 		{
-			"name": "Azelf",
-			"value": "azelf",
-			"image": "img/pokemon/azelf.png"
+			name: "Azelf",
+			image: "img/pokemon/azelf.png"
 		},
 		{
-			"name": "Dialga",
-			"value": "dialga",
-			"image": "img/pokemon/dialga.png"
+			name: "Dialga",
+			image: "img/pokemon/dialga.png"
 		},
 		{
-			"name": "Palkia",
-			"value": "palkia",
-			"image": "img/pokemon/palkia.png"
+			name: "Palkia",
+			image: "img/pokemon/palkia.png"
 		},
 		{
-			"name": "Heatran",
-			"value": "heatran",
-			"image": "img/pokemon/heatran.png"
+			name: "Heatran",
+			image: "img/pokemon/heatran.png"
 		},
 		{
-			"name": "Regigigas",
-			"value": "regigigas",
-			"image": "img/pokemon/regigigas.png"
+			name: "Regigigas",
+			image: "img/pokemon/regigigas.png"
 		},
 		{
-			"name": "Giratina",
-			"value": "giratina",
-			"image": "img/pokemon/giratina.png"
+			name: "Giratina",
+			image: "img/pokemon/giratina.png"
 		},
 		{
-			"name": "Cresselia",
-			"value": "cresselia",
-			"image": "img/pokemon/cresselia.png"
+			name: "Cresselia",
+			image: "img/pokemon/cresselia.png"
 		},
 		{
-			"name": "Phione",
-			"value": "phione",
-			"image": "img/pokemon/phione.png",
+			name: "Phione",
+			image: "img/pokemon/phione.png"
 		},
 		{
-			"name": "Manaphy",
-			"value": "manaphy",
-			"image": "img/pokemon/manaphy.png",
+			name: "Manaphy",
+			image: "img/pokemon/manaphy.png"
 		},
 		{
-			"name": "Darkrai",
-			"value": "darkrai",
-			"image": "img/pokemon/darkrai.png",
+			name: "Darkrai",
+			image: "img/pokemon/darkrai.png"
 		},
 		{
-			"name": "Shaymin",
-			"value": "shaymin",
-			"image": "img/pokemon/shaymin.png",
+			name: "Shaymin",
+			image: "img/pokemon/shaymin.png"
 		},
 		{
-			"name": "Arceus",
-			"value": "arceus",
-			"image": "img/pokemon/arceus.png",
+			name: "Arceus",
+			image: "img/pokemon/arceus.png"
 		},
 		{
-			"name": "Victini",
-			"value": "victini",
-			"image": "img/pokemon/victini.png"
+			name: "Victini",
+			image: "img/pokemon/victini.png"
 		},
 		{
-			"name": "Snivy",
-			"value": "snivy",
-			"image": "img/pokemon/snivy.png",
+			name: "Snivy",
+			image: "img/pokemon/snivy.png"
 		},
 		{
-			"name": "Servine",
-			"value": "servine",
-			"image": "img/pokemon/servine.png",
+			name: "Servine",
+			image: "img/pokemon/servine.png"
 		},
 		{
-			"name": "Serperior",
-			"value": "serperior",
-			"image": "img/pokemon/serperior.png",
+			name: "Serperior",
+			image: "img/pokemon/serperior.png"
 		},
 		{
-			"name": "Tepig",
-			"value": "tepig",
-			"image": "img/pokemon/tepig.png",
+			name: "Tepig",
+			image: "img/pokemon/tepig.png"
 		},
 		{
-			"name": "Pignite",
-			"value": "pignite",
-			"image": "img/pokemon/pignite.png",
+			name: "Pignite",
+			image: "img/pokemon/pignite.png"
 		},
 		{
-			"name": "Emboar",
-			"value": "emboar",
-			"image": "img/pokemon/emboar.png",
+			name: "Emboar",
+			image: "img/pokemon/emboar.png"
 		},
 		{
-			"name": "Oshawott",
-			"value": "oshawott",
-			"image": "img/pokemon/oshawott.png",
+			name: "Oshawott",
+			image: "img/pokemon/oshawott.png"
 		},
 		{
-			"name": "Dewott",
-			"value": "dewott",
-			"image": "img/pokemon/dewott.png",
+			name: "Dewott",
+			image: "img/pokemon/dewott.png"
 		},
 		{
-			"name": "Samurott",
-			"value": "samurott",
-			"image": "img/pokemon/samurott.png",
+			name: "Samurott",
+			image: "img/pokemon/samurott.png"
 		},
 		{
-			"name": "Patrat",
-			"value": "patrat",
-			"image": "img/pokemon/patrat.png",
+			name: "Patrat",
+			image: "img/pokemon/patrat.png"
 		},
 		{
-			"name": "Watchog",
-			"value": "watchog",
-			"image": "img/pokemon/watchog.png",
+			name: "Watchog",
+			image: "img/pokemon/watchog.png"
 		},
 		{
-			"name": "Lillipup",
-			"value": "lillipup",
-			"image": "img/pokemon/lillipup.png"
+			name: "Lillipup",
+			image: "img/pokemon/lillipup.png"
 		},
 		{
-			"name": "Herdier",
-			"value": "herdier",
-			"image": "img/pokemon/herdier.png"
+			name: "Herdier",
+			image: "img/pokemon/herdier.png"
 		},
 		{
-			"name": "Stoutland",
-			"value": "stoutland",
-			"image": "img/pokemon/stoutland.png"
+			name: "Stoutland",
+			image: "img/pokemon/stoutland.png"
 		},
 		{
-			"name": "Purrloin",
-			"value": "purrloin",
-			"image": "img/pokemon/purrloin.png"
+			name: "Purrloin",
+			image: "img/pokemon/purrloin.png"
 		},
 		{
-			"name": "Liepard",
-			"value": "liepard",
-			"image": "img/pokemon/liepard.png"
+			name: "Liepard",
+			image: "img/pokemon/liepard.png"
 		},
 		{
-			"name": "Pansage",
-			"value": "pansage",
-			"image": "img/pokemon/pansage.png",
+			name: "Pansage",
+			image: "img/pokemon/pansage.png"
 		},
 		{
-			"name": "Simisage",
-			"value": "simisage",
-			"image": "img/pokemon/simisage.png",
+			name: "Simisage",
+			image: "img/pokemon/simisage.png"
 		},
 		{
-			"name": "Pansear",
-			"value": "pansear",
-			"image": "img/pokemon/pansear.png",
+			name: "Pansear",
+			image: "img/pokemon/pansear.png"
 		},
 		{
-			"name": "Simisear",
-			"value": "simisear",
-			"image": "img/pokemon/simisear.png",
+			name: "Simisear",
+			image: "img/pokemon/simisear.png"
 		},
 		{
-			"name": "Panpour",
-			"value": "panpour",
-			"image": "img/pokemon/panpour.png",
+			name: "Panpour",
+			image: "img/pokemon/panpour.png"
 		},
 		{
-			"name": "Simipour",
-			"value": "simipour",
-			"image": "img/pokemon/simipour.png",
+			name: "Simipour",
+			image: "img/pokemon/simipour.png"
 		},
 		{
-			"name": "Munna",
-			"value": "munna",
-			"image": "img/pokemon/munna.png"
+			name: "Munna",
+			image: "img/pokemon/munna.png"
 		},
 		{
-			"name": "Musharna",
-			"value": "musharna",
-			"image": "img/pokemon/musharna.png"
+			name: "Musharna",
+			image: "img/pokemon/musharna.png"
 		},
 		{
-			"name": "Pidove",
-			"value": "pidove",
-			"image": "img/pokemon/pidove.png"
+			name: "Pidove",
+			image: "img/pokemon/pidove.png"
 		},
 		{
-			"name": "Tranquill",
-			"value": "tranquill",
-			"image": "img/pokemon/tranquill.png"
+			name: "Tranquill",
+			image: "img/pokemon/tranquill.png"
 		},
 		{
-			"name": "Unfezant",
-			"value": "unfezant",
-			"image": "img/pokemon/unfezant.png"
+			name: "Unfezant",
+			image: "img/pokemon/unfezant.png"
 		},
 		{
-			"name": "Blitzle",
-			"value": "blitzle",
-			"image": "img/pokemon/blitzle.png",
+			name: "Blitzle",
+			image: "img/pokemon/blitzle.png"
 		},
 		{
-			"name": "Zebstrika",
-			"value": "zebstrika",
-			"image": "img/pokemon/zebstrika.png",
+			name: "Zebstrika",
+			image: "img/pokemon/zebstrika.png"
 		},
 		{
-			"name": "Roggenrola",
-			"value": "roggenrola",
-			"image": "img/pokemon/roggenrola.png"
+			name: "Roggenrola",
+			image: "img/pokemon/roggenrola.png"
 		},
 		{
-			"name": "Boldore",
-			"value": "boldore",
-			"image": "img/pokemon/boldore.png"
+			name: "Boldore",
+			image: "img/pokemon/boldore.png"
 		},
 		{
-			"name": "Gigalith",
-			"value": "gigalith",
-			"image": "img/pokemon/gigalith.png"
+			name: "Gigalith",
+			image: "img/pokemon/gigalith.png"
 		},
 		{
-			"name": "Woobat",
-			"value": "woobat",
-			"image": "img/pokemon/woobat.png"
+			name: "Woobat",
+			image: "img/pokemon/woobat.png"
 		},
 		{
-			"name": "Swoobat",
-			"value": "swoobat",
-			"image": "img/pokemon/swoobat.png"
+			name: "Swoobat",
+			image: "img/pokemon/swoobat.png"
 		},
 		{
-			"name": "Drilbur",
-			"value": "drilbur",
-			"image": "img/pokemon/drilbur.png"
+			name: "Drilbur",
+			image: "img/pokemon/drilbur.png"
 		},
 		{
-			"name": "Excadrill",
-			"value": "excadrill",
-			"image": "img/pokemon/excadrill.png"
+			name: "Excadrill",
+			image: "img/pokemon/excadrill.png"
 		},
 		{
-			"name": "Audino",
-			"value": "audino",
-			"image": "img/pokemon/audino.png"
+			name: "Audino",
+			image: "img/pokemon/audino.png"
 		},
 		{
-			"name": "Timburr",
-			"value": "timburr",
-			"image": "img/pokemon/timburr.png"
+			name: "Timburr",
+			image: "img/pokemon/timburr.png"
 		},
 		{
-			"name": "Gurdurr",
-			"value": "gurdurr",
-			"image": "img/pokemon/gurdurr.png"
+			name: "Gurdurr",
+			image: "img/pokemon/gurdurr.png"
 		},
 		{
-			"name": "Conkeldurr",
-			"value": "conkeldurr",
-			"image": "img/pokemon/conkeldurr.png"
+			name: "Conkeldurr",
+			image: "img/pokemon/conkeldurr.png"
 		},
 		{
-			"name": "Tympole",
-			"value": "tympole",
-			"image": "img/pokemon/tympole.png"
+			name: "Tympole",
+			image: "img/pokemon/tympole.png"
 		},
 		{
-			"name": "Palpitoad",
-			"value": "palpitoad",
-			"image": "img/pokemon/palpitoad.png"
+			name: "Palpitoad",
+			image: "img/pokemon/palpitoad.png"
 		},
 		{
-			"name": "Seismitoad",
-			"value": "seismitoad",
-			"image": "img/pokemon/seismitoad.png"
+			name: "Seismitoad",
+			image: "img/pokemon/seismitoad.png"
 		},
 		{
-			"name": "Throh",
-			"value": "throh",
-			"image": "img/pokemon/throh.png"
+			name: "Throh",
+			image: "img/pokemon/throh.png"
 		},
 		{
-			"name": "Sawk",
-			"value": "sawk",
-			"image": "img/pokemon/sawk.png"
+			name: "Sawk",
+			image: "img/pokemon/sawk.png"
 		},
 		{
-			"name": "Sewaddle",
-			"value": "sewaddle",
-			"image": "img/pokemon/sewaddle.png",
+			name: "Sewaddle",
+			image: "img/pokemon/sewaddle.png"
 		},
 		{
-			"name": "Swadloon",
-			"value": "swadloon",
-			"image": "img/pokemon/swadloon.png",
+			name: "Swadloon",
+			image: "img/pokemon/swadloon.png"
 		},
 		{
-			"name": "Leavanny",
-			"value": "leavanny",
-			"image": "img/pokemon/leavanny.png",
+			name: "Leavanny",
+			image: "img/pokemon/leavanny.png"
 		},
 		{
-			"name": "Venipede",
-			"value": "venipede",
-			"image": "img/pokemon/venipede.png"
+			name: "Venipede",
+			image: "img/pokemon/venipede.png"
 		},
 		{
-			"name": "Whirlipede",
-			"value": "whirlipede",
-			"image": "img/pokemon/whirlipede.png"
+			name: "Whirlipede",
+			image: "img/pokemon/whirlipede.png"
 		},
 		{
-			"name": "Scolipede",
-			"value": "scolipede",
-			"image": "img/pokemon/scolipede.png"
+			name: "Scolipede",
+			image: "img/pokemon/scolipede.png"
 		},
 		{
-			"name": "Cottonee",
-			"value": "cottonee",
-			"image": "img/pokemon/cottonee.png"
+			name: "Cottonee",
+			image: "img/pokemon/cottonee.png"
 		},
 		{
-			"name": "Whimsicott",
-			"value": "whimsicott",
-			"image": "img/pokemon/whimsicott.png"
+			name: "Whimsicott",
+			image: "img/pokemon/whimsicott.png"
 		},
 		{
-			"name": "Petilil",
-			"value": "petilil",
-			"image": "img/pokemon/petilil.png"
+			name: "Petilil",
+			image: "img/pokemon/petilil.png"
 		},
 		{
-			"name": "Lilligant",
-			"value": "lilligant",
-			"image": "img/pokemon/lilligant.png"
+			name: "Lilligant",
+			image: "img/pokemon/lilligant.png"
 		},
 		{
-			"name": "Basculin",
-			"value": "basculin",
-			"image": "img/pokemon/basculin.png"
+			name: "Basculin",
+			image: "img/pokemon/basculin.png"
 		},
 		{
-			"name": "Sandile",
-			"value": "sandile",
-			"image": "img/pokemon/sandile.png"
+			name: "Sandile",
+			image: "img/pokemon/sandile.png"
 		},
 		{
-			"name": "Krokorok",
-			"value": "krokorok",
-			"image": "img/pokemon/krokorok.png"
+			name: "Krokorok",
+			image: "img/pokemon/krokorok.png"
 		},
 		{
-			"name": "Krookodile",
-			"value": "krookodile",
-			"image": "img/pokemon/krookodile.png"
+			name: "Krookodile",
+			image: "img/pokemon/krookodile.png"
 		},
 		{
-			"name": "Darumaka",
-			"value": "darumaka",
-			"image": "img/pokemon/darumaka.png"
+			name: "Darumaka",
+			image: "img/pokemon/darumaka.png"
 		},
 		{
-			"name": "Darmanitan",
-			"value": "darmanitan",
-			"image": "img/pokemon/darmanitan.png"
+			name: "Darmanitan",
+			image: "img/pokemon/darmanitan.png"
 		},
 		{
-			"name": "Maractus",
-			"value": "maractus",
-			"image": "img/pokemon/maractus.png"
+			name: "Maractus",
+			image: "img/pokemon/maractus.png"
 		},
 		{
-			"name": "Dwebble",
-			"value": "dwebble",
-			"image": "img/pokemon/dwebble.png"
+			name: "Dwebble",
+			image: "img/pokemon/dwebble.png"
 		},
 		{
-			"name": "Crustle",
-			"value": "crustle",
-			"image": "img/pokemon/crustle.png"
+			name: "Crustle",
+			image: "img/pokemon/crustle.png"
 		},
 		{
-			"name": "Scraggy",
-			"value": "scraggy",
-			"image": "img/pokemon/scraggy.png"
+			name: "Scraggy",
+			image: "img/pokemon/scraggy.png"
 		},
 		{
-			"name": "Scrafty",
-			"value": "scrafty",
-			"image": "img/pokemon/scrafty.png"
+			name: "Scrafty",
+			image: "img/pokemon/scrafty.png"
 		},
 		{
-			"name": "Sigilyph",
-			"value": "sigilyph",
-			"image": "img/pokemon/sigilyph.png"
+			name: "Sigilyph",
+			image: "img/pokemon/sigilyph.png"
 		},
 		{
-			"name": "Yamask",
-			"value": "yamask",
-			"image": "img/pokemon/yamask.png"
+			name: "Yamask",
+			image: "img/pokemon/yamask.png"
 		},
 		{
-			"name": "Cofagrigus",
-			"value": "cofagrigus",
-			"image": "img/pokemon/cofagrigus.png"
+			name: "Cofagrigus",
+			image: "img/pokemon/cofagrigus.png"
 		},
 		{
-			"name": "Tirtouga",
-			"value": "tirtouga",
-			"image": "img/pokemon/tirtouga.png"
+			name: "Tirtouga",
+			image: "img/pokemon/tirtouga.png"
 		},
 		{
-			"name": "Carracosta",
-			"value": "carracosta",
-			"image": "img/pokemon/carracosta.png"
+			name: "Carracosta",
+			image: "img/pokemon/carracosta.png"
 		},
 		{
-			"name": "Archen",
-			"value": "archen",
-			"image": "img/pokemon/archen.png"
+			name: "Archen",
+			image: "img/pokemon/archen.png"
 		},
 		{
-			"name": "Archeops",
-			"value": "archeops",
-			"image": "img/pokemon/archeops.png"
+			name: "Archeops",
+			image: "img/pokemon/archeops.png"
 		},
 		{
-			"name": "Trubbish",
-			"value": "trubbish",
-			"image": "img/pokemon/trubbish.png"
+			name: "Trubbish",
+			image: "img/pokemon/trubbish.png"
 		},
 		{
-			"name": "Garbodor",
-			"value": "garbodor",
-			"image": "img/pokemon/garbodor.png"
+			name: "Garbodor",
+			image: "img/pokemon/garbodor.png"
 		},
 		{
-			"name": "Zorua",
-			"value": "zorua",
-			"image": "img/pokemon/zorua.png"
+			name: "Zorua",
+			image: "img/pokemon/zorua.png"
 		},
 		{
-			"name": "Zoroark",
-			"value": "zoroark",
-			"image": "img/pokemon/zoroark.png"
+			name: "Zoroark",
+			image: "img/pokemon/zoroark.png"
 		},
 		{
-			"name": "Minccino",
-			"value": "minccino",
-			"image": "img/pokemon/minccino.png"
+			name: "Minccino",
+			image: "img/pokemon/minccino.png"
 		},
 		{
-			"name": "Cinccino",
-			"value": "cinccino",
-			"image": "img/pokemon/cinccino.png"
+			name: "Cinccino",
+			image: "img/pokemon/cinccino.png"
 		},
 		{
-			"name": "Gothita",
-			"value": "gothita",
-			"image": "img/pokemon/gothita.png"
+			name: "Gothita",
+			image: "img/pokemon/gothita.png"
 		},
 		{
-			"name": "Gothorita",
-			"value": "gothorita",
-			"image": "img/pokemon/gothorita.png"
+			name: "Gothorita",
+			image: "img/pokemon/gothorita.png"
 		},
 		{
-			"name": "Gothitelle",
-			"value": "gothitelle",
-			"image": "img/pokemon/gothitelle.png"
+			name: "Gothitelle",
+			image: "img/pokemon/gothitelle.png"
 		},
 		{
-			"name": "Solosis",
-			"value": "solosis",
-			"image": "img/pokemon/solosis.png"
+			name: "Solosis",
+			image: "img/pokemon/solosis.png"
 		},
 		{
-			"name": "Duosion",
-			"value": "duosion",
-			"image": "img/pokemon/duosion.png"
+			name: "Duosion",
+			image: "img/pokemon/duosion.png"
 		},
 		{
-			"name": "Reuniclus",
-			"value": "reuniclus",
-			"image": "img/pokemon/reuniclus.png"
+			name: "Reuniclus",
+			image: "img/pokemon/reuniclus.png"
 		},
 		{
-			"name": "Ducklett",
-			"value": "ducklett",
-			"image": "img/pokemon/ducklett.png",
+			name: "Ducklett",
+			image: "img/pokemon/ducklett.png"
 		},
 		{
-			"name": "Swanna",
-			"value": "swanna",
-			"image": "img/pokemon/swanna.png",
+			name: "Swanna",
+			image: "img/pokemon/swanna.png"
 		},
 		{
-			"name": "Vanillite",
-			"value": "vanillite",
-			"image": "img/pokemon/vanillite.png"
+			name: "Vanillite",
+			image: "img/pokemon/vanillite.png"
 		},
 		{
-			"name": "Vanillish",
-			"value": "vanillish",
-			"image": "img/pokemon/vanillish.png"
+			name: "Vanillish",
+			image: "img/pokemon/vanillish.png"
 		},
 		{
-			"name": "Vanilluxe",
-			"value": "vanilluxe",
-			"image": "img/pokemon/vanilluxe.png"
+			name: "Vanilluxe",
+			image: "img/pokemon/vanilluxe.png"
 		},
 		{
-			"name": "Deerling",
-			"value": "deerling",
-			"image": "img/pokemon/deerling.png",
+			name: "Deerling",
+			image: "img/pokemon/deerling.png"
 		},
 		{
-			"name": "Sawsbuck",
-			"value": "sawsbuck",
-			"image": "img/pokemon/sawsbuck.png",
+			name: "Sawsbuck",
+			image: "img/pokemon/sawsbuck.png"
 		},
 		{
-			"name": "Emolga",
-			"value": "emolga",
-			"image": "img/pokemon/emolga.png"
+			name: "Emolga",
+			image: "img/pokemon/emolga.png"
 		},
 		{
-			"name": "Karrablast",
-			"value": "karrablast",
-			"image": "img/pokemon/karrablast.png"
+			name: "Karrablast",
+			image: "img/pokemon/karrablast.png"
 		},
 		{
-			"name": "Escavalier",
-			"value": "escavalier",
-			"image": "img/pokemon/escavalier.png"
+			name: "Escavalier",
+			image: "img/pokemon/escavalier.png"
 		},
 		{
-			"name": "Foongus",
-			"value": "foongus",
-			"image": "img/pokemon/foongus.png"
+			name: "Foongus",
+			image: "img/pokemon/foongus.png"
 		},
 		{
-			"name": "Amoonguss",
-			"value": "amoonguss",
-			"image": "img/pokemon/amoonguss.png"
+			name: "Amoonguss",
+			image: "img/pokemon/amoonguss.png"
 		},
 		{
-			"name": "Frillish",
-			"value": "frillish",
-			"image": "img/pokemon/frillish.png"
+			name: "Frillish",
+			image: "img/pokemon/frillish.png"
 		},
 		{
-			"name": "Jellicent",
-			"value": "jellicent",
-			"image": "img/pokemon/jellicent.png"
+			name: "Jellicent",
+			image: "img/pokemon/jellicent.png"
 		},
 		{
-			"name": "Alomomola",
-			"value": "alomomola",
-			"image": "img/pokemon/alomomola.png",
+			name: "Alomomola",
+			image: "img/pokemon/alomomola.png"
 		},
 		{
-			"name": "Joltik",
-			"value": "joltik",
-			"image": "img/pokemon/joltik.png"
+			name: "Joltik",
+			image: "img/pokemon/joltik.png"
 		},
 		{
-			"name": "Galvantula",
-			"value": "galvantula",
-			"image": "img/pokemon/galvantula.png"
+			name: "Galvantula",
+			image: "img/pokemon/galvantula.png"
 		},
 		{
-			"name": "Ferroseed",
-			"value": "ferroseed",
-			"image": "img/pokemon/ferroseed.png"
+			name: "Ferroseed",
+			image: "img/pokemon/ferroseed.png"
 		},
 		{
-			"name": "Ferrothorn",
-			"value": "ferrothorn",
-			"image": "img/pokemon/ferrothorn.png"
+			name: "Ferrothorn",
+			image: "img/pokemon/ferrothorn.png"
 		},
 		{
-			"name": "Klink",
-			"value": "klink",
-			"image": "img/pokemon/klink.png"
+			name: "Klink",
+			image: "img/pokemon/klink.png"
 		},
 		{
-			"name": "Klang",
-			"value": "klang",
-			"image": "img/pokemon/klang.png"
+			name: "Klang",
+			image: "img/pokemon/klang.png"
 		},
 		{
-			"name": "Klinklang",
-			"value": "klinklang",
-			"image": "img/pokemon/klinklang.png"
+			name: "Klinklang",
+			image: "img/pokemon/klinklang.png"
 		},
 		{
-			"name": "Tynamo",
-			"value": "tynamo",
-			"image": "img/pokemon/tynamo.png",
+			name: "Tynamo",
+			image: "img/pokemon/tynamo.png"
 		},
 		{
-			"name": "Eelektrik",
-			"value": "eelektrik",
-			"image": "img/pokemon/eelektrik.png",
+			name: "Eelektrik",
+			image: "img/pokemon/eelektrik.png"
 		},
 		{
-			"name": "Eelektross",
-			"value": "eelektross",
-			"image": "img/pokemon/eelektross.png",
+			name: "Eelektross",
+			image: "img/pokemon/eelektross.png"
 		},
 		{
-			"name": "Elgyem",
-			"value": "elgyem",
-			"image": "img/pokemon/elgyem.png"
+			name: "Elgyem",
+			image: "img/pokemon/elgyem.png"
 		},
 		{
-			"name": "Beheeyem",
-			"value": "beheeyem",
-			"image": "img/pokemon/beheeyem.png"
+			name: "Beheeyem",
+			image: "img/pokemon/beheeyem.png"
 		},
 		{
-			"name": "Litwick",
-			"value": "litwick",
-			"image": "img/pokemon/litwick.png"
+			name: "Litwick",
+			image: "img/pokemon/litwick.png"
 		},
 		{
-			"name": "Lampent",
-			"value": "lampent",
-			"image": "img/pokemon/lampent.png"
+			name: "Lampent",
+			image: "img/pokemon/lampent.png"
 		},
 		{
-			"name": "Chandelure",
-			"value": "chandelure",
-			"image": "img/pokemon/chandelure.png"
+			name: "Chandelure",
+			image: "img/pokemon/chandelure.png"
 		},
 		{
-			"name": "Axew",
-			"value": "axew",
-			"image": "img/pokemon/axew.png"
+			name: "Axew",
+			image: "img/pokemon/axew.png"
 		},
 		{
-			"name": "Fraxure",
-			"value": "fraxure",
-			"image": "img/pokemon/fraxure.png"
+			name: "Fraxure",
+			image: "img/pokemon/fraxure.png"
 		},
 		{
-			"name": "Haxorus",
-			"value": "haxorus",
-			"image": "img/pokemon/haxorus.png"
+			name: "Haxorus",
+			image: "img/pokemon/haxorus.png"
 		},
 		{
-			"name": "Cubchoo",
-			"value": "cubchoo",
-			"image": "img/pokemon/cubchoo.png"
+			name: "Cubchoo",
+			image: "img/pokemon/cubchoo.png"
 		},
 		{
-			"name": "Beartic",
-			"value": "beartic",
-			"image": "img/pokemon/beartic.png"
+			name: "Beartic",
+			image: "img/pokemon/beartic.png"
 		},
 		{
-			"name": "Cryogonal",
-			"value": "cryogonal",
-			"image": "img/pokemon/cryogonal.png"
+			name: "Cryogonal",
+			image: "img/pokemon/cryogonal.png"
 		},
 		{
-			"name": "Shelmet",
-			"value": "shelmet",
-			"image": "img/pokemon/shelmet.png"
+			name: "Shelmet",
+			image: "img/pokemon/shelmet.png"
 		},
 		{
-			"name": "Accelgor",
-			"value": "accelgor",
-			"image": "img/pokemon/accelgor.png"
+			name: "Accelgor",
+			image: "img/pokemon/accelgor.png"
 		},
 		{
-			"name": "Stunfisk",
-			"value": "stunfisk",
-			"image": "img/pokemon/stunfisk.png"
+			name: "Stunfisk",
+			image: "img/pokemon/stunfisk.png"
 		},
 		{
-			"name": "Mienfoo",
-			"value": "mienfoo",
-			"image": "img/pokemon/mienfoo.png"
+			name: "Mienfoo",
+			image: "img/pokemon/mienfoo.png"
 		},
 		{
-			"name": "Mienshao",
-			"value": "mienshao",
-			"image": "img/pokemon/mienshao.png"
+			name: "Mienshao",
+			image: "img/pokemon/mienshao.png"
 		},
 		{
-			"name": "Druddigon",
-			"value": "druddigon",
-			"image": "img/pokemon/druddigon.png"
+			name: "Druddigon",
+			image: "img/pokemon/druddigon.png"
 		},
 		{
-			"name": "Golett",
-			"value": "golett",
-			"image": "img/pokemon/golett.png"
+			name: "Golett",
+			image: "img/pokemon/golett.png"
 		},
 		{
-			"name": "Golurk",
-			"value": "golurk",
-			"image": "img/pokemon/golurk.png"
+			name: "Golurk",
+			image: "img/pokemon/golurk.png"
 		},
 		{
-			"name": "Pawniard",
-			"value": "pawniard",
-			"image": "img/pokemon/pawniard.png"
+			name: "Pawniard",
+			image: "img/pokemon/pawniard.png"
 		},
 		{
-			"name": "Bisharp",
-			"value": "bisharp",
-			"image": "img/pokemon/bisharp.png"
+			name: "Bisharp",
+			image: "img/pokemon/bisharp.png"
 		},
 		{
-			"name": "Bouffalant",
-			"value": "bouffalant",
-			"image": "img/pokemon/bouffalant.png"
+			name: "Bouffalant",
+			image: "img/pokemon/bouffalant.png"
 		},
 		{
-			"name": "Rufflet",
-			"value": "rufflet",
-			"image": "img/pokemon/rufflet.png"
+			name: "Rufflet",
+			image: "img/pokemon/rufflet.png"
 		},
 		{
-			"name": "Braviary",
-			"value": "braviary",
-			"image": "img/pokemon/braviary.png"
+			name: "Braviary",
+			image: "img/pokemon/braviary.png"
 		},
 		{
-			"name": "Vullaby",
-			"value": "vullaby",
-			"image": "img/pokemon/vullaby.png"
+			name: "Vullaby",
+			image: "img/pokemon/vullaby.png"
 		},
 		{
-			"name": "Mandibuzz",
-			"value": "mandibuzz",
-			"image": "img/pokemon/mandibuzz.png"
+			name: "Mandibuzz",
+			image: "img/pokemon/mandibuzz.png"
 		},
 		{
-			"name": "Heatmor",
-			"value": "heatmor",
-			"image": "img/pokemon/heatmor.png"
+			name: "Heatmor",
+			image: "img/pokemon/heatmor.png"
 		},
 		{
-			"name": "Durant",
-			"value": "durant",
-			"image": "img/pokemon/durant.png"
+			name: "Durant",
+			image: "img/pokemon/durant.png"
 		},
 		{
-			"name": "Deino",
-			"value": "deino",
-			"image": "img/pokemon/deino.png"
+			name: "Deino",
+			image: "img/pokemon/deino.png"
 		},
 		{
-			"name": "Zweilous",
-			"value": "zweilous",
-			"image": "img/pokemon/zweilous.png"
+			name: "Zweilous",
+			image: "img/pokemon/zweilous.png"
 		},
 		{
-			"name": "Hydreigon",
-			"value": "hydreigon",
-			"image": "img/pokemon/hydreigon.png"
+			name: "Hydreigon",
+			image: "img/pokemon/hydreigon.png"
 		},
 		{
-			"name": "Larvesta",
-			"value": "larvesta",
-			"image": "img/pokemon/larvesta.png"
+			name: "Larvesta",
+			image: "img/pokemon/larvesta.png"
 		},
 		{
-			"name": "Volcarona",
-			"value": "volcarona",
-			"image": "img/pokemon/volcarona.png"
+			name: "Volcarona",
+			image: "img/pokemon/volcarona.png"
 		},
 		{
-			"name": "Cobalion",
-			"value": "cobalion",
-			"image": "img/pokemon/cobalion.png"
+			name: "Cobalion",
+			image: "img/pokemon/cobalion.png"
 		},
 		{
-			"name": "Terrakion",
-			"value": "terrakion",
-			"image": "img/pokemon/terrakion.png"
+			name: "Terrakion",
+			image: "img/pokemon/terrakion.png"
 		},
 		{
-			"name": "Virizion",
-			"value": "virizion",
-			"image": "img/pokemon/virizion.png"
+			name: "Virizion",
+			image: "img/pokemon/virizion.png"
 		},
 		{
-			"name": "Tornadus",
-			"value": "tornadus",
-			"image": "img/pokemon/tornadus.png"
+			name: "Tornadus",
+			image: "img/pokemon/tornadus.png"
 		},
 		{
-			"name": "Thundurus",
-			"value": "thundurus",
-			"image": "img/pokemon/thundurus.png"
+			name: "Thundurus",
+			image: "img/pokemon/thundurus.png"
 		},
 		{
-			"name": "Reshiram",
-			"value": "reshiram",
-			"image": "img/pokemon/reshiram.png"
+			name: "Reshiram",
+			image: "img/pokemon/reshiram.png"
 		},
 		{
-			"name": "Zekrom",
-			"value": "zekrom",
-			"image": "img/pokemon/zekrom.png"
+			name: "Zekrom",
+			image: "img/pokemon/zekrom.png"
 		},
 		{
-			"name": "Landorus",
-			"value": "landorus",
-			"image": "img/pokemon/landorus.png"
+			name: "Landorus",
+			image: "img/pokemon/landorus.png"
 		},
 		{
-			"name": "Kyurem",
-			"value": "kyurem",
-			"image": "img/pokemon/kyurem.png"
+			name: "Kyurem",
+			image: "img/pokemon/kyurem.png"
 		},
 		{
-			"name": "Keldeo",
-			"value": "keldeo",
-			"image": "img/pokemon/keldeo.png"
+			name: "Keldeo",
+			image: "img/pokemon/keldeo.png"
 		},
 		{
-			"name": "Meloetta",
-			"value": "meloetta",
-			"image": "img/pokemon/meloetta.png",
+			name: "Meloetta",
+			image: "img/pokemon/meloetta.png"
 		},
 		{
-			"name": "Genesect",
-			"value": "genesect",
-			"image": "img/pokemon/genesect.png"
+			name: "Genesect",
+			image: "img/pokemon/genesect.png"
 		},
 		{
-			"name": "Chespin",
-			"value": "chespin",
-			"image": "img/pokemon/chespin.png",
+			name: "Chespin",
+			image: "img/pokemon/chespin.png"
 		},
 		{
-			"name": "Quilladin",
-			"value": "quilladin",
-			"image": "img/pokemon/quilladin.png",
+			name: "Quilladin",
+			image: "img/pokemon/quilladin.png"
 		},
 		{
-			"name": "Chesnaught",
-			"value": "chesnaught",
-			"image": "img/pokemon/chesnaught.png",
+			name: "Chesnaught",
+			image: "img/pokemon/chesnaught.png"
 		},
 		{
-			"name": "Fennekin",
-			"value": "fennekin",
-			"image": "img/pokemon/fennekin.png",
+			name: "Fennekin",
+			image: "img/pokemon/fennekin.png"
 		},
 		{
-			"name": "Braixen",
-			"value": "braixen",
-			"image": "img/pokemon/braixen.png",
+			name: "Braixen",
+			image: "img/pokemon/braixen.png"
 		},
 		{
-			"name": "Delphox",
-			"value": "delphox",
-			"image": "img/pokemon/delphox.png",
+			name: "Delphox",
+			image: "img/pokemon/delphox.png"
 		},
 		{
-			"name": "Froakie",
-			"value": "froakie",
-			"image": "img/pokemon/froakie.png",
+			name: "Froakie",
+			image: "img/pokemon/froakie.png"
 		},
 		{
-			"name": "Frogadier",
-			"value": "frogadier",
-			"image": "img/pokemon/frogadier.png",
+			name: "Frogadier",
+			image: "img/pokemon/frogadier.png"
 		},
 		{
-			"name": "Greninja",
-			"value": "greninja",
-			"image": "img/pokemon/greninja.png",
+			name: "Greninja",
+			image: "img/pokemon/greninja.png"
 		},
 		{
-			"name": "Bunnelby",
-			"value": "bunnelby",
-			"image": "img/pokemon/bunnelby.png"
+			name: "Bunnelby",
+			image: "img/pokemon/bunnelby.png"
 		},
 		{
-			"name": "Diggersby",
-			"value": "diggersby",
-			"image": "img/pokemon/diggersby.png"
+			name: "Diggersby",
+			image: "img/pokemon/diggersby.png"
 		},
 		{
-			"name": "Fletchling",
-			"value": "fletchling",
-			"image": "img/pokemon/fletchling.png"
+			name: "Fletchling",
+			image: "img/pokemon/fletchling.png"
 		},
 		{
-			"name": "Fletchinder",
-			"value": "fletchinder",
-			"image": "img/pokemon/fletchinder.png"
+			name: "Fletchinder",
+			image: "img/pokemon/fletchinder.png"
 		},
 		{
-			"name": "Talonflame",
-			"value": "talonflame",
-			"image": "img/pokemon/talonflame.png"
+			name: "Talonflame",
+			image: "img/pokemon/talonflame.png"
 		},
 		{
-			"name": "Scatterbug",
-			"value": "scatterbug",
-			"image": "img/pokemon/scatterbug.png",
+			name: "Scatterbug",
+			image: "img/pokemon/scatterbug.png"
 		},
 		{
-			"name": "Spewpa",
-			"value": "spewpa",
-			"image": "img/pokemon/spewpa.png",
+			name: "Spewpa",
+			image: "img/pokemon/spewpa.png"
 		},
 		{
-			"name": "Vivillon",
-			"value": "vivillon",
-			"image": "img/pokemon/vivillon.png",
+			name: "Vivillon",
+			image: "img/pokemon/vivillon.png"
 		},
 		{
-			"name": "Litleo",
-			"value": "litleo",
-			"image": "img/pokemon/litleo.png",
+			name: "Litleo",
+			image: "img/pokemon/litleo.png"
 		},
 		{
-			"name": "Pyroar",
-			"value": "pyroar",
-			"image": "img/pokemon/pyroar.png",
+			name: "Pyroar",
+			image: "img/pokemon/pyroar.png"
 		},
 		{
-			"name": "Flabébé",
-			"value": "flabebe",
-			"image": "img/pokemon/flabebe.png",
+			name: "Flabébé",
+			image: "img/pokemon/flabebe.png"
 		},
 		{
-			"name": "Floette",
-			"value": "floette",
-			"image": "img/pokemon/floette.png",
+			name: "Floette",
+			image: "img/pokemon/floette.png"
 		},
 		{
-			"name": "Florges",
-			"value": "florges",
-			"image": "img/pokemon/florges.png",
+			name: "Florges",
+			image: "img/pokemon/florges.png"
 		},
 		{
-			"name": "Skiddo",
-			"value": "skiddo",
-			"image": "img/pokemon/skiddo.png",
+			name: "Skiddo",
+			image: "img/pokemon/skiddo.png"
 		},
 		{
-			"name": "Gogoat",
-			"value": "gogoat",
-			"image": "img/pokemon/gogoat.png",
+			name: "Gogoat",
+			image: "img/pokemon/gogoat.png"
 		},
 		{
-			"name": "Pancham",
-			"value": "pancham",
-			"image": "img/pokemon/pancham.png"
+			name: "Pancham",
+			image: "img/pokemon/pancham.png"
 		},
 		{
-			"name": "Pangoro",
-			"value": "pangoro",
-			"image": "img/pokemon/pangoro.png"
+			name: "Pangoro",
+			image: "img/pokemon/pangoro.png"
 		},
 		{
-			"name": "Furfrou",
-			"value": "furfrou",
-			"image": "img/pokemon/furfrou.png",
+			name: "Furfrou",
+			image: "img/pokemon/furfrou.png"
 		},
 		{
-			"name": "Espurr",
-			"value": "espurr",
-			"image": "img/pokemon/espurr.png"
+			name: "Espurr",
+			image: "img/pokemon/espurr.png"
 		},
 		{
-			"name": "Meowstic",
-			"value": "meowstic",
-			"image": "img/pokemon/meowstic.png"
+			name: "Meowstic",
+			image: "img/pokemon/meowstic.png"
 		},
 		{
-			"name": "Honedge",
-			"value": "honedge",
-			"image": "img/pokemon/honedge.png"
+			name: "Honedge",
+			image: "img/pokemon/honedge.png"
 		},
 		{
-			"name": "Doublade",
-			"value": "doublade",
-			"image": "img/pokemon/doublade.png"
+			name: "Doublade",
+			image: "img/pokemon/doublade.png"
 		},
 		{
-			"name": "Aegislash",
-			"value": "aegislash",
-			"image": "img/pokemon/aegislash.png"
+			name: "Aegislash",
+			image: "img/pokemon/aegislash.png"
 		},
 		{
-			"name": "Spritzee",
-			"value": "spritzee",
-			"image": "img/pokemon/spritzee.png"
+			name: "Spritzee",
+			image: "img/pokemon/spritzee.png"
 		},
 		{
-			"name": "Aromatisse",
-			"value": "aromatisse",
-			"image": "img/pokemon/aromatisse.png"
+			name: "Aromatisse",
+			image: "img/pokemon/aromatisse.png"
 		},
 		{
-			"name": "Swirlix",
-			"value": "swirlix",
-			"image": "img/pokemon/swirlix.png"
+			name: "Swirlix",
+			image: "img/pokemon/swirlix.png"
 		},
 		{
-			"name": "Slurpuff",
-			"value": "slurpuff",
-			"image": "img/pokemon/slurpuff.png"
+			name: "Slurpuff",
+			image: "img/pokemon/slurpuff.png"
 		},
 		{
-			"name": "Inkay",
-			"value": "inkay",
-			"image": "img/pokemon/inkay.png"
+			name: "Inkay",
+			image: "img/pokemon/inkay.png"
 		},
 		{
-			"name": "Malamar",
-			"value": "malamar",
-			"image": "img/pokemon/malamar.png"
+			name: "Malamar",
+			image: "img/pokemon/malamar.png"
 		},
 		{
-			"name": "Binacle",
-			"value": "binacle",
-			"image": "img/pokemon/binacle.png"
+			name: "Binacle",
+			image: "img/pokemon/binacle.png"
 		},
 		{
-			"name": "Barbaracle",
-			"value": "barbaracle",
-			"image": "img/pokemon/barbaracle.png"
+			name: "Barbaracle",
+			image: "img/pokemon/barbaracle.png"
 		},
 		{
-			"name": "Skrelp",
-			"value": "skrelp",
-			"image": "img/pokemon/skrelp.png"
+			name: "Skrelp",
+			image: "img/pokemon/skrelp.png"
 		},
 		{
-			"name": "Dragalge",
-			"value": "dragalge",
-			"image": "img/pokemon/dragalge.png"
+			name: "Dragalge",
+			image: "img/pokemon/dragalge.png"
 		},
 		{
-			"name": "Clauncher",
-			"value": "clauncher",
-			"image": "img/pokemon/clauncher.png"
+			name: "Clauncher",
+			image: "img/pokemon/clauncher.png"
 		},
 		{
-			"name": "Clawitzer",
-			"value": "clawitzer",
-			"image": "img/pokemon/clawitzer.png"
+			name: "Clawitzer",
+			image: "img/pokemon/clawitzer.png"
 		},
 		{
-			"name": "Helioptile",
-			"value": "helioptile",
-			"image": "img/pokemon/helioptile.png"
+			name: "Helioptile",
+			image: "img/pokemon/helioptile.png"
 		},
 		{
-			"name": "Heliolisk",
-			"value": "heliolisk",
-			"image": "img/pokemon/heliolisk.png"
+			name: "Heliolisk",
+			image: "img/pokemon/heliolisk.png"
 		},
 		{
-			"name": "Tyrunt",
-			"value": "tyrunt",
-			"image": "img/pokemon/tyrunt.png"
+			name: "Tyrunt",
+			image: "img/pokemon/tyrunt.png"
 		},
 		{
-			"name": "Tyrantrum",
-			"value": "tyrantrum",
-			"image": "img/pokemon/tyrantrum.png"
+			name: "Tyrantrum",
+			image: "img/pokemon/tyrantrum.png"
 		},
 		{
-			"name": "Amaura",
-			"value": "amaura",
-			"image": "img/pokemon/amaura.png"
+			name: "Amaura",
+			image: "img/pokemon/amaura.png"
 		},
 		{
-			"name": "Aurorus",
-			"value": "aurorus",
-			"image": "img/pokemon/aurorus.png"
+			name: "Aurorus",
+			image: "img/pokemon/aurorus.png"
 		},
 		{
-			"name": "Sylveon",
-			"value": "sylveon",
-			"image": "img/pokemon/sylveon.png"
+			name: "Sylveon",
+			image: "img/pokemon/sylveon.png"
 		},
 		{
-			"name": "Hawlucha",
-			"value": "hawlucha",
-			"image": "img/pokemon/hawlucha.png"
+			name: "Hawlucha",
+			image: "img/pokemon/hawlucha.png"
 		},
 		{
-			"name": "Dedenne",
-			"value": "dedenne",
-			"image": "img/pokemon/dedenne.png"
+			name: "Dedenne",
+			image: "img/pokemon/dedenne.png"
 		},
 		{
-			"name": "Carbink",
-			"value": "carbink",
-			"image": "img/pokemon/carbink.png"
+			name: "Carbink",
+			image: "img/pokemon/carbink.png"
 		},
 		{
-			"name": "Goomy",
-			"value": "goomy",
-			"image": "img/pokemon/goomy.png"
+			name: "Goomy",
+			image: "img/pokemon/goomy.png"
 		},
 		{
-			"name": "Sliggoo",
-			"value": "sliggoo",
-			"image": "img/pokemon/sliggoo.png"
+			name: "Sliggoo",
+			image: "img/pokemon/sliggoo.png"
 		},
 		{
-			"name": "Goodra",
-			"value": "goodra",
-			"image": "img/pokemon/goodra.png"
+			name: "Goodra",
+			image: "img/pokemon/goodra.png"
 		},
 		{
-			"name": "Klefki",
-			"value": "klefki",
-			"image": "img/pokemon/klefki.png"
+			name: "Klefki",
+			image: "img/pokemon/klefki.png"
 		},
 		{
-			"name": "Phantump",
-			"value": "phantump",
-			"image": "img/pokemon/phantump.png"
+			name: "Phantump",
+			image: "img/pokemon/phantump.png"
 		},
 		{
-			"name": "Trevenant",
-			"value": "trevenant",
-			"image": "img/pokemon/trevenant.png"
+			name: "Trevenant",
+			image: "img/pokemon/trevenant.png"
 		},
 		{
-			"name": "Pumpkaboo",
-			"value": "pumpkaboo",
-			"image": "img/pokemon/pumpkaboo.png"
+			name: "Pumpkaboo",
+			image: "img/pokemon/pumpkaboo.png"
 		},
 		{
-			"name": "Gourgeist",
-			"value": "gourgeist",
-			"image": "img/pokemon/gourgeist.png"
+			name: "Gourgeist",
+			image: "img/pokemon/gourgeist.png"
 		},
 		{
-			"name": "Bergmite",
-			"value": "bergmite",
-			"image": "img/pokemon/bergmite.png"
+			name: "Bergmite",
+			image: "img/pokemon/bergmite.png"
 		},
 		{
-			"name": "Avalugg",
-			"value": "avalugg",
-			"image": "img/pokemon/avalugg.png"
+			name: "Avalugg",
+			image: "img/pokemon/avalugg.png"
 		},
 		{
-			"name": "Noibat",
-			"value": "noibat",
-			"image": "img/pokemon/noibat.png"
+			name: "Noibat",
+			image: "img/pokemon/noibat.png"
 		},
 		{
-			"name": "Noivern",
-			"value": "noivern",
-			"image": "img/pokemon/noivern.png"
+			name: "Noivern",
+			image: "img/pokemon/noivern.png"
 		},
 		{
-			"name": "Xerneas",
-			"value": "xerneas",
-			"image": "img/pokemon/xerneas.png"
+			name: "Xerneas",
+			image: "img/pokemon/xerneas.png"
 		},
 		{
-			"name": "Yveltal",
-			"value": "yveltal",
-			"image": "img/pokemon/yveltal.png"
+			name: "Yveltal",
+			image: "img/pokemon/yveltal.png"
 		},
 		{
-			"name": "Zygarde",
-			"value": "zygarde",
-			"image": "img/pokemon/zygarde.png"
+			name: "Zygarde",
+			image: "img/pokemon/zygarde.png"
 		},
 		{
-			"name": "Diancie",
-			"value": "diancie",
-			"image": "img/pokemon/diancie.png"
+			name: "Diancie",
+			image: "img/pokemon/diancie.png"
 		},
 		{
-			"name": "Hoopa",
-			"value": "hoopa",
-			"image": "img/pokemon/hoopa.png",
+			name: "Hoopa",
+			image: "img/pokemon/hoopa.png"
 		},
 		{
-			"name": "Volcanion",
-			"value": "volcanion",
-			"image": "img/pokemon/volcanion.png"
+			name: "Volcanion",
+			image: "img/pokemon/volcanion.png"
 		},
 		{
-			"name": "Rowlet",
-			"value": "rowlet",
-			"image": "img/pokemon/rowlet.png"
+			name: "Rowlet",
+			image: "img/pokemon/rowlet.png"
 		},
 		{
-			"name": "Dartrix",
-			"value": "dartrix",
-			"image": "img/pokemon/dartrix.png"
+			name: "Dartrix",
+			image: "img/pokemon/dartrix.png"
 		},
 		{
-			"name": "Decidueye",
-			"value": "decidueye",
-			"image": "img/pokemon/decidueye.png"
+			name: "Decidueye",
+			image: "img/pokemon/decidueye.png"
 		},
 		{
-			"name": "Litten",
-			"value": "litten",
-			"image": "img/pokemon/litten.png"
+			name: "Litten",
+			image: "img/pokemon/litten.png"
 		},
 		{
-			"name": "Torracat",
-			"value": "torracat",
-			"image": "img/pokemon/torracat.png"
+			name: "Torracat",
+			image: "img/pokemon/torracat.png"
 		},
 		{
-			"name": "Incineroar",
-			"value": "incineroar",
-			"image": "img/pokemon/incineroar.png"
+			name: "Incineroar",
+			image: "img/pokemon/incineroar.png"
 		},
 		{
-			"name": "Popplio",
-			"value": "popplio",
-			"image": "img/pokemon/popplio.png"
+			name: "Popplio",
+			image: "img/pokemon/popplio.png"
 		},
 		{
-			"name": "Brionne",
-			"value": "brionne",
-			"image": "img/pokemon/brionne.png"
+			name: "Brionne",
+			image: "img/pokemon/brionne.png"
 		},
 		{
-			"name": "Primarina",
-			"value": "primarina",
-			"image": "img/pokemon/primarina.png"
+			name: "Primarina",
+			image: "img/pokemon/primarina.png"
 		},
 		{
-			"name": "Pikipek",
-			"value": "pikipek",
-			"image": "img/pokemon/pikipek.png",
+			name: "Pikipek",
+			image: "img/pokemon/pikipek.png"
 		},
 		{
-			"name": "Trumbeak",
-			"value": "trumbeak",
-			"image": "img/pokemon/trumbeak.png",
+			name: "Trumbeak",
+			image: "img/pokemon/trumbeak.png"
 		},
 		{
-			"name": "Toucannon",
-			"value": "toucannon",
-			"image": "img/pokemon/toucannon.png",
+			name: "Toucannon",
+			image: "img/pokemon/toucannon.png"
 		},
 		{
-			"name": "Yungoos",
-			"value": "yungoos",
-			"image": "img/pokemon/yungoos.png",
+			name: "Yungoos",
+			image: "img/pokemon/yungoos.png"
 		},
 		{
-			"name": "Gumshoos",
-			"value": "gumshoos",
-			"image": "img/pokemon/gumshoos.png",
+			name: "Gumshoos",
+			image: "img/pokemon/gumshoos.png"
 		},
 		{
-			"name": "Grubbin",
-			"value": "grubbin",
-			"image": "img/pokemon/grubbin.png"
+			name: "Grubbin",
+			image: "img/pokemon/grubbin.png"
 		},
 		{
-			"name": "Charjabug",
-			"value": "charjabug",
-			"image": "img/pokemon/charjabug.png"
+			name: "Charjabug",
+			image: "img/pokemon/charjabug.png"
 		},
 		{
-			"name": "Vikavolt",
-			"value": "vikavolt",
-			"image": "img/pokemon/vikavolt.png"
+			name: "Vikavolt",
+			image: "img/pokemon/vikavolt.png"
 		},
 		{
-			"name": "Crabrawler",
-			"value": "crabrawler",
-			"image": "img/pokemon/crabrawler.png",
+			name: "Crabrawler",
+			image: "img/pokemon/crabrawler.png"
 		},
 		{
-			"name": "Crabominable",
-			"value": "crabominable",
-			"image": "img/pokemon/crabominable.png",
+			name: "Crabominable",
+			image: "img/pokemon/crabominable.png"
 		},
 		{
-			"name": "Oricorio",
-			"value": "oricorio",
-			"image": "img/pokemon/oricorio.png",
+			name: "Oricorio",
+			image: "img/pokemon/oricorio.png"
 		},
 		{
-			"name": "Cutiefly",
-			"value": "cutiefly",
-			"image": "img/pokemon/cutiefly.png"
+			name: "Cutiefly",
+			image: "img/pokemon/cutiefly.png"
 		},
 		{
-			"name": "Ribombee",
-			"value": "ribombee",
-			"image": "img/pokemon/ribombee.png"
+			name: "Ribombee",
+			image: "img/pokemon/ribombee.png"
 		},
 		{
-			"name": "Rockruff",
-			"value": "rockruff",
-			"image": "img/pokemon/rockruff.png"
+			name: "Rockruff",
+			image: "img/pokemon/rockruff.png"
 		},
 		{
-			"name": "Lycanroc",
-			"value": "lycanroc",
-			"image": "img/pokemon/lycanroc.png"
+			name: "Lycanroc",
+			image: "img/pokemon/lycanroc.png"
 		},
 		{
-			"name": "Wishiwashi",
-			"value": "wishiwashi",
-			"image": "img/pokemon/wishiwashi.png"
+			name: "Wishiwashi",
+			image: "img/pokemon/wishiwashi.png"
 		},
 		{
-			"name": "Mareanie",
-			"value": "mareanie",
-			"image": "img/pokemon/mareanie.png"
+			name: "Mareanie",
+			image: "img/pokemon/mareanie.png"
 		},
 		{
-			"name": "Toxapex",
-			"value": "toxapex",
-			"image": "img/pokemon/toxapex.png"
+			name: "Toxapex",
+			image: "img/pokemon/toxapex.png"
 		},
 		{
-			"name": "Mudbray",
-			"value": "mudbray",
-			"image": "img/pokemon/mudbray.png"
+			name: "Mudbray",
+			image: "img/pokemon/mudbray.png"
 		},
 		{
-			"name": "Mudsdale",
-			"value": "mudsdale",
-			"image": "img/pokemon/mudsdale.png"
+			name: "Mudsdale",
+			image: "img/pokemon/mudsdale.png"
 		},
 		{
-			"name": "Dewpider",
-			"value": "dewpider",
-			"image": "img/pokemon/dewpider.png"
+			name: "Dewpider",
+			image: "img/pokemon/dewpider.png"
 		},
 		{
-			"name": "Araquanid",
-			"value": "araquanid",
-			"image": "img/pokemon/araquanid.png"
+			name: "Araquanid",
+			image: "img/pokemon/araquanid.png"
 		},
 		{
-			"name": "Fomantis",
-			"value": "fomantis",
-			"image": "img/pokemon/fomantis.png"
+			name: "Fomantis",
+			image: "img/pokemon/fomantis.png"
 		},
 		{
-			"name": "Lurantis",
-			"value": "lurantis",
-			"image": "img/pokemon/lurantis.png"
+			name: "Lurantis",
+			image: "img/pokemon/lurantis.png"
 		},
 		{
-			"name": "Morelull",
-			"value": "morelull",
-			"image": "img/pokemon/morelull.png"
+			name: "Morelull",
+			image: "img/pokemon/morelull.png"
 		},
 		{
-			"name": "Shiinotic",
-			"value": "shiinotic",
-			"image": "img/pokemon/shiinotic.png"
+			name: "Shiinotic",
+			image: "img/pokemon/shiinotic.png"
 		},
 		{
-			"name": "Salandit",
-			"value": "salandit",
-			"image": "img/pokemon/salandit.png"
+			name: "Salandit",
+			image: "img/pokemon/salandit.png"
 		},
 		{
-			"name": "Salazzle",
-			"value": "salazzle",
-			"image": "img/pokemon/salazzle.png"
+			name: "Salazzle",
+			image: "img/pokemon/salazzle.png"
 		},
 		{
-			"name": "Stufful",
-			"value": "stufful",
-			"image": "img/pokemon/stufful.png"
+			name: "Stufful",
+			image: "img/pokemon/stufful.png"
 		},
 		{
-			"name": "Bewear",
-			"value": "bewear",
-			"image": "img/pokemon/bewear.png"
+			name: "Bewear",
+			image: "img/pokemon/bewear.png"
 		},
 		{
-			"name": "Bounsweet",
-			"value": "bounsweet",
-			"image": "img/pokemon/bounsweet.png"
+			name: "Bounsweet",
+			image: "img/pokemon/bounsweet.png"
 		},
 		{
-			"name": "Steenee",
-			"value": "steenee",
-			"image": "img/pokemon/steenee.png"
+			name: "Steenee",
+			image: "img/pokemon/steenee.png"
 		},
 		{
-			"name": "Tsareena",
-			"value": "tsareena",
-			"image": "img/pokemon/tsareena.png"
+			name: "Tsareena",
+			image: "img/pokemon/tsareena.png"
 		},
 		{
-			"name": "Comfey",
-			"value": "comfey",
-			"image": "img/pokemon/comfey.png"
+			name: "Comfey",
+			image: "img/pokemon/comfey.png"
 		},
 		{
-			"name": "Oranguru",
-			"value": "oranguru",
-			"image": "img/pokemon/oranguru.png"
+			name: "Oranguru",
+			image: "img/pokemon/oranguru.png"
 		},
 		{
-			"name": "Passimian",
-			"value": "passimian",
-			"image": "img/pokemon/passimian.png"
+			name: "Passimian",
+			image: "img/pokemon/passimian.png"
 		},
 		{
-			"name": "Wimpod",
-			"value": "wimpod",
-			"image": "img/pokemon/wimpod.png"
+			name: "Wimpod",
+			image: "img/pokemon/wimpod.png"
 		},
 		{
-			"name": "Golisopod",
-			"value": "golisopod",
-			"image": "img/pokemon/golisopod.png"
+			name: "Golisopod",
+			image: "img/pokemon/golisopod.png"
 		},
 		{
-			"name": "Sandygast",
-			"value": "sandygast",
-			"image": "img/pokemon/sandygast.png"
+			name: "Sandygast",
+			image: "img/pokemon/sandygast.png"
 		},
 		{
-			"name": "Palossand",
-			"value": "palossand",
-			"image": "img/pokemon/palossand.png"
+			name: "Palossand",
+			image: "img/pokemon/palossand.png"
 		},
 		{
-			"name": "Pyukumuku",
-			"value": "pyukumuku",
-			"image": "img/pokemon/pyukumuku.png"
+			name: "Pyukumuku",
+			image: "img/pokemon/pyukumuku.png"
 		},
 		{
-			"name": "Type: Null",
-			"value": "type-null",
-			"image": "img/pokemon/type-null.png"
+			name: "Type: Null",
+			image: "img/pokemon/type-null.png"
 		},
 		{
-			"name": "Silvally",
-			"value": "silvally",
-			"image": "img/pokemon/silvally.png"
+			name: "Silvally",
+			image: "img/pokemon/silvally.png"
 		},
 		{
-			"name": "Minior",
-			"value": "minior",
-			"image": "img/pokemon/minior.png",
+			name: "Minior",
+			image: "img/pokemon/minior.png"
 		},
 		{
-			"name": "Komala",
-			"value": "komala",
-			"image": "img/pokemon/komala.png",
+			name: "Komala",
+			image: "img/pokemon/komala.png"
 		},
 		{
-			"name": "Turtonator",
-			"value": "turtonator",
-			"image": "img/pokemon/turtonator.png"
+			name: "Turtonator",
+			image: "img/pokemon/turtonator.png"
 		},
 		{
-			"name": "Togedemaru",
-			"value": "togedemaru",
-			"image": "img/pokemon/togedemaru.png"
+			name: "Togedemaru",
+			image: "img/pokemon/togedemaru.png"
 		},
 		{
-			"name": "Mimikyu",
-			"value": "mimikyu",
-			"image": "img/pokemon/mimikyu.png"
+			name: "Mimikyu",
+			image: "img/pokemon/mimikyu.png"
 		},
 		{
-			"name": "Bruxish",
-			"value": "bruxish",
-			"image": "img/pokemon/bruxish.png",
+			name: "Bruxish",
+			image: "img/pokemon/bruxish.png"
 		},
 		{
-			"name": "Drampa",
-			"value": "drampa",
-			"image": "img/pokemon/drampa.png"
+			name: "Drampa",
+			image: "img/pokemon/drampa.png"
 		},
 		{
-			"name": "Dhelmise",
-			"value": "dhelmise",
-			"image": "img/pokemon/dhelmise.png"
+			name: "Dhelmise",
+			image: "img/pokemon/dhelmise.png"
 		},
 		{
-			"name": "Jangmo-o",
-			"value": "jangmo-o",
-			"image": "img/pokemon/jangmo-o.png"
+			name: "Jangmo-o",
+			image: "img/pokemon/jangmo-o.png"
 		},
 		{
-			"name": "Hakamo-o",
-			"value": "hakamo-o",
-			"image": "img/pokemon/hakamo-o.png"
+			name: "Hakamo-o",
+			image: "img/pokemon/hakamo-o.png"
 		},
 		{
-			"name": "Kommo-o",
-			"value": "kommo-o",
-			"image": "img/pokemon/kommo-o.png"
+			name: "Kommo-o",
+			image: "img/pokemon/kommo-o.png"
 		},
 		{
-			"name": "Tapu Koko",
-			"value": "tapu-koko",
-			"image": "img/pokemon/tapu-koko.png"
+			name: "Tapu Koko",
+			image: "img/pokemon/tapu-koko.png"
 		},
 		{
-			"name": "Tapu Lele",
-			"value": "tapu-lele",
-			"image": "img/pokemon/tapu-lele.png"
+			name: "Tapu Lele",
+			image: "img/pokemon/tapu-lele.png"
 		},
 		{
-			"name": "Tapu Bulu",
-			"value": "tapu-bulu",
-			"image": "img/pokemon/tapu-bulu.png"
+			name: "Tapu Bulu",
+			image: "img/pokemon/tapu-bulu.png"
 		},
 		{
-			"name": "Tapu Fini",
-			"value": "tapu-fini",
-			"image": "img/pokemon/tapu-fini.png"
+			name: "Tapu Fini",
+			image: "img/pokemon/tapu-fini.png"
 		},
 		{
-			"name": "Cosmog",
-			"value": "cosmog",
-			"image": "img/pokemon/cosmog.png"
+			name: "Cosmog",
+			image: "img/pokemon/cosmog.png"
 		},
 		{
-			"name": "Cosmoem",
-			"value": "cosmoem",
-			"image": "img/pokemon/cosmoem.png"
+			name: "Cosmoem",
+			image: "img/pokemon/cosmoem.png"
 		},
 		{
-			"name": "Solgaleo",
-			"value": "solgaleo",
-			"image": "img/pokemon/solgaleo.png"
+			name: "Solgaleo",
+			image: "img/pokemon/solgaleo.png"
 		},
 		{
-			"name": "Lunala",
-			"value": "lunala",
-			"image": "img/pokemon/lunala.png"
+			name: "Lunala",
+			image: "img/pokemon/lunala.png"
 		},
 		{
-			"name": "Nihilego",
-			"value": "nihilego",
-			"image": "img/pokemon/nihilego.png"
+			name: "Nihilego",
+			image: "img/pokemon/nihilego.png"
 		},
 		{
-			"name": "Buzzwole",
-			"value": "buzzwole",
-			"image": "img/pokemon/buzzwole.png"
+			name: "Buzzwole",
+			image: "img/pokemon/buzzwole.png"
 		},
 		{
-			"name": "Pheromosa",
-			"value": "pheromosa",
-			"image": "img/pokemon/pheromosa.png"
+			name: "Pheromosa",
+			image: "img/pokemon/pheromosa.png"
 		},
 		{
-			"name": "Xurkitree",
-			"value": "xurkitree",
-			"image": "img/pokemon/xurkitree.png"
+			name: "Xurkitree",
+			image: "img/pokemon/xurkitree.png"
 		},
 		{
-			"name": "Celesteela",
-			"value": "celesteela",
-			"image": "img/pokemon/celesteela.png"
+			name: "Celesteela",
+			image: "img/pokemon/celesteela.png"
 		},
 		{
-			"name": "Kartana",
-			"value": "kartana",
-			"image": "img/pokemon/kartana.png"
+			name: "Kartana",
+			image: "img/pokemon/kartana.png"
 		},
 		{
-			"name": "Guzzlord",
-			"value": "guzzlord",
-			"image": "img/pokemon/guzzlord.png"
+			name: "Guzzlord",
+			image: "img/pokemon/guzzlord.png"
 		},
 		{
-			"name": "Necrozma",
-			"value": "necrozma",
-			"image": "img/pokemon/necrozma.png"
+			name: "Necrozma",
+			image: "img/pokemon/necrozma.png"
 		},
 		{
-			"name": "Magearna",
-			"value": "magearna",
-			"image": "img/pokemon/magearna.png"
+			name: "Magearna",
+			image: "img/pokemon/magearna.png"
 		},
 		{
-			"name": "Marshadow",
-			"value": "marshadow",
-			"image": "img/pokemon/marshadow.png"
+			name: "Marshadow",
+			image: "img/pokemon/marshadow.png"
 		},
 		{
-			"name": "Poipole",
-			"value": "poipole",
-			"image": "img/pokemon/poipole.png"
+			name: "Poipole",
+			image: "img/pokemon/poipole.png"
 		},
 		{
-			"name": "Naganadel",
-			"value": "naganadel",
-			"image": "img/pokemon/naganadel.png"
+			name: "Naganadel",
+			image: "img/pokemon/naganadel.png"
 		},
 		{
-			"name": "Stakataka",
-			"value": "stakataka",
-			"image": "img/pokemon/stakataka.png"
+			name: "Stakataka",
+			image: "img/pokemon/stakataka.png"
 		},
 		{
-			"name": "Blacephalon",
-			"value": "blacephalon",
-			"image": "img/pokemon/blacephalon.png"
+			name: "Blacephalon",
+			image: "img/pokemon/blacephalon.png"
 		},
 		{
-			"name": "Zeraora",
-			"value": "zeraora",
-			"image": "img/pokemon/zeraora.png"
+			name: "Zeraora",
+			image: "img/pokemon/zeraora.png"
 		},
 		{
-			"name": "Meltan",
-			"value": "meltan",
-			"image": "img/pokemon/meltan.png"
+			name: "Meltan",
+			image: "img/pokemon/meltan.png"
 		},
 		{
-			"name": "Melmetal",
-			"value": "melmetal",
-			"image": "img/pokemon/melmetal.png"
+			name: "Melmetal",
+			image: "img/pokemon/melmetal.png"
 		},
 		{
-			"name": "Grookey",
-			"value": "grookey",
-			"image": "img/pokemon/grookey.png"
+			name: "Grookey",
+			image: "img/pokemon/grookey.png"
 		},
 		{
-			"name": "Thwackey",
-			"value": "thwackey",
-			"image": "img/pokemon/thwackey.png"
+			name: "Thwackey",
+			image: "img/pokemon/thwackey.png"
 		},
 		{
-			"name": "Rillaboom",
-			"value": "rillaboom",
-			"image": "img/pokemon/rillaboom.png"
+			name: "Rillaboom",
+			image: "img/pokemon/rillaboom.png"
 		},
 		{
-			"name": "Scorbunny",
-			"value": "scorbunny",
-			"image": "img/pokemon/scorbunny.png"
+			name: "Scorbunny",
+			image: "img/pokemon/scorbunny.png"
 		},
 		{
-			"name": "Raboot",
-			"value": "raboot",
-			"image": "img/pokemon/raboot.png"
+			name: "Raboot",
+			image: "img/pokemon/raboot.png"
 		},
 		{
-			"name": "Cinderace",
-			"value": "cinderace",
-			"image": "img/pokemon/cinderace.png"
+			name: "Cinderace",
+			image: "img/pokemon/cinderace.png"
 		},
 		{
-			"name": "Sobble",
-			"value": "sobble",
-			"image": "img/pokemon/sobble.png"
+			name: "Sobble",
+			image: "img/pokemon/sobble.png"
 		},
 		{
-			"name": "Drizzile",
-			"value": "drizzile",
-			"image": "img/pokemon/drizzile.png"
+			name: "Drizzile",
+			image: "img/pokemon/drizzile.png"
 		},
 		{
-			"name": "Inteleon",
-			"value": "inteleon",
-			"image": "img/pokemon/inteleon.png"
+			name: "Inteleon",
+			image: "img/pokemon/inteleon.png"
 		},
 		{
-			"name": "Skwovet",
-			"value": "skwovet",
-			"image": "img/pokemon/skwovet.png"
+			name: "Skwovet",
+			image: "img/pokemon/skwovet.png"
 		},
 		{
-			"name": "Greedent",
-			"value": "greedent",
-			"image": "img/pokemon/greedent.png"
+			name: "Greedent",
+			image: "img/pokemon/greedent.png"
 		},
 		{
-			"name": "Rookidee",
-			"value": "rookidee",
-			"image": "img/pokemon/rookidee.png"
+			name: "Rookidee",
+			image: "img/pokemon/rookidee.png"
 		},
 		{
-			"name": "Corvisquire",
-			"value": "corvisquire",
-			"image": "img/pokemon/corvisquire.png"
+			name: "Corvisquire",
+			image: "img/pokemon/corvisquire.png"
 		},
 		{
-			"name": "Corviknight",
-			"value": "corviknight",
-			"image": "img/pokemon/corviknight.png"
+			name: "Corviknight",
+			image: "img/pokemon/corviknight.png"
 		},
 		{
-			"name": "Blipbug",
-			"value": "blipbug",
-			"image": "img/pokemon/blipbug.png"
+			name: "Blipbug",
+			image: "img/pokemon/blipbug.png"
 		},
 		{
-			"name": "Dottler",
-			"value": "dottler",
-			"image": "img/pokemon/dottler.png"
+			name: "Dottler",
+			image: "img/pokemon/dottler.png"
 		},
 		{
-			"name": "Orbeetle",
-			"value": "orbeetle",
-			"image": "img/pokemon/orbeetle.png"
+			name: "Orbeetle",
+			image: "img/pokemon/orbeetle.png"
 		},
 		{
-			"name": "Nickit",
-			"value": "nickit",
-			"image": "img/pokemon/nickit.png"
+			name: "Nickit",
+			image: "img/pokemon/nickit.png"
 		},
 		{
-			"name": "Thievul",
-			"value": "thievul",
-			"image": "img/pokemon/thievul.png"
+			name: "Thievul",
+			image: "img/pokemon/thievul.png"
 		},
 		{
-			"name": "Gossifleur",
-			"value": "gossifleur",
-			"image": "img/pokemon/gossifleur.png"
+			name: "Gossifleur",
+			image: "img/pokemon/gossifleur.png"
 		},
 		{
-			"name": "Eldegoss",
-			"value": "eldegoss",
-			"image": "img/pokemon/eldegoss.png"
+			name: "Eldegoss",
+			image: "img/pokemon/eldegoss.png"
 		},
 		{
-			"name": "Wooloo",
-			"value": "wooloo",
-			"image": "img/pokemon/wooloo.png"
+			name: "Wooloo",
+			image: "img/pokemon/wooloo.png"
 		},
 		{
-			"name": "Dubwool",
-			"value": "dubwool",
-			"image": "img/pokemon/dubwool.png"
+			name: "Dubwool",
+			image: "img/pokemon/dubwool.png"
 		},
 		{
-			"name": "Chewtle",
-			"value": "chewtle",
-			"image": "img/pokemon/chewtle.png"
+			name: "Chewtle",
+			image: "img/pokemon/chewtle.png"
 		},
 		{
-			"name": "Drednaw",
-			"value": "drednaw",
-			"image": "img/pokemon/drednaw.png"
+			name: "Drednaw",
+			image: "img/pokemon/drednaw.png"
 		},
 		{
-			"name": "Yamper",
-			"value": "yamper",
-			"image": "img/pokemon/yamper.png"
+			name: "Yamper",
+			image: "img/pokemon/yamper.png"
 		},
 		{
-			"name": "Boltund",
-			"value": "boltund",
-			"image": "img/pokemon/boltund.png"
+			name: "Boltund",
+			image: "img/pokemon/boltund.png"
 		},
 		{
-			"name": "Rolycoly",
-			"value": "rolycoly",
-			"image": "img/pokemon/rolycoly.png"
+			name: "Rolycoly",
+			image: "img/pokemon/rolycoly.png"
 		},
 		{
-			"name": "Carkol",
-			"value": "carkol",
-			"image": "img/pokemon/carkol.png"
+			name: "Carkol",
+			image: "img/pokemon/carkol.png"
 		},
 		{
-			"name": "Coalossal",
-			"value": "coalossal",
-			"image": "img/pokemon/coalossal.png"
+			name: "Coalossal",
+			image: "img/pokemon/coalossal.png"
 		},
 		{
-			"name": "Applin",
-			"value": "applin",
-			"image": "img/pokemon/applin.png"
+			name: "Applin",
+			image: "img/pokemon/applin.png"
 		},
 		{
-			"name": "Flapple",
-			"value": "flapple",
-			"image": "img/pokemon/flapple.png"
+			name: "Flapple",
+			image: "img/pokemon/flapple.png"
 		},
 		{
-			"name": "Appletun",
-			"value": "appletun",
-			"image": "img/pokemon/appletun.png"
+			name: "Appletun",
+			image: "img/pokemon/appletun.png"
 		},
 		{
-			"name": "Silicobra",
-			"value": "silicobra",
-			"image": "img/pokemon/silicobra.png"
+			name: "Silicobra",
+			image: "img/pokemon/silicobra.png"
 		},
 		{
-			"name": "Sandaconda",
-			"value": "sandaconda",
-			"image": "img/pokemon/sandaconda.png"
+			name: "Sandaconda",
+			image: "img/pokemon/sandaconda.png"
 		},
 		{
-			"name": "Cramorant",
-			"value": "cramorant",
-			"image": "img/pokemon/cramorant.png"
+			name: "Cramorant",
+			image: "img/pokemon/cramorant.png"
 		},
 		{
-			"name": "Arrokuda",
-			"value": "arrokuda",
-			"image": "img/pokemon/arrokuda.png"
+			name: "Arrokuda",
+			image: "img/pokemon/arrokuda.png"
 		},
 		{
-			"name": "Barraskewda",
-			"value": "barraskewda",
-			"image": "img/pokemon/barraskewda.png"
+			name: "Barraskewda",
+			image: "img/pokemon/barraskewda.png"
 		},
 		{
-			"name": "Toxel",
-			"value": "toxel",
-			"image": "img/pokemon/toxel.png"
+			name: "Toxel",
+			image: "img/pokemon/toxel.png"
 		},
 		{
-			"name": "Toxtricity",
-			"value": "toxtricity",
-			"image": "img/pokemon/toxtricity.png"
+			name: "Toxtricity",
+			image: "img/pokemon/toxtricity.png"
 		},
 		{
-			"name": "Sizzlipede",
-			"value": "sizzlipede",
-			"image": "img/pokemon/sizzlipede.png"
+			name: "Sizzlipede",
+			image: "img/pokemon/sizzlipede.png"
 		},
 		{
-			"name": "Centiskorch",
-			"value": "centiskorch",
-			"image": "img/pokemon/centiskorch.png"
+			name: "Centiskorch",
+			image: "img/pokemon/centiskorch.png"
 		},
 		{
-			"name": "Clobbopus",
-			"value": "clobbopus",
-			"image": "img/pokemon/clobbopus.png"
+			name: "Clobbopus",
+			image: "img/pokemon/clobbopus.png"
 		},
 		{
-			"name": "Grapploct",
-			"value": "grapploct",
-			"image": "img/pokemon/grapploct.png"
+			name: "Grapploct",
+			image: "img/pokemon/grapploct.png"
 		},
 		{
-			"name": "Sinistea",
-			"value": "sinistea",
-			"image": "img/pokemon/sinistea.png"
+			name: "Sinistea",
+			image: "img/pokemon/sinistea.png"
 		},
 		{
-			"name": "Polteageist",
-			"value": "polteageist",
-			"image": "img/pokemon/polteageist.png"
+			name: "Polteageist",
+			image: "img/pokemon/polteageist.png"
 		},
 		{
-			"name": "Hatenna",
-			"value": "hatenna",
-			"image": "img/pokemon/hatenna.png"
+			name: "Hatenna",
+			image: "img/pokemon/hatenna.png"
 		},
 		{
-			"name": "Hattrem",
-			"value": "hattrem",
-			"image": "img/pokemon/hattrem.png"
+			name: "Hattrem",
+			image: "img/pokemon/hattrem.png"
 		},
 		{
-			"name": "Hatterene",
-			"value": "hatterene",
-			"image": "img/pokemon/hatterene.png"
+			name: "Hatterene",
+			image: "img/pokemon/hatterene.png"
 		},
 		{
-			"name": "Impidimp",
-			"value": "impidimp",
-			"image": "img/pokemon/impidimp.png"
+			name: "Impidimp",
+			image: "img/pokemon/impidimp.png"
 		},
 		{
-			"name": "Morgrem",
-			"value": "morgrem",
-			"image": "img/pokemon/morgrem.png"
+			name: "Morgrem",
+			image: "img/pokemon/morgrem.png"
 		},
 		{
-			"name": "Grimmsnarl",
-			"value": "grimmsnarl",
-			"image": "img/pokemon/grimmsnarl.png"
+			name: "Grimmsnarl",
+			image: "img/pokemon/grimmsnarl.png"
 		},
 		{
-			"name": "Obstagoon",
-			"value": "obstagoon",
-			"image": "img/pokemon/obstagoon.png"
+			name: "Obstagoon",
+			image: "img/pokemon/obstagoon.png"
 		},
 		{
-			"name": "Perrserker",
-			"value": "perrserker",
-			"image": "img/pokemon/perrserker.png"
+			name: "Perrserker",
+			image: "img/pokemon/perrserker.png"
 		},
 		{
-			"name": "Cursola",
-			"value": "cursola",
-			"image": "img/pokemon/cursola.png"
+			name: "Cursola",
+			image: "img/pokemon/cursola.png"
 		},
 		{
-			"name": "Sirfetch\"d",
-			"value": "sirfetchd",
-			"image": "img/pokemon/sirfetchd.png"
+			name: "Sirfetch'd",
+			image: "img/pokemon/sirfetchd.png"
 		},
 		{
-			"name": "Mr. Rime",
-			"value": "mr-rime",
-			"image": "img/pokemon/mr-rime.png"
+			name: "Mr. Rime",
+			image: "img/pokemon/mr-rime.png"
 		},
 		{
-			"name": "Runerigus",
-			"value": "runerigus",
-			"image": "img/pokemon/runerigus.png"
+			name: "Runerigus",
+			image: "img/pokemon/runerigus.png"
 		},
 		{
-			"name": "Milcery",
-			"value": "milcery",
-			"image": "img/pokemon/milcery.png"
+			name: "Milcery",
+			image: "img/pokemon/milcery.png"
 		},
 		{
-			"name": "Alcremie",
-			"value": "alcremie",
-			"image": "img/pokemon/alcremie.png"
+			name: "Alcremie",
+			image: "img/pokemon/alcremie.png"
 		},
 		{
-			"name": "Falinks",
-			"value": "falinks",
-			"image": "img/pokemon/falinks.png"
+			name: "Falinks",
+			image: "img/pokemon/falinks.png"
 		},
 		{
-			"name": "Pincurchin",
-			"value": "pincurchin",
-			"image": "img/pokemon/pincurchin.png"
+			name: "Pincurchin",
+			image: "img/pokemon/pincurchin.png"
 		},
 		{
-			"name": "Snom",
-			"value": "snom",
-			"image": "img/pokemon/snom.png"
+			name: "Snom",
+			image: "img/pokemon/snom.png"
 		},
 		{
-			"name": "Frosmoth",
-			"value": "frosmoth",
-			"image": "img/pokemon/frosmoth.png"
+			name: "Frosmoth",
+			image: "img/pokemon/frosmoth.png"
 		},
 		{
-			"name": "Stonjourner",
-			"value": "stonjourner",
-			"image": "img/pokemon/stonjourner.png"
+			name: "Stonjourner",
+			image: "img/pokemon/stonjourner.png"
 		},
 		{
-			"name": "Eiscue",
-			"value": "eiscue",
-			"image": "img/pokemon/eiscue.png"
+			name: "Eiscue",
+			image: "img/pokemon/eiscue.png"
 		},
 		{
-			"name": "Indeedee",
-			"value": "indeedee",
-			"image": "img/pokemon/indeedee.png"
+			name: "Indeedee",
+			image: "img/pokemon/indeedee.png"
 		},
 		{
-			"name": "Morpeko",
-			"value": "morpeko",
-			"image": "img/pokemon/morpeko.png"
+			name: "Morpeko",
+			image: "img/pokemon/morpeko.png"
 		},
 		{
-			"name": "Cufant",
-			"value": "cufant",
-			"image": "img/pokemon/cufant.png"
+			name: "Cufant",
+			image: "img/pokemon/cufant.png"
 		},
 		{
-			"name": "Copperajah",
-			"value": "copperajah",
-			"image": "img/pokemon/copperajah.png"
+			name: "Copperajah",
+			image: "img/pokemon/copperajah.png"
 		},
 		{
-			"name": "Dracozolt",
-			"value": "dracozolt",
-			"image": "img/pokemon/dracozolt.png"
+			name: "Dracozolt",
+			image: "img/pokemon/dracozolt.png"
 		},
 		{
-			"name": "Arctozolt",
-			"value": "arctozolt",
-			"image": "img/pokemon/arctozolt.png"
+			name: "Arctozolt",
+			image: "img/pokemon/arctozolt.png"
 		},
 		{
-			"name": "Dracovish",
-			"value": "dracovish",
-			"image": "img/pokemon/dracovish.png"
+			name: "Dracovish",
+			image: "img/pokemon/dracovish.png"
 		},
 		{
-			"name": "Arctovish",
-			"value": "arctovish",
-			"image": "img/pokemon/arctovish.png"
+			name: "Arctovish",
+			image: "img/pokemon/arctovish.png"
 		},
 		{
-			"name": "Duraludon",
-			"value": "duraludon",
-			"image": "img/pokemon/duraludon.png"
+			name: "Duraludon",
+			image: "img/pokemon/duraludon.png"
 		},
 		{
-			"name": "Dreepy",
-			"value": "dreepy",
-			"image": "img/pokemon/dreepy.png"
+			name: "Dreepy",
+			image: "img/pokemon/dreepy.png"
 		},
 		{
-			"name": "Drakloak",
-			"value": "drakloak",
-			"image": "img/pokemon/drakloak.png"
+			name: "Drakloak",
+			image: "img/pokemon/drakloak.png"
 		},
 		{
-			"name": "Dragapult",
-			"value": "dragapult",
-			"image": "img/pokemon/dragapult.png"
+			name: "Dragapult",
+			image: "img/pokemon/dragapult.png"
 		},
 		{
-			"name": "Zacian",
-			"value": "zacian",
-			"image": "img/pokemon/zacian.png"
+			name: "Zacian",
+			image: "img/pokemon/zacian.png"
 		},
 		{
-			"name": "Zamazenta",
-			"value": "zamazenta",
-			"image": "img/pokemon/zamazenta.png"
+			name: "Zamazenta",
+			image: "img/pokemon/zamazenta.png"
 		},
 		{
-			"name": "Eternatus",
-			"value": "eternatus",
-			"image": "img/pokemon/eternatus.png"
+			name: "Eternatus",
+			image: "img/pokemon/eternatus.png"
 		},
 		{
-			"name": "Kubfu",
-			"value": "kubfu",
-			"image": "img/pokemon/kubfu.png"
+			name: "Kubfu",
+			image: "img/pokemon/kubfu.png"
 		},
 		{
-			"name": "Urshifu",
-			"value": "urshifu",
-			"image": "img/pokemon/urshifu.png"
+			name: "Urshifu",
+			image: "img/pokemon/urshifu.png"
 		},
 		{
-			"name": "Zarude",
-			"value": "zarude",
-			"image": "img/pokemon/zarude.png"
+			name: "Zarude",
+			image: "img/pokemon/zarude.png"
 		},
 		{
-			"name": "Regieleki",
-			"value": "regieleki",
-			"image": "img/pokemon/regieleki.png"
+			name: "Regieleki",
+			image: "img/pokemon/regieleki.png"
 		},
 		{
-			"name": "Regidrago",
-			"value": "regidrago",
-			"image": "img/pokemon/regidrago.png"
+			name: "Regidrago",
+			image: "img/pokemon/regidrago.png"
 		},
 		{
-			"name": "Glastrier",
-			"value": "glastrier",
-			"image": "img/pokemon/glastrier.png"
+			name: "Glastrier",
+			image: "img/pokemon/glastrier.png"
 		},
 		{
-			"name": "Spectrier",
-			"value": "spectrier",
-			"image": "img/pokemon/spectrier.png"
+			name: "Spectrier",
+			image: "img/pokemon/spectrier.png"
 		},
 		{
-			"name": "Calyrex",
-			"value": "calyrex",
-			"image": "img/pokemon/calyrex.png"
+			name: "Calyrex",
+			image: "img/pokemon/calyrex.png"
 		}
 	];

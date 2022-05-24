@@ -214,6 +214,20 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	height: 64vmin;
 	overflow-x: hidden;
 	overflow-y: auto;
+
+	/* The pokemon list should only be displayed when the 'pokemon-input-field' is in focus or a list item is being clicked on */
+	display: none;
+}
+
+/*  Applied style:
+    1 - to all list items when 'pokemon-input-field' is in focus
+    2 - whenever a list item is 'active', the 'active' pseudoclass propagates to their parents, and in this case, one of the parents is 'pokemon-list', therefore when an item is activated, all other items are also styled
+    Note: this makes it possible to click in an item and trigger the 'click' event before it disappears (using 'focus' & 'blur' events, for example)
+*/
+.pokemon-input-field:focus + .pokemon-list,
+.pokemon-list:active
+{
+	display: block;
 }
 
 .pokemon-list li
@@ -229,15 +243,25 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 	border: 0.1em solid rgb(55 55 65);
 
 	box-sizing: border-box;
+}
 
-	/* List items should only be displayed when the 'pokemon-input-field' is in focus or a list item is being clicked on*/
-	display: none;
+.pokemon-list li:last-child
+{
+	border-bottom-left-radius: 0.1em;
+	border-bottom-right-radius: 0.1em;
 }
 
 /* This is meant to hide pokemon list items when its respective pokemon name doesn't match the input in the input field */
-.containing-box div.pokemon-select-wrapper ul.pokemon-list li.off
+.pokemon-list li.off
 {
 	display: none;
+}
+
+.pokemon-list li .click-area
+{
+	position: relative;
+
+	height: 100%;
 }
 
 /* `.click-area` represents the part of the list item that is meant to be clickable to select that pokemon */
@@ -248,30 +272,6 @@ Note: There may be better ways to deal with this scenario. As I'm still learning
 		Browser Support: All browsers from 2013 forwards can use this, except all versions of opera-mini.
 	*/
 	pointer-events: none;
-}
-
-/*  Applied style:
-    1 - to all list items when 'pokemon-input-field' is in focus
-    2 - whenever a list item is 'active', the 'active' pseudoclass propagates to their parents, and in this case, one of the parents is 'pokemon-list', therefore when an item is activated, all other items are also styled
-    Note: this makes it possible to click in an item and trigger the 'click' event before it disappears (using 'focus' & 'blur' events, for example)
-*/
-.pokemon-input-field:focus + .pokemon-list li,
-.pokemon-list:active li
-{
-	display: block;
-}
-
-.pokemon-list li:last-child
-{
-	border-bottom-left-radius: 0.1em;
-	border-bottom-right-radius: 0.1em;
-}
-
-.pokemon-list li .click-area
-{
-	position: relative;
-
-	height: 100%;
 }
 
 .pokemon-list li .click-area img

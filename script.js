@@ -101,15 +101,16 @@ const route_box_factory = (route_name) =>
 		 */
 		pokemon_input_field.addEventListener("focus", () =>
 		{
-			console.log("Focus up!");
-
-			// Shows all list items
-			const start_Time = performance.now();
-			for (const [, list_item] of pokemon_list.item_list)
+			/** 
+			 * Makes all pokemon visible in the list.
+			 * 
+			 * Ideally this should happen when the pokemon list gets out of focus, but this 
+			 * implementation suffices for now.
+			*/
+			for (const list_item of pokemon_list.childNodes)
 			{
 				list_item.classList.remove("off");
 			}
-			console.log(`Took ${performance.now() - start_Time} ms`);
 
 			if (route_box.selected_pokemon === undefined)
 			{
@@ -118,7 +119,6 @@ const route_box_factory = (route_name) =>
 
 			else
 			{
-				console.log(pokemon_input_field.value);
 				pokemon_input_field.placeholder = pokemon_input_field.value;
 			}
 
@@ -173,8 +173,6 @@ const route_box_factory = (route_name) =>
 		 */
 		pokemon_input_field.addEventListener("blur", () =>
 		{
-			console.log("Blur up!");
-
 			if (route_box.selected_pokemon === undefined)
 			{
 				pokemon_input_field.value = "";
@@ -188,38 +186,45 @@ const route_box_factory = (route_name) =>
 		});
 
 		/**
-		 * Checks if there's a pokemon with name equal to `str`.
+		 * Whenever the input updates, the pokemon_list should show only pokemon that match the input.
 		 * 
-		 * `str` is first converted to a string using only english letters.
-		 * Therefore "pikachu" and "píkãchû" are both considered to be equal "pikachu".
+		 * A match happens when the input is substring of a pokemon name.
+		 * Both the input and the pokemon name are turned to lowercase before trying to match.
 		 * 
-		 * @param {string} str String to be matched with a pokemon name.
-		 * @param {object} poke_data Array containing data of all pokemon, including their name.
-		 * @returns {boolean} true if a pokemon with name equal to `str` exists, false otherwise.
+		 * Note: 
+		 *   The function called when `input` triggers is impure. It changes the state of 
+		 *   `pokemon_list`, more specifically its child nodes. There might be a better way to 
+		 *   implement this, without relying on an impure function. 
+		 * 
+		 *   Also notice that performance was an important consideration in favor of a more 
+		 *   direct implementation, since this event can be fired multiple times per second.
 		 */
-		function check_pokemon_name(str)
+		pokemon_input_field.addEventListener("input", (e) =>
 		{
-			const start_time = performance.now();
+			// `str` is the input typed in the input field
+			const str = e.target.value.toLowerCase();
 
-			if (str === "")
+			// An empty string matches all pokemon, so all pokemon should show in the list
+			if (str == "")
 			{
-				console.log("Empty String");
-
-				for (const [, list_item] of pokemon_list.item_list)
+				for (const list_item of pokemon_list.childNodes)
 				{
-					list_item.classList.toggle("off", false);
+					list_item.classList.remove("off");
 				}
-
-				console.log(`Empty string in input execution took ${performance.now() - start_time} ms`);
 
 				return;
 			}
 
-			str = str.toLowerCase();
-
-			for (const [, list_item] of pokemon_list.item_list)
+			for (const list_item of pokemon_list.childNodes)
 			{
-				let str_is_substring_of_pokemon_name = false;
+				/*
+				  `match` is true if `str` is substring of `pokemon_name`, false otherwise.
+				  
+				  Notice that `str` may be a non-contiguous substring of `pokemon_name`.
+				  This means that "pkc" matches "pikachu" and "r" matches "bulbasaur".
+				  However "pck" does not match "pikachu" and "ru" does not match "bulbasaur".
+				*/
+				let match = false;
 
 				const pokemon_name = list_item.pokemon_data.name.toLowerCase();
 
@@ -231,33 +236,22 @@ const route_box_factory = (route_name) =>
 
 						if (i_str === str.length) 
 						{
-							str_is_substring_of_pokemon_name = true;
+							match = true;
 							break;
 						}
 					}
 				}
 
-				if (str_is_substring_of_pokemon_name === true)
+				if (match === true)
 				{
 					list_item.classList.remove("off");
 				}
 
 				else
 				{
-					list_item.classList.toggle("off", true);
+					list_item.classList.add("off");
 				}
 			}
-
-			console.log(`Execution took ${performance.now() - start_time} ms`);
-		}
-
-		pokemon_input_field.addEventListener("input", (e) =>
-		{
-			console.log("input called!");
-
-			const input_string = e.target.value;
-
-			check_pokemon_name(input_string);
 		});
 	}
 
@@ -272,16 +266,11 @@ const route_box_factory = (route_name) =>
 		const pokemon_list = document.createElement("ul");
 		pokemon_list.className = "pokemon-list";
 
-		// Maps pokemon value (as defined in poke_data array) to its respective list_item HTML element
-		pokemon_list.item_list = new Map();
-
-		const start_Time = performance.now();
-
 		/**
 		 * This iterates over the poke_data array, which contains the data of all pokemon
 		 * For each pokemon, a new list item is created for it, and appended to pokemon_list
 		 */
-		for (const { name, value, image } of poke_data/*.slice(0, 9)*/)
+		for (const { name, image } of poke_data/*.slice(0, 9)*/)
 		{
 			const list_item = document.createElement("li");
 			list_item.pokemon_data = { name, image };
@@ -291,7 +280,10 @@ const route_box_factory = (route_name) =>
 
 			// 'alt' was set to "" so non-visual browsers may omit it from rendering (it's decoration after all)
 			const pokemon_icon = document.createElement("img");
+
+			// Assigning `.src` to near 1000 pokemon is really slow to performance and should be done in a better way
 			pokemon_icon.src = image;
+
 			pokemon_icon.setAttribute("alt", "");
 
 			const pokemon_name = document.createElement("p");
@@ -304,12 +296,7 @@ const route_box_factory = (route_name) =>
 			list_item.click_area = click_area;
 
 			pokemon_list.appendChild(list_item);
-
-			// Adds the newly created list_item to the map of pokemon value -> respective list_item
-			pokemon_list.item_list.set(value, list_item);
 		}
-
-		console.log(`Pokemon list creation took ${performance.now() - start_Time} ms`);
 
 		return pokemon_list;
 	}
@@ -325,13 +312,13 @@ const route_box_factory = (route_name) =>
 	function assign_pokemon_list_events(pokemon_list, pokemon_input_field, pokemon_image, route_box)
 	{
 		// This implementation iterates over the map, without declaring the keys (which wouldn't be used anyway)
-		for (const [, list_item] of pokemon_list.item_list)
+		for (const list_item of pokemon_list.childNodes)
 		{
 			// list_item.click_area.addEventListener("mousedown", () => console.log("MouseDown!"));
 
 			list_item.click_area.addEventListener("click", () =>
 			{
-				console.log(`${list_item.pokemon_data.name} was clicked!`);
+				// console.log(`${list_item.pokemon_data.name} was clicked!`);
 
 				route_box.selected_pokemon = list_item.pokemon_data.name;
 				pokemon_input_field.value = list_item.pokemon_data.name;
@@ -339,7 +326,7 @@ const route_box_factory = (route_name) =>
 				// Adds pokemon image to left circle
 				pokemon_image.src = list_item.pokemon_data.image;
 
-				console.log(`Current selected pokemon = ${route_box.selected_pokemon}`);
+				// console.log(`Current selected pokemon = ${route_box.selected_pokemon}`);
 			});
 		}
 	}
@@ -446,10 +433,6 @@ const route_box_factory = (route_name) =>
 		 */
 		build_route_box()
 		{
-			const document_fragment = document.createDocumentFragment();
-
-			document_fragment.appendChild(html.containing_box);
-
 			html.containing_box.appendChild(html.route_title);
 			html.containing_box.appendChild(html.pokemon_image_holder);
 			html.containing_box.appendChild(html.pokemon_select_wrapper);
@@ -458,7 +441,7 @@ const route_box_factory = (route_name) =>
 			assign_pokemon_input_field_events(html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_select_wrapper.pokemon_list, route_box);
 			assign_pokemon_list_events(html.pokemon_select_wrapper.pokemon_list, html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image, route_box);
 
-			document.body.appendChild(document_fragment);
+			document.body.appendChild(html.containing_box);
 		}
 	}
 
