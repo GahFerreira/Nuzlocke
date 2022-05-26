@@ -169,7 +169,7 @@ const route_box_factory = (route_name) =>
 		 *     placeholder showed the name of the current selected pokemon.
 		 *   
 		 *   The CSS rule that helps in this convergence has the following selector:
-		 *   `.pokemon-select-wrapper:active .pokemon-input-field`
+		 *   `.pokemon-selection-wrapper:active .pokemon-input-field`
 		 */
 		pokemon_input_field.addEventListener("blur", () =>
 		{
@@ -336,10 +336,10 @@ const route_box_factory = (route_name) =>
 	 * 
 	 * @returns A new pokemon select wrapper HTML element.
 	 */
-	function Pokemon_Select_Wrapper()
+	function Pokemon_Selection_Wrapper()
 	{
-		const pokemon_select_wrapper = document.createElement("div");
-		pokemon_select_wrapper.className = "pokemon-select-wrapper";
+		const pokemon_selection_wrapper = document.createElement("div");
+		pokemon_selection_wrapper.className = "pokemon-selection-wrapper";
 
 		// The input field where the pokemon name will be typed
 		const pokemon_input_field = Pokemon_Input_Field();
@@ -347,13 +347,13 @@ const route_box_factory = (route_name) =>
 		// The pokemon list that drops down when the input field is in focus
 		const pokemon_list = Pokemon_List();
 
-		pokemon_select_wrapper.appendChild(pokemon_input_field);
-		pokemon_select_wrapper.appendChild(pokemon_list);
+		pokemon_selection_wrapper.appendChild(pokemon_input_field);
+		pokemon_selection_wrapper.appendChild(pokemon_list);
 
-		pokemon_select_wrapper.pokemon_input_field = pokemon_input_field;
-		pokemon_select_wrapper.pokemon_list = pokemon_list;
+		pokemon_selection_wrapper.pokemon_input_field = pokemon_input_field;
+		pokemon_selection_wrapper.pokemon_list = pokemon_list;
 
-		return pokemon_select_wrapper;
+		return pokemon_selection_wrapper;
 	}
 
 	/**
@@ -403,7 +403,7 @@ const route_box_factory = (route_name) =>
 		const pokemon_image_holder = Pokemon_Image_Holder();
 
 		// This wraps both the text input field and the list it creates when it's in focus
-		const pokemon_select_wrapper = Pokemon_Select_Wrapper();
+		const pokemon_selection_wrapper = Pokemon_Selection_Wrapper();
 
 		// The state dropdown that shows the state of the pokemon
 		const state_dropdown = State_Dropdown();
@@ -414,7 +414,7 @@ const route_box_factory = (route_name) =>
 			containing_box,
 			route_title,
 			pokemon_image_holder,
-			pokemon_select_wrapper,
+			pokemon_selection_wrapper,
 			state_dropdown
 		}
 
@@ -435,11 +435,11 @@ const route_box_factory = (route_name) =>
 		{
 			html.containing_box.appendChild(html.route_title);
 			html.containing_box.appendChild(html.pokemon_image_holder);
-			html.containing_box.appendChild(html.pokemon_select_wrapper);
+			html.containing_box.appendChild(html.pokemon_selection_wrapper);
 			html.containing_box.appendChild(html.state_dropdown);
 
-			assign_pokemon_input_field_events(html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_select_wrapper.pokemon_list, route_box);
-			assign_pokemon_list_events(html.pokemon_select_wrapper.pokemon_list, html.pokemon_select_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image, route_box);
+			assign_pokemon_input_field_events(html.pokemon_selection_wrapper.pokemon_input_field, html.pokemon_selection_wrapper.pokemon_list, route_box);
+			assign_pokemon_list_events(html.pokemon_selection_wrapper.pokemon_list, html.pokemon_selection_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image, route_box);
 
 			document.body.appendChild(html.containing_box);
 		}

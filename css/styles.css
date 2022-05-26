@@ -153,11 +153,15 @@ body
 	image-rendering: pixelated;
 }
 
-.pokemon-select-wrapper
+.pokemon-selection-wrapper
 {
-	width: 42%;
+	position: absolute;
 
-	margin-left: calc(13vmin + 15%);
+	left: calc(13vmin + 15%);
+	top: 45%;
+
+	width: 42%;
+	height: 7.25vmin;
 }
 
 .pokemon-input-field
@@ -168,8 +172,15 @@ body
 	width: 100%;
 	height: 7.25vmin;
 
-	margin-top: 4vmin;
+	margin: 0;
 
+	/* 
+		`padding: 0` being included or not does not seem to change the structure of the page.
+		When it's not included, the input field will simply have a very small padding.
+
+		I've decided to include it to avoid further confusion, as it does not influence anything.
+	*/
+	padding: 0;
 	padding-left: 5%;
 
 	border: 0.1em solid rgb(55 55 65);
@@ -189,13 +200,26 @@ body
 }
 
 /* 
-This exists because the 'blur' event of 'pokemon_input_field' is called when the user presses the click, but doesn't release it, in a 'pokemon_list' list.
-When this happens, 'value' takes the value of 'placeholder', as if the user has already made a choice, before any 'click' event is triggered.
-To give the user the feeling that no choice has been made yet, this rule colors the 'value' of 'pokemon_input_field' with 'placeholder' color.
+The purpose of this rule is to help UX during the selection of a pokemon from the pokemon list,
+when a previous pokemon had already been selected in that route box.
 
-Note: There may be better ways to deal with this scenario. As I'm still learning, this suffices for now.
+To contextualize, when the pokemon list is open the value of the input field is the empty string,
+and the placeholder is the current selected pokemon.
+
+When the user clicks in a pokemon from the list, the `blur` event of the input field is fired, 
+which updates the value of the input field to the current selected pokemon.
+
+The problem is that if the user holds the click, the `blur` event is fired in the very
+beginning of the mouse down, which means the user has not selected a new pokemon yet, but the
+value of the input field will be updated.
+
+To keep the impression that nothing has changed (because no pokemon has been selected yet), the
+value gets the color of the placeholder while the user holds the click.
+
+When the user releases the click, the list will close, the pokemon-selection-wrapper will not be
+active anymore and the value will regain its usual color.
 */
-.pokemon-select-wrapper:active .pokemon-input-field
+.pokemon-selection-wrapper:active .pokemon-input-field
 {
 	color: rgb(117, 117, 117);
 }
