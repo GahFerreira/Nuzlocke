@@ -201,11 +201,45 @@ const route_box_factory = (route_name) =>
 		 */
 		pokemon_input_field.addEventListener("input", (e) =>
 		{
-			// `str` is the input typed in the input field
-			const str = e.target.value.toLowerCase();
+			/**
+			 * Tries to match an input string to a pokemon name.
+			 * 
+			 * Notice that the input_string may be a non-contiguous substring of the pokemon name.
+			 * This means that "pkc" matches "pikachu" and "r" matches "bulbasaur".
+			 * However "pck" does not match "pikachu" and "ru" does not match "bulbasaur".
+			 * 
+			 * @param {string} input_string The input given by the user.
+			 * @param {string} pokemon_name The name of pokemon to match.
+			 * @returns {boolean} `true` if `input_string` is substring of `pokemon_name`, `false` otherwise.
+			 */
+			function match_pokemon_name(input_string, pokemon_name)
+			{
+				for (let i_input_string = 0, i_pokemon_name = 0; i_pokemon_name < pokemon_name.length; i_pokemon_name++)
+				{
+					if (input_string[i_input_string] === pokemon_name[i_pokemon_name])
+					{
+						i_input_string++;
 
-			// An empty string matches all pokemon, so all pokemon should show in the list
-			if (str == "")
+						if (i_input_string === input_string.length)
+						{
+							return true;
+						}
+					}
+				}
+
+				return false;
+			}
+
+			/**
+			 * `input_string` is the input typed in the input field.
+			 * It's converted to lowercase and normalized in "NFKC".
+			 * This normalization means that characters such as "é" are in the "é" form and not 
+			 * "e´" form and characters such as "ﬀ" are treated as "ff".
+			 */
+			const input_string = e.target.value.toLowerCase().normalize("NFKC");
+
+			// The empty string matches all pokemon, so no point in trying to match
+			if (input_string == "")
 			{
 				for (const list_item of pokemon_list.childNodes)
 				{
@@ -217,28 +251,36 @@ const route_box_factory = (route_name) =>
 
 			for (const list_item of pokemon_list.childNodes)
 			{
-				/*
-				  `match` is true if `str` is substring of `pokemon_name`, false otherwise.
-				  
-				  Notice that `str` may be a non-contiguous substring of `pokemon_name`.
-				  This means that "pkc" matches "pikachu" and "r" matches "bulbasaur".
-				  However "pck" does not match "pikachu" and "ru" does not match "bulbasaur".
-				*/
-				let match = false;
+				/**
+				 * Pokemon name is converted to lower case and normalized in "NFC".
+				 * This normalization means that characters such as "é" are in the "é" form and 
+				 * not "e´" form.
+				 */
+				const pokemon_name = list_item.pokemon_data.name.toLowerCase().normalize();
 
-				const pokemon_name = list_item.pokemon_data.name.toLowerCase();
+				let match = match_pokemon_name(input_string, pokemon_name);
 
-				for (let i_str = 0, i_pokemon_name = 0; i_pokemon_name < pokemon_name.length; i_pokemon_name++)
+				/**
+				 * Pokemon with non english letters in their name should, alongside matching 
+				 * their name with the right character, also match an input that has an 
+				 * equivalent english letter in its place. This is meant to improve UX.
+				 * 
+				 * For example, the Pokemon "Flabébé":
+				 *   - It should of course match an input like "Flabé".
+				 *   - It also should match an input like "Flabe".
+				 *
+				 * Therefore, if a match hasn't occurred with the true pokemon name, it checks
+				 * if the name is any different using only english characters, and if it is, it
+				 * tries to rematch.
+				 */
+				if (match === false)
 				{
-					if (str[i_str] === pokemon_name[i_pokemon_name])
-					{
-						i_str++;
+					// `[\u0300-\u036f]/g` matches all diacritical characters, such as "´".
+					const eng_pokemon_name = pokemon_name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-						if (i_str === str.length) 
-						{
-							match = true;
-							break;
-						}
+					if (pokemon_name !== eng_pokemon_name)
+					{
+						match = match_pokemon_name(input_string, eng_pokemon_name);
 					}
 				}
 
