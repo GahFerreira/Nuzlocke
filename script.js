@@ -1,6 +1,21 @@
 import { poke_data } from "./js/pokedata.js";
 
 /**
+ * Detaches an HTML element from the DOM for later usage.
+ * 
+ * @param {HTMLElement} HTML_element HTML element to be detached from the DOM.
+ * @returns The parent of the element.
+ */
+function detach_from_DOM(HTML_element)
+{
+	const parent = HTML_element.parentNode;
+
+	parent.removeChild(HTML_element);
+
+	return parent;
+}
+
+/**
  * Function assigned to the "New Run" button in the main page when it is selected
  */
 function new_run()
@@ -93,6 +108,131 @@ const route_box_factory = (route_name) =>
 	function assign_pokemon_input_field_events(pokemon_input_field, pokemon_list, route_box)
 	{
 		/**
+		 * Sorts the pokemon list to enhance the search results.
+		 * 
+		 * If multiple pokemon match, the order will be ascending defined by the following:
+		 *   1. Pokemon with longer contiguous matches
+		 *   2. Pokemon with the longest contiguous searching starting earlier in its name
+		 *   3. Pokemon ID
+		 * 
+		 * @param {HTMLUListElement} pokemon_list The pokemon list to be sorted.
+		 * @param {boolean} sort_by_id If the list should be sorted by id or match quality.
+		 */
+		function sort_pokemon_list(pokemon_list, reset_sort = false)
+		{
+			// Treat these as constants
+			const ITEM_1_COMES_FIRST = -1;
+			const ITEM_2_COMES_FIRST = 1;
+
+			const pokemon_list_parent = detach_from_DOM(pokemon_list);
+
+			let list_items = [];
+
+			for (const item of pokemon_list.children)
+			{
+				list_items.push(item);
+			}
+
+			/** 
+			 * Whenever the sorting gets to be reset, all pokemon should be visible in the list.
+			 * 
+			 * Ideally this should happen whenever the pokemon list gets out of focus.
+			 * 
+			 * Right now, it happens when:
+			 *   1. The `pokemon_list.default_sort` is set to false AND
+			 *   2. The input field `input` event is fired
+			*/
+			if (reset_sort === true)
+			{
+				pokemon_list.default_sort = true;
+
+				list_items.sort((item_1, item_2) =>
+				{
+					// Return the one with the ealier `pokemon_id`
+					if (item_1.pokemon_data.pokemon_id < item_2.pokemon_data.pokemon_id)
+					{
+						return ITEM_1_COMES_FIRST;
+					}
+
+					else
+					{
+						return ITEM_2_COMES_FIRST;
+					}
+				});
+
+				for (const list_item of pokemon_list.children)
+				{
+					list_item.classList.remove("off");
+				}
+			}
+
+			else
+			{
+				pokemon_list.default_sort = false;
+
+				list_items.sort((item_1, item_2) =>
+				{
+					// If one hasn't matched, return the other
+					if (item_2.priority.match === false) return ITEM_1_COMES_FIRST;
+					if (item_1.priority.match === false) return ITEM_2_COMES_FIRST;
+
+					if (item_1.priority.match_on_first_char !== item_2.priority.match_on_first_char)
+					{
+						if (item_1.priority.match_on_first_char === true)
+						{
+							return ITEM_1_COMES_FIRST;
+						}
+
+						return ITEM_2_COMES_FIRST;
+					}
+
+					// Return the one with longest `longest_match`
+					if (item_1.priority.longest_match !== item_2.priority.longest_match)
+					{
+						if (item_1.priority.longest_match > item_2.priority.longest_match)
+						{
+							return ITEM_1_COMES_FIRST;
+						}
+
+						return ITEM_2_COMES_FIRST;
+					}
+
+					// Return the one with the earlier `begin_of_longest_match`
+					if (item_1.priority.begin_of_longest_match !== item_2.priority.begin_of_longest_match)
+					{
+						if (item_1.priority.begin_of_longest_match < item_2.priority.begin_of_longest_match)
+						{
+							return ITEM_1_COMES_FIRST;
+						}
+
+						return ITEM_2_COMES_FIRST;
+					}
+
+					// Return the one with the ealier `pokemon_id` (guaranteed to be different)
+					if (item_1.pokemon_data.pokemon_id < item_2.pokemon_data.pokemon_id)
+					{
+						return ITEM_1_COMES_FIRST;
+					}
+
+					return ITEM_2_COMES_FIRST;
+				});
+			}
+
+			for (const item of list_items)
+			{
+				/**
+				 * This will detach the item from its current position in the list and 
+				 * append it to the final of the list.
+				 * 
+				 * Doing it for every item will sort the list.
+				 */
+				pokemon_list.appendChild(item);
+			}
+
+			pokemon_list_parent.appendChild(pokemon_list);
+		}
+
+		/**
 		 * When the input field gets focused, it should be ready to be typed in
 		 * Then we have to consider two cases:
 		 *   - If no pokemon had been previously selected, the placeholder shows "Pokemon..."
@@ -101,15 +241,9 @@ const route_box_factory = (route_name) =>
 		 */
 		pokemon_input_field.addEventListener("focus", () =>
 		{
-			/** 
-			 * Makes all pokemon visible in the list.
-			 * 
-			 * Ideally this should happen when the pokemon list gets out of focus, but this 
-			 * implementation suffices for now.
-			*/
-			for (const list_item of pokemon_list.childNodes)
+			if (pokemon_list.default_sort === false)
 			{
-				list_item.classList.remove("off");
+				sort_pokemon_list(pokemon_list, true);
 			}
 
 			if (route_box.selected_pokemon === undefined)
@@ -210,24 +344,51 @@ const route_box_factory = (route_name) =>
 			 * 
 			 * @param {string} input_string The input given by the user.
 			 * @param {string} pokemon_name The name of pokemon to match.
-			 * @returns {boolean} `true` if `input_string` is substring of `pokemon_name`, `false` otherwise.
+			 * @returns {object} Information of success or failure of match and match quality if matched.
 			 */
 			function match_pokemon_name(input_string, pokemon_name)
 			{
+				let match_on_first_char = false;
+				let longest_match = 0, begin_of_longest_match;
+				let current_match = 0, begin_of_current_match;
+
 				for (let i_input_string = 0, i_pokemon_name = 0; i_pokemon_name < pokemon_name.length; i_pokemon_name++)
 				{
 					if (input_string[i_input_string] === pokemon_name[i_pokemon_name])
 					{
+						if (i_pokemon_name === 0)
+						{
+							match_on_first_char = true;
+						}
+
+						if (current_match === 0)
+						{
+							begin_of_current_match = i_pokemon_name;
+						}
+
+						current_match++;
+
+						if (current_match > longest_match)
+						{
+							longest_match = current_match;
+							begin_of_longest_match = begin_of_current_match;
+						}
+
 						i_input_string++;
 
 						if (i_input_string === input_string.length)
 						{
-							return true;
+							return { match: true, match_on_first_char, longest_match, begin_of_longest_match };
 						}
+					}
+
+					else
+					{
+						current_match = 0;
 					}
 				}
 
-				return false;
+				return { match: false };
 			}
 
 			/**
@@ -241,15 +402,15 @@ const route_box_factory = (route_name) =>
 			// The empty string matches all pokemon, so no point in trying to match
 			if (input_string == "")
 			{
-				for (const list_item of pokemon_list.childNodes)
+				if (pokemon_list.default_sort === false)
 				{
-					list_item.classList.remove("off");
+					sort_pokemon_list(pokemon_list, true);
 				}
 
 				return;
 			}
 
-			for (const list_item of pokemon_list.childNodes)
+			for (const list_item of pokemon_list.children)
 			{
 				/**
 				 * Pokemon name is converted to lower case and normalized in "NFC".
@@ -258,7 +419,7 @@ const route_box_factory = (route_name) =>
 				 */
 				const pokemon_name = list_item.pokemon_data.name.toLowerCase().normalize();
 
-				let match = match_pokemon_name(input_string, pokemon_name);
+				let match_info = match_pokemon_name(input_string, pokemon_name);
 
 				/**
 				 * Pokemon with non english letters in their name should, alongside matching 
@@ -273,27 +434,41 @@ const route_box_factory = (route_name) =>
 				 * if the name is any different using only english characters, and if it is, it
 				 * tries to rematch.
 				 */
-				if (match === false)
+				if (match_info.match === false)
 				{
 					// `[\u0300-\u036f]/g` matches all diacritical characters, such as "´".
 					const eng_pokemon_name = pokemon_name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 					if (pokemon_name !== eng_pokemon_name)
 					{
-						match = match_pokemon_name(input_string, eng_pokemon_name);
+						match_info = match_pokemon_name(input_string, eng_pokemon_name);
 					}
 				}
 
-				if (match === true)
+				if (match_info.match === true)
 				{
 					list_item.classList.remove("off");
+
+					const { match, match_on_first_char, longest_match, begin_of_longest_match } = match_info;
+
+					list_item.priority =
+					{
+						match,
+						match_on_first_char,
+						longest_match,
+						begin_of_longest_match
+					};
 				}
 
 				else
 				{
 					list_item.classList.add("off");
+
+					list_item.priority.match = false;
 				}
 			}
+
+			sort_pokemon_list(pokemon_list);
 		});
 	}
 
@@ -308,14 +483,36 @@ const route_box_factory = (route_name) =>
 		const pokemon_list = document.createElement("ul");
 		pokemon_list.className = "pokemon-list";
 
+		// It means the pokemon are ordered by pokemon id
+		pokemon_list.default_sort = true;
+
+		let pokemon_id = 1;
+
 		/**
 		 * This iterates over the poke_data array, which contains the data of all pokemon
 		 * For each pokemon, a new list item is created for it, and appended to pokemon_list
 		 */
-		for (const { name, image } of poke_data/*.slice(0, 9)*/)
+		for (const { name, image } of poke_data)
 		{
 			const list_item = document.createElement("li");
-			list_item.pokemon_data = { name, image };
+			list_item.pokemon_data = { name, image, pokemon_id };
+
+			pokemon_id++;
+
+			/**
+			 * This is for enhancing the search of pokemon
+			 *   -`match` means the search matched
+			 *   -`match_on_first_char` if there's a match in the first character of the pokemon name
+			 *   -`longest_match` the longest contiguous match, 
+			 *   -`begin_of_match` where in the pokemon name the `longest_match` started
+			*/
+			list_item.priority =
+			{
+				match: false,
+				match_on_first_char: false,
+				longest_match: 0,
+				begin_of_longest_match: -1
+			};
 
 			const click_area = document.createElement("div");
 			click_area.className = "click-area";
@@ -354,21 +551,17 @@ const route_box_factory = (route_name) =>
 	function assign_pokemon_list_events(pokemon_list, pokemon_input_field, pokemon_image, route_box)
 	{
 		// This implementation iterates over the map, without declaring the keys (which wouldn't be used anyway)
-		for (const list_item of pokemon_list.childNodes)
+		for (const list_item of pokemon_list.children)
 		{
 			// list_item.click_area.addEventListener("mousedown", () => console.log("MouseDown!"));
 
 			list_item.click_area.addEventListener("click", () =>
 			{
-				// console.log(`${list_item.pokemon_data.name} was clicked!`);
-
 				route_box.selected_pokemon = list_item.pokemon_data.name;
 				pokemon_input_field.value = list_item.pokemon_data.name;
 
 				// Adds pokemon image to left circle
 				pokemon_image.src = list_item.pokemon_data.image;
-
-				// console.log(`Current selected pokemon = ${route_box.selected_pokemon}`);
 			});
 		}
 	}
