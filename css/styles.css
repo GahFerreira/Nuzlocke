@@ -113,6 +113,25 @@ body
 	font-size: 1.8em;
 
 	margin: 0;
+	outline: 0;
+
+	/* This makes so words will not wrap to a new line */
+	white-space: nowrap;
+
+	/* This makes all text that would overflow to the left hidden */
+	overflow-x: hidden;
+}
+
+.route-title.placeholder
+{
+	font-weight: normal;
+	font-style: italic;
+	color: rgb(117, 117, 117);
+}
+
+.route-title *
+{
+	display: none;
 }
 
 .pokemon-image-holder

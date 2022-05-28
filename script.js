@@ -78,8 +78,48 @@ const route_box_factory = (route_name) =>
 		const route_title = document.createElement("p");
 		route_title.className = "route-title";
 		route_title.innerText = route_name;
+		route_title.contentEditable = true;
+		route_title.spellcheck = false;
 
 		return route_title;
+	}
+
+	/**
+	 * Assigns events to the route title HTML element.
+	 * 
+	 * @param {HTMLParagraphElement} route_title The HTML element that receives the events.
+	 */
+	function assign_route_title_events(route_title)
+	{
+		route_title.addEventListener("focus", () =>
+		{
+			if (route_title.classList.contains("placeholder") === true)
+			{
+				route_title.textContent = "";
+
+				route_title.classList.remove("placeholder");
+			}
+		});
+
+		route_title.addEventListener("blur", () =>
+		{
+			// Any children created because of line breaks are removed
+			const route_title_parent = detach_from_DOM(route_title);
+
+			while (route_title.lastElementChild !== null)
+			{
+				route_title.removeChild(route_title.lastElementChild);
+			}
+
+			route_title_parent.appendChild(route_title);
+
+			// If the title is empty, it places a placeholder in the title
+			if (route_title.textContent.length === 0)
+			{
+				route_title.textContent = "Route Name";
+				route_title.classList.add("placeholder");
+			}
+		});
 	}
 
 	/**
@@ -92,9 +132,9 @@ const route_box_factory = (route_name) =>
 		const pokemon_input_field = document.createElement("input");
 		pokemon_input_field.className = "pokemon-input-field";
 
-		pokemon_input_field.setAttribute("maxlength", 12);
-		pokemon_input_field.setAttribute("placeholder", "Pokémon...");
-		pokemon_input_field.setAttribute("spellcheck", "false");
+		pokemon_input_field.maxLength = 12;
+		pokemon_input_field.placeholder = "Pokémon...";
+		pokemon_input_field.spellcheck = false;
 
 		return pokemon_input_field;
 	}
@@ -520,7 +560,7 @@ const route_box_factory = (route_name) =>
 			 * shown for the first time in the page.
 			 */
 			const pokemon_icon = document.createElement("img");
-			pokemon_icon.setAttribute("loading", "lazy");
+			pokemon_icon.loading = "lazy";
 			pokemon_icon.src = image;
 
 			/**
@@ -681,6 +721,7 @@ const route_box_factory = (route_name) =>
 			html.containing_box.appendChild(html.pokemon_selection_wrapper);
 			html.containing_box.appendChild(html.state_dropdown);
 
+			assign_route_title_events(html.route_title);
 			assign_pokemon_input_field_events(html.pokemon_selection_wrapper.pokemon_input_field, html.pokemon_selection_wrapper.pokemon_list, route_box);
 			assign_pokemon_list_events(html.pokemon_selection_wrapper.pokemon_list, html.pokemon_selection_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image, route_box);
 
