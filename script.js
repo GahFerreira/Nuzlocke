@@ -474,7 +474,7 @@ const route_box_factory = (route_name) =>
 	}
 
 	/**
-	 * Creates an `<ul>` that drops down when the input field is focused and appends to it one `<li>` for each pokemon. Each `<li>` is composed of a `<div>`, which determines the click area for that list item, an `<img>` to show the pokemon sprite and a `<p>` to show the pokemon name.
+	 * Creates an `<ul>` that drops down when the input field is focused and appends to it one `<li>` for each pokemon. Each `<li>` is composed of an `<img>` to show the pokemon sprite and a `<p>` to show the pokemon name.
 	 * 
 	 * @returns A new pokemon list HTML element.
 	 */
@@ -515,9 +515,6 @@ const route_box_factory = (route_name) =>
 				begin_of_longest_match: -1
 			};
 
-			const click_area = document.createElement("div");
-			click_area.className = "click-area";
-
 			/**
 			 * The `loading` attribute set to `lazy` will only render the images when they are 
 			 * shown for the first time in the page.
@@ -544,11 +541,8 @@ const route_box_factory = (route_name) =>
 			const pokemon_name = document.createElement("p");
 			pokemon_name.innerText = name;
 
-			click_area.appendChild(pokemon_icon);
-			click_area.appendChild(pokemon_name);
-
-			list_item.appendChild(click_area);
-			list_item.click_area = click_area;
+			list_item.appendChild(pokemon_icon);
+			list_item.appendChild(pokemon_name);
 
 			pokemon_list.appendChild(list_item);
 		}
@@ -569,9 +563,7 @@ const route_box_factory = (route_name) =>
 		// This implementation iterates over the map, without declaring the keys (which wouldn't be used anyway)
 		for (const list_item of pokemon_list.children)
 		{
-			// list_item.click_area.addEventListener("mousedown", () => console.log("MouseDown!"));
-
-			list_item.click_area.addEventListener("click", () =>
+			list_item.addEventListener("click", () =>
 			{
 				route_box.selected_pokemon = list_item.pokemon_data.name;
 				pokemon_input_field.value = list_item.pokemon_data.name;

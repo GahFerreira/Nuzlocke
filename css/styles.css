@@ -256,6 +256,8 @@ active anymore and the value will regain its usual color.
 
 .pokemon-list li
 {
+	position: relative;
+
 	cursor: pointer;
 
 	width: 100%;
@@ -267,6 +269,9 @@ active anymore and the value will regain its usual color.
 	border: 0.1em solid rgb(55 55 65);
 
 	box-sizing: border-box;
+
+	/* This makes the list item contents not selectable, as in select to copy and paste */
+	user-select: none;
 }
 
 .pokemon-list li:last-child
@@ -275,30 +280,42 @@ active anymore and the value will regain its usual color.
 	border-bottom-right-radius: 0.1em;
 }
 
+/* 
+	The next 3 rules define the following scenario:
+	- When the user is only hovering over list items, they should be darker
+	- When the user is clicking on a list item, it should be darker
+	- When the user is clicking on a list item, but change the mouse position and begins to hover 
+	  other list items, the clicked item will remain darker and all others will not be darker
+*/
+.pokemon-list li:hover
+{
+	background-color: rgb(31, 31, 38);
+}
+
+.pokemon-list:active li:hover
+{
+	background-color: rgb(47, 47, 57);
+}
+
+.pokemon-list:active li:active
+{
+	background-color: rgb(31, 31, 38);
+}
+
 /* This is meant to hide pokemon list items when its respective pokemon name doesn't match the input in the input field */
 .pokemon-list li.off
 {
 	display: none;
 }
 
-.pokemon-list li .click-area
+.pokemon-list li *
 {
-	position: relative;
-
-	height: 100%;
-}
-
-/* `.click-area` represents the part of the list item that is meant to be clickable to select that pokemon */
-.pokemon-list li .click-area *
-{
-	/* 
-		This makes all children of click-area not receive click events.
-		Browser Support: All browsers from 2013 forwards can use this, except all versions of opera-mini.
-	*/
+	/* This makes all children of pokemon list item not receive click events. */
 	pointer-events: none;
 }
 
-.pokemon-list li .click-area img
+/* This is equivalent to: `.pokemon-list li img` */
+.pokemon-list img
 {
 	position: absolute;
 
@@ -311,7 +328,8 @@ active anymore and the value will regain its usual color.
 	/* image-rendering: pixelated; */
 }
 
-.pokemon-list li .click-area p
+/* This is equivalent to: `.pokemon-list li p` */
+.pokemon-list p
 {
 	position: relative;
 	top: 50%;
