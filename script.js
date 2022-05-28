@@ -486,6 +486,27 @@ const route_box_factory = (route_name) =>
 		// It means the pokemon are ordered by pokemon id
 		pokemon_list.default_sort = true;
 
+		// Observer way
+		// const observer = new IntersectionObserver((entries, observer) => 
+		// {
+		// 	entries.forEach((entry) =>
+		// 	{
+		// 		if (entry.isIntersecting === true)
+		// 		{
+		// 			const image = entry.target;
+
+		// 			if (!image.loaded)
+		// 			{
+		// 				image.src = image.image_source;
+		// 				image.loaded = true;
+		// 			}
+
+		// 			observer.unobserve(image);
+		// 		}
+		// 	});
+
+		// }, { root: pokemon_list });
+
 		let pokemon_id = 1;
 
 		/**
@@ -517,13 +538,40 @@ const route_box_factory = (route_name) =>
 			const click_area = document.createElement("div");
 			click_area.className = "click-area";
 
-			// 'alt' was set to "" so non-visual browsers may omit it from rendering (it's decoration after all)
+			/**
+			 * The `loading` attribute set to `lazy` will only render the images when they are 
+			 * shown for the first time in the page.
+			 */
 			const pokemon_icon = document.createElement("img");
-
-			// Assigning `.src` to near 1000 pokemon is really slow to performance and should be done in a better way
+			pokemon_icon.setAttribute("loading", "lazy");
 			pokemon_icon.src = image;
 
-			pokemon_icon.setAttribute("alt", "");
+			// Observer way
+			// pokemon_icon.image_source = image;
+			// pokemon_icon.loaded = false;
+			// observer.observe(pokemon_icon);
+
+			/**
+			 * This establishes a callback function that removes the `loading` attribute of the 
+			 * images, but only during idle time, as to not impact UX.
+			 * 
+			 * The idea behind this is to slowly load the images when nothing else is happening, 
+			 * so when the user actually scrolls over them, they are already rendered.
+			 * 
+			 * Even if an image is already rendered, since this function will only be called on 
+			 * idle time, it shouldn't impact performance.
+			 */
+			window.requestIdleCallback(() =>
+			{
+				// Observer way
+				// if (!pokemon_icon.loaded)
+				// {
+				// 	pokemon_icon.src = image;
+				// 	pokemon_icon.loaded = true;
+				// }
+
+				pokemon_icon.removeAttribute("loading");
+			});
 
 			const pokemon_name = document.createElement("p");
 			pokemon_name.innerText = name;
