@@ -1,3 +1,9 @@
+:root
+{
+	--placeholder-color: rgb(117, 117, 117);
+	--value-color: rgb(200, 200, 210);
+}
+
 *
 {
 	font-family: georgia;
@@ -13,7 +19,7 @@ body
 
 .outer-gray-box
 {
-	color: rgb(200, 200, 210);
+	color: var(--value-color);
 	background-color: rgb(50, 50, 60);
 
 	border: 0.2em solid rgb(50, 50, 60);
@@ -126,7 +132,7 @@ body
 {
 	font-weight: normal;
 	font-style: italic;
-	color: rgb(117, 117, 117);
+	color: var(--placeholder-color);
 }
 
 .route-title *
@@ -185,7 +191,7 @@ body
 
 .pokemon-input-field
 {
-	color: rgb(200, 200, 210);
+	color: var(--value-color);
 	background-color: rgb(47, 47, 57);
 
 	width: 100%;
@@ -240,7 +246,7 @@ active anymore and the value will regain its usual color.
 */
 .pokemon-selection-wrapper:active .pokemon-input-field
 {
-	color: rgb(117, 117, 117);
+	color: var(--placeholder-color);
 }
 
 .pokemon-list
@@ -282,7 +288,7 @@ active anymore and the value will regain its usual color.
 	width: 100%;
 	height: 8vmin;
 
-	color: rgb(200, 200, 210);
+	color: var(--value-color);
 	background-color: rgb(47, 47, 57);
 
 	border: 0.1em solid rgb(55 55 65);
@@ -371,7 +377,7 @@ active anymore and the value will regain its usual color.
 
 .state-dropdown
 {
-	color: rgb(200, 200, 210);
+	color: var(--value-color);
 	background-color: rgb(47, 47, 57);
 
 	width: 100%;
