@@ -96,6 +96,76 @@ body
 
 /* New Game */
 
+/* 
+	Represents the box that wraps some elements. 
+
+	It has a darker background and lighter border, with a small border radius.
+	
+	For example, the pokemon image holder and input field from the route box use this class.
+*/
+.inner-wrapper
+{
+	background-color: rgb(47, 47, 57);
+	border: 0.1em solid rgb(55 55 65);
+
+	border-radius: 0.25em;
+}
+
+.list
+{
+	list-style: none;
+
+	margin: 0;
+	padding: 0;
+}
+
+.list li
+{
+	position: relative;
+
+	cursor: pointer;
+
+	width: 100%;
+
+	color: var(--value-color);
+	background-color: rgb(47, 47, 57);
+
+	border: 0.1em solid rgb(55 55 65);
+
+	box-sizing: border-box;
+
+	/* This makes the list item contents not selectable, as in select to copy and paste */
+	user-select: none;
+}
+
+.list li:last-child
+{
+	border-bottom-left-radius: 0.1em;
+	border-bottom-right-radius: 0.1em;
+}
+
+/* 
+	The next 3 rules define the following scenario:
+	- When the user is only hovering over list items, they should be darker
+	- When the user is clicking on a list item, it should be darker
+	- When the user is clicking on a list item, but change the mouse position and begins to hover 
+	  other list items, the clicked item will remain darker and all others will not be darker
+*/
+.list li:hover
+{
+	background-color: rgb(31, 31, 38);
+}
+
+.list:active .list li:hover
+{
+	background-color: rgb(47, 47, 57);
+}
+
+.list:active li:active
+{
+	background-color: rgb(31, 31, 38);
+}
+
 .containing-box
 {
 	position: relative;
@@ -192,7 +262,6 @@ body
 .pokemon-input-field
 {
 	color: var(--value-color);
-	background-color: rgb(47, 47, 57);
 
 	width: 100%;
 	height: 7.25vmin;
@@ -207,9 +276,6 @@ body
 	*/
 	padding: 0;
 	padding-left: 5%;
-
-	border: 0.1em solid rgb(55 55 65);
-	border-radius: 0.25em;
 
 	font-size: 1em;
 
@@ -251,11 +317,6 @@ active anymore and the value will regain its usual color.
 
 .pokemon-list
 {
-	list-style: none;
-
-	margin: 0;
-	padding: 0;
-
 	/* 
 		Adds a scrollbar to the list. 
 		Note that the height was set so it shows 8 list items (8 * 8vmin). 
@@ -281,50 +342,7 @@ active anymore and the value will regain its usual color.
 
 .pokemon-list li
 {
-	position: relative;
-
-	cursor: pointer;
-
-	width: 100%;
 	height: 8vmin;
-
-	color: var(--value-color);
-	background-color: rgb(47, 47, 57);
-
-	border: 0.1em solid rgb(55 55 65);
-
-	box-sizing: border-box;
-
-	/* This makes the list item contents not selectable, as in select to copy and paste */
-	user-select: none;
-}
-
-.pokemon-list li:last-child
-{
-	border-bottom-left-radius: 0.1em;
-	border-bottom-right-radius: 0.1em;
-}
-
-/* 
-	The next 3 rules define the following scenario:
-	- When the user is only hovering over list items, they should be darker
-	- When the user is clicking on a list item, it should be darker
-	- When the user is clicking on a list item, but change the mouse position and begins to hover 
-	  other list items, the clicked item will remain darker and all others will not be darker
-*/
-.pokemon-list li:hover
-{
-	background-color: rgb(31, 31, 38);
-}
-
-.pokemon-list:active li:hover
-{
-	background-color: rgb(47, 47, 57);
-}
-
-.pokemon-list:active li:active
-{
-	background-color: rgb(31, 31, 38);
 }
 
 /* This is meant to hide pokemon list items when its respective pokemon name doesn't match the input in the input field */

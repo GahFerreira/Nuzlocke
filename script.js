@@ -56,7 +56,7 @@ const route_box_factory = (route_name) =>
 	{
 		// The circle which contains inside it the pokemon image
 		const pokemon_image_holder = document.createElement("div");
-		pokemon_image_holder.className = "pokemon-image-holder";
+		pokemon_image_holder.className = "inner-wrapper pokemon-image-holder";
 
 		// The pokemon image
 		const pokemon_image = document.createElement("img");
@@ -130,7 +130,7 @@ const route_box_factory = (route_name) =>
 	function Pokemon_Input_Field()
 	{
 		const pokemon_input_field = document.createElement("input");
-		pokemon_input_field.className = "pokemon-input-field";
+		pokemon_input_field.className = "inner-wrapper pokemon-input-field";
 
 		pokemon_input_field.maxLength = 12;
 		pokemon_input_field.placeholder = "Pokémon...";
@@ -522,7 +522,7 @@ const route_box_factory = (route_name) =>
 	{
 		// Creating the pokemon list dropdown
 		const pokemon_list = document.createElement("ul");
-		pokemon_list.className = "pokemon-list";
+		pokemon_list.className = "list pokemon-list";
 
 		// It means the pokemon are ordered by pokemon id
 		pokemon_list.default_sort = true;
