@@ -427,6 +427,11 @@ active anymore and the value will regain its usual color.
 	display: block;
 }
 
+.state-field.placeholder
+{
+	color: var(--placeholder-color);
+}
+
 .state-list li
 {
 	height: 6vmin;

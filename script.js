@@ -651,8 +651,9 @@ const route_box_factory = (route_name) =>
 
 		// Creating the field where the current state will be at
 		const state_field = document.createElement("input");
-		state_field.className = "inner-wrapper state-field";
+		state_field.className = "inner-wrapper state-field placeholder";
 		state_field.readOnly = true;
+		state_field.value = "State...";
 
 		// Creating the state list to control pokemon state
 		const state_list = document.createElement("ul");
@@ -690,6 +691,8 @@ const route_box_factory = (route_name) =>
 			list_item.addEventListener("click", () =>
 			{
 				state_field.value = list_item.dataset.state;
+
+				state_field.classList.remove("placeholder");
 			});
 		}
 	}
