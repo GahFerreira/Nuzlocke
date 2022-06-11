@@ -106,9 +106,14 @@ body
 .inner-wrapper
 {
 	background-color: rgb(47, 47, 57);
-	border: 0.1em solid rgb(55 55 65);
+	border: 0.15rem solid rgb(55 55 65);
 
-	border-radius: 0.25em;
+	border-radius: 0.25rem;
+}
+
+.inner-wrapper:focus
+{
+	outline: none;
 }
 
 .list
@@ -156,7 +161,7 @@ body
 	background-color: rgb(31, 31, 38);
 }
 
-.list:active .list li:hover
+.list:active li:hover
 {
 	background-color: rgb(47, 47, 57);
 }
@@ -284,7 +289,7 @@ body
 
 .pokemon-input-field:focus
 {
-	outline: none;
+	/* outline: none; */
 
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
@@ -382,7 +387,7 @@ active anymore and the value will regain its usual color.
 	padding-left: 30%;
 }
 
-.state-dropdown-wrapper
+.state-dropdown
 {
 	position: absolute;
 
@@ -393,7 +398,7 @@ active anymore and the value will regain its usual color.
 	height: 7.25vmin;
 }
 
-.state-dropdown
+.state-field
 {
 	color: var(--value-color);
 	background-color: rgb(47, 47, 57);
@@ -401,14 +406,40 @@ active anymore and the value will regain its usual color.
 	width: 100%;
 	height: 100%;
 
-	border: 0.1em solid rgb(55 55 65);
-
 	font-size: 0.8em;
 
 	box-sizing: border-box;
 }
 
-.state-dropdown:focus
+.state-field:focus
 {
-	outline: 0.1em solid rgb(105 105 115);
+	outline: 0.1rem solid rgb(105 105 115);
+}
+
+.state-list
+{
+	display: none;
+}
+
+.state-field:focus + .state-list,
+.state-list:active
+{
+	display: block;
+}
+
+.state-list li
+{
+	height: 6vmin;
+}
+
+.state-list p
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+	margin: 0;
+	padding-left: 30%;
+
+	font-size: 0.8em;
 }

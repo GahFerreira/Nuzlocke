@@ -600,7 +600,6 @@ const route_box_factory = (route_name) =>
 	 */
 	function assign_pokemon_list_events(pokemon_list, pokemon_input_field, pokemon_image, route_box)
 	{
-		// This implementation iterates over the map, without declaring the keys (which wouldn't be used anyway)
 		for (const list_item of pokemon_list.children)
 		{
 			list_item.addEventListener("click", () =>
@@ -642,30 +641,57 @@ const route_box_factory = (route_name) =>
 	/**
 	 * Creates a `<div>` that wraps a `<select>` field, that represents the state dropdown, which is filled with an `<option>` for each state.
 	 * 
-	 * @returns A new state dropdown wrapper HTML element.
+	 * @returns A new state dropdown HTML element.
 	 */
 	function State_Dropdown()
 	{
-		// Creating the dropdown menu to control pokemon state
-		const state_dropdown_wrapper = document.createElement("div");
-		state_dropdown_wrapper.className = "state-dropdown-wrapper";
-
-		const state_dropdown = document.createElement("select");
+		// Creates the wrapper that represents the dropdown
+		const state_dropdown = document.createElement("div");
 		state_dropdown.className = "state-dropdown";
 
-		const states = ["team", "boxed", "fainted", "escaped"];
+		// Creating the field where the current state will be at
+		const state_field = document.createElement("input");
+		state_field.className = "inner-wrapper state-field";
+		state_field.readOnly = true;
+
+		// Creating the state list to control pokemon state
+		const state_list = document.createElement("ul");
+		state_list.className = "list state-list";
+
+		const states = ["Captured", "Escaped", "Fainted", "Received", "Traded", "Shiny"];
 
 		for (const state of states)
 		{
-			const state_option = document.createElement("option");
-			state_option.value = state;
-			state_option.text = state.charAt(0).toUpperCase() + state.slice(1);
-			state_dropdown.appendChild(state_option);
+			const list_item = document.createElement("li");
+
+			list_item.dataset.state = state;
+
+			const state_name = document.createElement("p");
+			state_name.innerText = state;
+
+			list_item.appendChild(state_name);
+
+			state_list.appendChild(list_item);
 		}
 
-		state_dropdown_wrapper.appendChild(state_dropdown);
+		state_dropdown.appendChild(state_field);
+		state_dropdown.appendChild(state_list);
 
-		return state_dropdown_wrapper;
+		state_dropdown.state_field = state_field;
+		state_dropdown.state_list = state_list;
+
+		return state_dropdown;
+	}
+
+	function assign_state_dropdown_events(state_field, state_list)
+	{
+		for (const list_item of state_list.children)
+		{
+			list_item.addEventListener("click", () =>
+			{
+				state_field.value = list_item.dataset.state;
+			});
+		}
 	}
 
 	/**
@@ -724,6 +750,7 @@ const route_box_factory = (route_name) =>
 			assign_route_title_events(html.route_title);
 			assign_pokemon_input_field_events(html.pokemon_selection_wrapper.pokemon_input_field, html.pokemon_selection_wrapper.pokemon_list, route_box);
 			assign_pokemon_list_events(html.pokemon_selection_wrapper.pokemon_list, html.pokemon_selection_wrapper.pokemon_input_field, html.pokemon_image_holder.pokemon_image, route_box);
+			assign_state_dropdown_events(html.state_dropdown.state_field, html.state_dropdown.state_list);
 
 			document.body.appendChild(html.containing_box);
 		}
